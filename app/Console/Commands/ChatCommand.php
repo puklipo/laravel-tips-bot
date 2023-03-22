@@ -33,6 +33,7 @@ class ChatCommand extends Command
             'LaravelのTIPSを一つ生成',
             'Laravel公式ドキュメント(https://laravel.com/docs)から1ページ選択して解説',
             'Laravelのよくある質問と回答を一つ生成',
+            'Laravelのたまにしか聞かれない質問と回答を一つ生成',
         ])->random();
 
         $response = OpenAI::chat()->create([
