@@ -47,6 +47,10 @@ class ChatCommand extends Command
         $tips = trim(Arr::get($response, 'choices.0.message.content'));
         $this->info($tips);
 
+        if (blank($tips)) {
+            return;
+        }
+
         Notification::route('discord', config('services.discord.channel'))
                     ->notify(new TipsNotification($tips));
     }
