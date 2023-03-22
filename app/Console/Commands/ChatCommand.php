@@ -2,8 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Notification;
 use OpenAI\Laravel\Facades\OpenAI;
 
 class ChatCommand extends Command
@@ -41,7 +43,10 @@ class ChatCommand extends Command
             ],
         ]);
 
-        $tips = Arr::get($response, 'choices.0.message.content');
-        $this->info(trim($tips));
+        $tips = trim(Arr::get($response, 'choices.0.message.content'));
+        $this->info($tips);
+
+        Notification::route('discord', config('services.discord.channel'))
+                    ->notify(new TipsNotification($tips));
     }
 }
