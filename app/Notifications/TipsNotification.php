@@ -39,7 +39,7 @@ class TipsNotification extends Notification
 
     public function toDiscord(object $notifiable): DiscordMessage
     {
-        return DiscordMessage::create($this->tips);
+        return DiscordMessage::create(body: $this->tips);
     }
 
     public function toNostr(object $notifiable): NostrMessage
