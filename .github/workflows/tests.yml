@@ -22,5 +22,9 @@ jobs:
           coverage: xdebug
       - name: Install Composer dependencies
         run: composer update --no-progress --optimize-autoloader
+      - name: env
+        run: |
+          cp .env.example .env
+          php artisan key:generate
       - name: Test
         run: vendor/bin/phpunit
