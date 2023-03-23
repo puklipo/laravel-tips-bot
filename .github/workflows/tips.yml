@@ -27,3 +27,8 @@ jobs:
           php artisan key:generate
       - name: Run
         run: php artisan chat:tips
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DISCORD_CHANNEL: ${{ secrets.DISCORD_CHANNEL }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          NOSTR_SK: ${{ secrets.NOSTR_SK }}
