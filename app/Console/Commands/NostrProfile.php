@@ -7,6 +7,7 @@ use Revolution\Nostr\Event;
 use Revolution\Nostr\Facades\Nostr;
 use Revolution\Nostr\Kind;
 use Revolution\Nostr\Profile;
+use Revolution\Nostr\Tags\ReferenceTag;
 
 class NostrProfile extends Command
 {
@@ -41,6 +42,22 @@ class NostrProfile extends Command
             kind: Kind::Metadata,
             content: $profile->toJson(),
             created_at: now()->timestamp,
+        );
+
+        Nostr::pool()->publish(event: $event, sk: config('nostr.keys.sk'));
+
+        $this->relays();
+    }
+
+    protected function relays(): void
+    {
+        $relays = collect(config('nostr.relays'))
+            ->map(fn ($relay) => ReferenceTag::make(r: $relay));
+
+        $event = Event::make(
+            kind: Kind::RelayList,
+            created_at: now()->timestamp,
+            tags: $relays->toArray(),
         );
 
         Nostr::pool()->publish(event: $event, sk: config('nostr.keys.sk'));
