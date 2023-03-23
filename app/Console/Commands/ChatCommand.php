@@ -7,6 +7,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Notification;
 use OpenAI\Laravel\Facades\OpenAI;
+use Revolution\Nostr\Notifications\NostrRoute;
 
 class ChatCommand extends Command
 {
@@ -53,6 +54,7 @@ class ChatCommand extends Command
         }
 
         Notification::route('discord', config('services.discord.channel'))
+                    ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
                     ->notify(new TipsNotification($tips));
     }
 }

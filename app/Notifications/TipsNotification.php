@@ -7,6 +7,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 use NotificationChannels\Discord\DiscordChannel;
 use NotificationChannels\Discord\DiscordMessage;
+use Revolution\Nostr\Notifications\NostrChannel;
+use Revolution\Nostr\Notifications\NostrMessage;
+use Revolution\Nostr\Tags\HashTag;
 
 class TipsNotification extends Notification
 {
@@ -30,11 +33,20 @@ class TipsNotification extends Notification
         return [
             //'mail',
             DiscordChannel::class,
+            NostrChannel::class,
         ];
     }
 
     public function toDiscord(object $notifiable): DiscordMessage
     {
         return DiscordMessage::create($this->tips);
+    }
+
+    public function toNostr(object $notifiable): NostrMessage
+    {
+        return NostrMessage::create(
+            content: $this->tips.PHP_EOL.'#laravel',
+            tags: [HashTag::make(t: 'laravel')],
+        );
     }
 }
