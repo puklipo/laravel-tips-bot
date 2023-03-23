@@ -5,6 +5,7 @@ namespace App\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
+use Illuminate\Support\Str;
 use NotificationChannels\Discord\DiscordChannel;
 use NotificationChannels\Discord\DiscordMessage;
 use Revolution\Nostr\Notifications\NostrChannel;
@@ -39,7 +40,7 @@ class TipsNotification extends Notification
 
     public function toDiscord(object $notifiable): DiscordMessage
     {
-        return DiscordMessage::create(body: $this->tips);
+        return DiscordMessage::create(body: Str::truncate($this->tips, 1800));
     }
 
     public function toNostr(object $notifiable): NostrMessage
