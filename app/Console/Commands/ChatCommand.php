@@ -32,10 +32,10 @@ class ChatCommand extends Command
     public function handle(): void
     {
         $prompt = collect([
-            'LaravelのTIPSを一つ生成',
-            'Laravel公式ドキュメント(https://laravel.com/docs)から1ページ選択して解説',
-            'Laravelのよくある質問と回答を一つ生成',
-            'Laravelの珍しい質問と回答を一つ生成',
+            'LaravelのTIPSを一つ生成。',
+            'Laravel公式ドキュメント(https://laravel.com/docs)から1ページ選択して解説。',
+            'Laravelのよくある質問と回答を一つ生成。',
+            'Laravelの珍しい質問と回答を一つ生成。',
         ])->random();
 
         $lang = Lottery::odds(8, 10)
@@ -48,7 +48,7 @@ class ChatCommand extends Command
             //'temperature' => 0.3,
             'messages' => [
                 ['role' => 'system', 'content' => 'あなたはLaravelに詳しい優秀なプログラマーです'],
-                ['role' => 'user', 'content' => $prompt.'。'.$lang],
+                ['role' => 'user', 'content' => $prompt.$lang],
             ],
         ]);
 
