@@ -6,6 +6,7 @@ use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Lottery;
 use OpenAI\Laravel\Facades\OpenAI;
 use Revolution\Nostr\Notifications\NostrRoute;
 
@@ -37,12 +38,17 @@ class ChatCommand extends Command
             'Laravelの珍しい質問と回答を一つ生成',
         ])->random();
 
+        $lang = Lottery::odds(8, 10)
+                       ->winner(fn () => '日本語で。')
+                       ->loser(fn () => '英語で。')
+                       ->choose();
+
         $response = OpenAI::chat()->create([
             'model' => 'gpt-3.5-turbo',
-            'temperature' => 0.3,
+            //'temperature' => 0.3,
             'messages' => [
                 ['role' => 'system', 'content' => 'あなたはLaravelに詳しい優秀なプログラマーです'],
-                ['role' => 'user', 'content' => $prompt],
+                ['role' => 'user', 'content' => $prompt.'。'.$lang],
             ],
         ]);
 
