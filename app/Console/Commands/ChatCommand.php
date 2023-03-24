@@ -43,20 +43,21 @@ class ChatCommand extends Command
                        ->loser(fn () => '英語で。')
                        ->choose();
 
-        $length = '1000文字までに制限。';
-
         $response = OpenAI::chat()->create([
             'model' => 'gpt-3.5-turbo',
+            'max_tokens' => 1000,
             //'temperature' => 0.3,
             'messages' => [
                 ['role' => 'system', 'content' => 'あなたはLaravelに詳しい優秀なプログラマーです'],
-                ['role' => 'user', 'content' => $prompt.$lang.$length],
+                ['role' => 'user', 'content' => $prompt.$lang],
             ],
         ]);
 
         $tips = trim(Arr::get($response, 'choices.0.message.content'));
         $this->info($tips);
-        $this->info(mb_strlen($tips));
+
+        $this->line('strlen: '.mb_strlen($tips));
+        $this->line('total_tokens: '.Arr::get($response, 'usage.total_tokens'));
 
         if (blank($tips)) {
             return;
