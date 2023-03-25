@@ -1444,16 +1444,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.3.9",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "c1e114f74e518daca2729ea8c4bf1167038fa4b5"
+                "reference": "d44a24690f16b8c1808bf13b1bd54ae4c63ea048"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/c1e114f74e518daca2729ea8c4bf1167038fa4b5",
-                "reference": "c1e114f74e518daca2729ea8c4bf1167038fa4b5",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/d44a24690f16b8c1808bf13b1bd54ae4c63ea048",
+                "reference": "d44a24690f16b8c1808bf13b1bd54ae4c63ea048",
                 "shasum": ""
             },
             "require": {
@@ -1489,7 +1489,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "2.4-dev"
+                    "dev-main": "2.5-dev"
                 }
             },
             "autoload": {
@@ -1546,7 +1546,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-15T14:07:24+00:00"
+            "time": "2023-03-24T15:16:10+00:00"
         },
         {
             "name": "league/config",
@@ -2273,16 +2273,16 @@
         },
         {
             "name": "openai-php/client",
-            "version": "v0.4.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openai-php/client.git",
-                "reference": "96bfd288e8a072e76be3e2f4de4c72db5ff91f8b"
+                "reference": "b16dbad9ac6507f7d9a3ec365b906f659e50e2b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openai-php/client/zipball/96bfd288e8a072e76be3e2f4de4c72db5ff91f8b",
-                "reference": "96bfd288e8a072e76be3e2f4de4c72db5ff91f8b",
+                "url": "https://api.github.com/repos/openai-php/client/zipball/b16dbad9ac6507f7d9a3ec365b906f659e50e2b9",
+                "reference": "b16dbad9ac6507f7d9a3ec365b906f659e50e2b9",
                 "shasum": ""
             },
             "require": {
@@ -2296,13 +2296,12 @@
             },
             "require-dev": {
                 "guzzlehttp/guzzle": "^7.5.0",
-                "guzzlehttp/psr7": "^2.4.4",
-                "laravel/pint": "^1.6.0",
-                "nunomaduro/collision": "^7.1.2",
-                "pestphp/pest": "^2.0.0",
-                "pestphp/pest-plugin-arch": "^2.0.0",
+                "laravel/pint": "^1.7.0",
+                "nunomaduro/collision": "^7.3.3",
+                "pestphp/pest": "^2.2.3",
+                "pestphp/pest-plugin-arch": "^2.0.2",
                 "pestphp/pest-plugin-mock": "^2.0.0",
-                "phpstan/phpstan": "^1.10.7",
+                "phpstan/phpstan": "^1.10.8",
                 "rector/rector": "^0.14.8",
                 "symfony/var-dumper": "^6.2.7"
             },
@@ -2344,7 +2343,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openai-php/client/issues",
-                "source": "https://github.com/openai-php/client/tree/v0.4.0"
+                "source": "https://github.com/openai-php/client/tree/v0.4.1"
             },
             "funding": [
                 {
@@ -2360,34 +2359,34 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-17T19:37:49+00:00"
+            "time": "2023-03-24T11:41:32+00:00"
         },
         {
             "name": "openai-php/laravel",
-            "version": "v0.4.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openai-php/laravel.git",
-                "reference": "10e1369a4e4b1e070e3e4f873e0817577bf8c866"
+                "reference": "9cebc5185946a30f5c045cbbb57453956747d961"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openai-php/laravel/zipball/10e1369a4e4b1e070e3e4f873e0817577bf8c866",
-                "reference": "10e1369a4e4b1e070e3e4f873e0817577bf8c866",
+                "url": "https://api.github.com/repos/openai-php/laravel/zipball/9cebc5185946a30f5c045cbbb57453956747d961",
+                "reference": "9cebc5185946a30f5c045cbbb57453956747d961",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.5",
-                "laravel/framework": "^9.46.0|^10.2.0",
-                "openai-php/client": "^0.4.0",
+                "laravel/framework": "^9.46.0|^10.4.1",
+                "openai-php/client": "^0.4.1",
                 "php": "^8.1.0"
             },
             "require-dev": {
-                "laravel/pint": "^1.6",
-                "pestphp/pest": "^2.0.0",
-                "pestphp/pest-plugin-arch": "^2.0.0",
+                "laravel/pint": "^1.7",
+                "pestphp/pest": "^2.2.3",
+                "pestphp/pest-plugin-arch": "^2.0.2",
                 "pestphp/pest-plugin-mock": "^2.0.0",
-                "phpstan/phpstan": "^1.10.3",
+                "phpstan/phpstan": "^1.10.8",
                 "symfony/var-dumper": "^6.2.7"
             },
             "type": "library",
@@ -2430,7 +2429,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openai-php/laravel/issues",
-                "source": "https://github.com/openai-php/laravel/tree/v0.4.0"
+                "source": "https://github.com/openai-php/laravel/tree/v0.4.1"
             },
             "funding": [
                 {
@@ -2446,7 +2445,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-03-17T20:22:39+00:00"
+            "time": "2023-03-24T11:47:10+00:00"
         },
         {
             "name": "php-http/discovery",
