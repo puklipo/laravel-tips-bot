@@ -38,7 +38,7 @@ class ChatCommand extends Command
             'Laravelの珍しい質問と回答を一つ生成。',
         ])->random();
 
-        $lang = Lottery::odds(8, 10)
+        $lang = Lottery::odds(chances: 8, outOf: 10)
                        ->winner(fn () => '日本語で。')
                        ->loser(fn () => '英語で。')
                        ->choose();
