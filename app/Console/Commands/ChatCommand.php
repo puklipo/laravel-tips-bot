@@ -32,7 +32,7 @@ class ChatCommand extends Command
     public function handle(): void
     {
         $prompt = collect([
-            'LaravelのTIPSを一つ生成。',
+            'Tell me one Laravel tips. ',
             'Laravel公式ドキュメント(https://laravel.com/docs)から1ページ選択して解説。',
             'Laravelのよくある質問と回答を一つ生成。',
             'Laravelの珍しい質問と回答を一つ生成。',
