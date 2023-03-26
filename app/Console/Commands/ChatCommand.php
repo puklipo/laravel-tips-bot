@@ -39,8 +39,8 @@ class ChatCommand extends Command
         ])->random();
 
         $lang = Lottery::odds(chances: 8, outOf: 10)
-                       ->winner(fn () => 'Answer by japanese.')
-                       ->loser(fn () => 'Answer by english.')
+                       ->winner(fn () => 'Answer in japanese.')
+                       ->loser(fn () => 'Answer in english.')
                        ->choose();
 
         $response = OpenAI::chat()->create([
