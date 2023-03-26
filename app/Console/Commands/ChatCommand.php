@@ -33,7 +33,7 @@ class ChatCommand extends Command
     {
         $prompt = collect([
             'Tell me one Laravel tips. ',
-            'Laravel公式ドキュメント(https://laravel.com/docs)から1ページ選択して解説。',
+            'Select one page from the official Laravel documentation and explain it. ',
             'Laravelのよくある質問と回答を一つ生成。',
             'Laravelの珍しい質問と回答を一つ生成。',
         ])->random();
