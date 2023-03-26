@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "861743f405785d32cf091c73c3ae686a",
+    "content-hash": "4e6ae3ad78880c4ce6c2370dcea093c6",
     "packages": [
         {
             "name": "brick/math",
@@ -3485,16 +3485,16 @@
         },
         {
             "name": "revolution/laravel-nostr",
-            "version": "0.0.1",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-nostr.git",
-                "reference": "3694fa36fcc0f8ec396de1d7ea334b70bf0a7bf1"
+                "reference": "aaf744b223a9bf4eb2c633b997be629a3aafac93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/3694fa36fcc0f8ec396de1d7ea334b70bf0a7bf1",
-                "reference": "3694fa36fcc0f8ec396de1d7ea334b70bf0a7bf1",
+                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/aaf744b223a9bf4eb2c633b997be629a3aafac93",
+                "reference": "aaf744b223a9bf4eb2c633b997be629a3aafac93",
                 "shasum": ""
             },
             "require": {
@@ -3537,9 +3537,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-nostr/issues",
-                "source": "https://github.com/kawax/laravel-nostr/tree/0.0.1"
+                "source": "https://github.com/kawax/laravel-nostr/tree/0.1.0"
             },
-            "time": "2023-03-20T09:56:30+00:00"
+            "time": "2023-03-26T05:14:28+00:00"
         },
         {
             "name": "revolution/laravel-str-mixins",
