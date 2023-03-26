@@ -48,7 +48,7 @@ class ChatCommand extends Command
             'max_tokens' => 1000,
             //'temperature' => 0.3,
             'messages' => [
-                ['role' => 'system', 'content' => 'あなたはLaravelに詳しい優秀なプログラマーです'],
+                ['role' => 'system', 'content' => 'Act as a good programmer who knows Laravel.'],
                 ['role' => 'user', 'content' => $prompt.$lang],
             ],
         ]);
