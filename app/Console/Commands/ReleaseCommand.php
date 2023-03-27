@@ -50,13 +50,13 @@ class ReleaseCommand extends Command
 
     protected function release(array $release): void
     {
-        $date = Carbon::parse($release['published_at'], 'UTC');
+        $date = Carbon::parse(time: $release['published_at'], tz: 'UTC');
 
         if ($date->tz(config('app.tz'))->addDay()->lessThan(now())) {
             return;
         }
 
-        $note = $this->chat($release['body']);
+        $note = $this->chat(body: $release['body']);
 
         if (blank($note)) {
             return;
@@ -64,7 +64,11 @@ class ReleaseCommand extends Command
 
         Notification::route('discord', config('services.discord.channel'))
                     ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
-                    ->notify(new ReleaseNotification(ver: $release['tag_name'], url: $release['html_url'], note: $note));
+                    ->notify(new ReleaseNotification(
+                        ver: $release['tag_name'],
+                        url: $release['html_url'],
+                        note: $note),
+                    );
     }
 
     protected function chat(string $body): string
