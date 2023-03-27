@@ -49,7 +49,7 @@ class ChatCommand extends Command
             //'temperature' => 0.3,
             'messages' => [
                 ['role' => 'system', 'content' => 'Act as a good programmer who knows Laravel.'],
-                ['role' => 'user', 'content' => $prompt.$lang],
+                ['role' => 'user', 'content' => $prompt.$lang.'only one answer.'],
             ],
         ]);
 
