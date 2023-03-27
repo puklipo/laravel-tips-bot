@@ -56,13 +56,14 @@ class ReleaseCommand extends Command
             return;
         }
 
-        $ver = Arr::get($release, 'tag_name');
-        $url = Arr::get($release, 'html_url');
         $note = $this->chat(Arr::get($release, 'body'));
 
         if (blank($note)) {
             return;
         }
+
+        $ver = Arr::get($release, 'tag_name');
+        $url = Arr::get($release, 'html_url');
 
         Notification::route('discord', config('services.discord.channel'))
                     ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
