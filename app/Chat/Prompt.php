@@ -11,7 +11,7 @@ class Prompt implements Arrayable
 {
     protected string $model = 'gpt-3.5-turbo';
     protected int $max_tokens = 1000;
-    protected float $temperature = 0.7;
+    protected float $temperature = 1.0;
 
     public function __construct(
         protected string $system,
