@@ -58,9 +58,7 @@ class ReleaseCommand extends Command
 
         $ver = Arr::get($release, 'tag_name');
         $url = Arr::get($release, 'html_url');
-        $body = Arr::get($release, 'body');
-
-        $note = $this->chat($body);
+        $note = $this->chat(Arr::get($release, 'body'));
 
         if (blank($note)) {
             return;
