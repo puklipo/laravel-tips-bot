@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Console\Commands;
 
+use App\Chat\Prompt;
 use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
@@ -31,27 +34,12 @@ class ChatCommand extends Command
      */
     public function handle(): void
     {
-        $prompt = collect([
-            'Tell me one Laravel tips.',
-            'Select one page from the official Laravel documentation and explain it.',
-            'Generate one Laravel Frequently Asked Questions and Answers.',
-            'Generate one unusual question and answer for Laravel.',
-        ])->random();
-
-        $lang = Lottery::odds(chances: 8, outOf: 10)
-                       ->winner(fn () => 'Answer in japanese.')
-                       ->loser(fn () => 'Answer in english.')
-                       ->choose();
-
-        $response = OpenAI::chat()->create([
-            'model' => 'gpt-3.5-turbo',
-            'max_tokens' => 1000,
-            //'temperature' => 0.3,
-            'messages' => [
-                ['role' => 'system', 'content' => 'Act as a good programmer who knows Laravel.'],
-                ['role' => 'user', 'content' => $prompt.$lang.'only one answer.'],
-            ],
-        ]);
+        $response = OpenAI::chat()->create(
+            Prompt::make(
+                system: 'Act as a good programmer who knows Laravel.',
+                prompt: $this->prompt(),
+            )->toArray()
+        );
 
         $tips = trim(Arr::get($response, 'choices.0.message.content'));
         $this->info($tips);
@@ -66,5 +54,22 @@ class ChatCommand extends Command
         Notification::route('discord', config('services.discord.channel'))
                     ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
                     ->notify(new TipsNotification($tips));
+    }
+
+    protected function prompt(): string
+    {
+        $prompt = collect([
+            'Tell me one Laravel tips.',
+            'Select one page from the official Laravel documentation(https://laravel.com/docs) and explain it.',
+            'Generate one Laravel Frequently Asked Questions and Answers.',
+            'Generate one unusual question and answer for Laravel.',
+        ])->random();
+
+        $lang = Lottery::odds(chances: 8, outOf: 10)
+                       ->winner(fn () => 'Answer in japanese.')
+                       ->loser(fn () => 'Answer in english.')
+                       ->choose();
+
+        return $prompt.$lang.'only one answer.';
     }
 }
