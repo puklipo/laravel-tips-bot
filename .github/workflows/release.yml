@@ -1,0 +1,33 @@
+name: release
+
+on:
+  schedule:
+    - cron: '0 5 * * *' #UTC
+
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup PHP, with composer and extensions
+        uses: shivammathur/setup-php@v2 #https://github.com/shivammathur/setup-php
+        with:
+          php-version: 8.2
+          extensions: mbstring
+          coverage: none
+      - name: Install Composer dependencies
+        run: composer install --no-dev --no-progress --optimize-autoloader
+      - name: env
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+      - name: Run chat:release
+        run: php artisan chat:release
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DISCORD_CHANNEL: ${{ secrets.DISCORD_CHANNEL }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          NOSTR_SK: ${{ secrets.NOSTR_SK }}
