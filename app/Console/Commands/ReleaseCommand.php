@@ -50,6 +50,10 @@ class ReleaseCommand extends Command
 
     protected function release(array $release): void
     {
+        if (! Arr::exists($release, 'published_at')) {
+            return;
+        }
+
         $date = Carbon::parse(time: $release['published_at'], tz: 'UTC');
 
         if ($date->tz(config('app.tz'))->addDay()->lessThan(now())) {
