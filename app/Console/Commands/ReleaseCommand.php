@@ -48,7 +48,7 @@ class ReleaseCommand extends Command
                  ->each($this->release(...));
     }
 
-    protected function release(array $release)
+    protected function release(array $release): void
     {
         $date = Carbon::parse(Arr::get($release, 'published_at', 'UTC'));
 
