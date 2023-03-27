@@ -38,14 +38,14 @@ class ReleaseCommand extends Command
      */
     public function handle(): void
     {
-        $response = Http::baseUrl('https://api.github.com/repos/')
-                        ->get('laravel/framework/releases', [
-                            'per_page' => 5,
-                        ])->throw();
-
-        $response->collect()
-                 ->reverse()
-                 ->each($this->release(...));
+        Http::baseUrl('https://api.github.com/repos/')
+            ->get('laravel/framework/releases', [
+                'per_page' => 5,
+            ])
+            ->throw()
+            ->collect()
+            ->reverse()
+            ->each($this->release(...));
     }
 
     protected function release(array $release): void
