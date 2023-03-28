@@ -32,9 +32,9 @@ class PromptTest extends TestCase
     {
         $p = new Prompt(
             system: 'sys',
-            prompt: fn () => 'test',
+            prompt: fn () => app()->version(),
         );
 
-        $this->assertSame('test', $p->toArray()['messages'][1]['content']);
+        $this->assertSame(app()->version(), $p->toArray()['messages'][1]['content']);
     }
 }
