@@ -13,6 +13,7 @@ class PromptTest extends TestCase
     {
         $p = Prompt::make(system: 'sys', prompt: 'test');
 
+        $this->assertInstanceOf(Prompt::class, $p);
         $this->assertSame('sys', $p->toArray()['messages'][0]['content']);
     }
 
