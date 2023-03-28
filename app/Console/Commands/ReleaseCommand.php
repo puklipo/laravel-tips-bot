@@ -48,7 +48,7 @@ class ReleaseCommand extends Command
             ->each($this->release(...));
     }
 
-    protected function release(array $release): void
+    private function release(array $release): void
     {
         if (! Arr::exists($release, 'published_at')) {
             return;
@@ -71,11 +71,11 @@ class ReleaseCommand extends Command
                     ->notify(new ReleaseNotification(
                         ver: $release['tag_name'],
                         url: $release['html_url'],
-                        note: $note),
-                    );
+                        note: $note,
+                    ));
     }
 
-    protected function chat(string $body): string
+    private function chat(string $body): string
     {
         $response = OpenAI::chat()->create(
             Prompt::make(
