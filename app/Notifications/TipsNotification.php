@@ -34,7 +34,6 @@ class TipsNotification extends Notification
     public function via(object $notifiable): array
     {
         return [
-            //'mail',
             DiscordChannel::class,
             NostrChannel::class,
         ];
