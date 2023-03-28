@@ -14,8 +14,8 @@ class Prompt implements Arrayable
     protected float $temperature = 1.0;
 
     public function __construct(
-        protected string $system,
-        protected string|Closure $prompt,
+        protected readonly string $system,
+        protected readonly string|Closure $prompt,
     ) {
     }
 
