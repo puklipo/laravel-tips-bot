@@ -69,6 +69,7 @@ class ReleaseCommand extends Command
         Notification::route('discord', config('services.discord.channel'))
                     ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
                     ->notify(new ReleaseNotification(
+                        repo: 'laravel/framework',
                         ver: $release['tag_name'],
                         url: $release['html_url'],
                         note: $note,
