@@ -22,6 +22,7 @@ class ReleaseNotification extends Notification
      * Create a new notification instance.
      */
     public function __construct(
+        protected string $repo,
         protected string $ver,
         protected string $url,
         protected string $note,
@@ -45,7 +46,7 @@ class ReleaseNotification extends Notification
     public function toDiscord(object $notifiable): DiscordMessage
     {
         $content = collect([
-            'laravel/framework '.$this->ver,
+            $this->repo.' '.$this->ver,
             $this->url,
             '',
             $this->note,
@@ -57,7 +58,7 @@ class ReleaseNotification extends Notification
     public function toNostr(object $notifiable): NostrMessage
     {
         $content = collect([
-            'laravel/framework '.$this->ver,
+            $this->repo.' '.$this->ver,
             $this->url,
             '',
             $this->note,
