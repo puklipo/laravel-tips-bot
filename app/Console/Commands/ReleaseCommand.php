@@ -22,7 +22,7 @@ class ReleaseCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'chat:release';
+    protected $signature = 'chat:release {repo=framework}';
 
     /**
      * The console command description.
@@ -39,7 +39,7 @@ class ReleaseCommand extends Command
     public function handle(): void
     {
         Http::baseUrl('https://api.github.com/repos/')
-            ->get('laravel/framework/releases', [
+            ->get('laravel/'.$this->argument('repo').'/releases', [
                 'per_page' => 5,
             ])
             ->throw()
@@ -69,7 +69,7 @@ class ReleaseCommand extends Command
         Notification::route('discord', config('services.discord.channel'))
                     ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
                     ->notify(new ReleaseNotification(
-                        repo: 'laravel/framework',
+                        repo: 'laravel/'.$this->argument('repo'),
                         ver: $release['tag_name'],
                         url: $release['html_url'],
                         note: $note,
