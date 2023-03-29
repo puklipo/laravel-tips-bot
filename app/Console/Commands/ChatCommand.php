@@ -66,8 +66,8 @@ class ChatCommand extends Command
         ])->random();
 
         $lang = Lottery::odds(chances: 8, outOf: 10)
-                       ->winner(fn () => 'lang:ja.')
-                       ->loser(fn () => 'lang:en.')
+                       ->winner(fn () => 'Answer in japanese.')
+                       ->loser(fn () => 'Answer in english.')
                        ->choose();
 
         return collect([
