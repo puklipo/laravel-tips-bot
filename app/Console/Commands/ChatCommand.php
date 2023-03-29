@@ -66,10 +66,15 @@ class ChatCommand extends Command
         ])->random();
 
         $lang = Lottery::odds(chances: 8, outOf: 10)
-                       ->winner(fn () => 'Answer in japanese.')
-                       ->loser(fn () => 'Answer in english.')
+                       ->winner(fn () => 'lang:ja.')
+                       ->loser(fn () => 'lang:en.')
                        ->choose();
 
-        return $prompt.$lang.'only one answer.';
+        return collect([
+            $prompt,
+            $lang,
+            'Please provide only one answer.',
+        ])->dump()
+          ->join(PHP_EOL);
     }
 }
