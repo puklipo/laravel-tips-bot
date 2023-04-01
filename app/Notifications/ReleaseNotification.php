@@ -62,10 +62,11 @@ class ReleaseNotification extends Notification
             $this->url,
             '',
             $this->note,
+            '#laravel',
         ])->join(PHP_EOL);
 
         return NostrMessage::create(
-            content: $content.PHP_EOL.'#laravel',
+            content: $content,
             tags: [HashTag::make(t: 'laravel')],
         );
     }
