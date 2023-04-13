@@ -8,6 +8,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Notification;
 use OpenAI\Laravel\Facades\OpenAI;
+use OpenAI\Responses\Chat\CreateResponse;
 use Tests\TestCase;
 
 class ChatTest extends TestCase
@@ -16,12 +17,20 @@ class ChatTest extends TestCase
     {
         Notification::fake();
 
-//        OpenAI::fake();
-//
-//        $response = $this->artisan('chat:tips');
-//
-//        $response->assertSuccessful();
+        OpenAI::fake([
+            CreateResponse::fake([
+                'choices' => [
+                    [
+                        'message' => [
+                            'content' => 'test',
+                        ]
+                    ]
+                ]
+            ])
+        ]);
 
-        Notification::assertNothingSent();
+        $response = $this->artisan('chat:tips');
+
+        $response->assertSuccessful();
     }
 }
