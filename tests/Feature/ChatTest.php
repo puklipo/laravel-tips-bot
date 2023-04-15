@@ -23,10 +23,10 @@ class ChatTest extends TestCase
                     [
                         'message' => [
                             'content' => 'test',
-                        ]
-                    ]
-                ]
-            ])
+                        ],
+                    ],
+                ],
+            ]),
         ]);
 
         $response = $this->artisan('chat:tips');
