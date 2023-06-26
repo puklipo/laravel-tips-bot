@@ -25,7 +25,9 @@ jobs:
           cp .env.example .env
           php artisan key:generate
       - name: Run chat:release
-        run: php artisan chat:release
+        run: |
+          php artisan chat:release framework
+          php artisan chat:release laravel
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           DISCORD_CHANNEL: ${{ secrets.DISCORD_CHANNEL }}
