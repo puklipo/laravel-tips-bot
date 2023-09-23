@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
-use App\Chat\Prompt;
+use App\Chat\CompletionPrompt;
 use App\Notifications\ReleaseNotification;
 use Illuminate\Console\Command;
 use Illuminate\Http\Client\RequestException;
@@ -67,20 +67,19 @@ class ReleaseCommand extends Command
         }
 
         Notification::route('discord', config('services.discord.channel'))
-                    ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
-                    ->notify(new ReleaseNotification(
-                        repo: 'laravel/'.$this->argument('repo'),
-                        ver: $release['tag_name'],
-                        url: $release['html_url'],
-                        note: $note,
-                    ));
+            ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
+            ->notify(new ReleaseNotification(
+                repo: 'laravel/'.$this->argument('repo'),
+                ver: $release['tag_name'],
+                url: $release['html_url'],
+                note: $note,
+            ));
     }
 
     private function chat(string $body): string
     {
-        $response = OpenAI::chat()->create(
-            Prompt::make(
-                system: 'Act as a good programmer who knows Laravel.',
+        $response = OpenAI::completions()->create(
+            CompletionPrompt::make(
                 prompt: fn () => collect([
                     '次のリリースノートを日本語訳。',
                     '',
@@ -89,7 +88,7 @@ class ReleaseCommand extends Command
             )->withTemperature(0.0)->toArray()
         );
 
-        $content = trim(Arr::get($response, 'choices.0.message.content'));
+        $content = trim(Arr::get($response, 'choices.0.text'));
         $this->info($content);
 
         $this->line('strlen: '.mb_strlen($content));

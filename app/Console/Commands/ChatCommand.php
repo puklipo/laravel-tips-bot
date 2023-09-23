@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
-use App\Chat\Prompt;
+use App\Chat\CompletionPrompt;
 use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
@@ -34,14 +34,13 @@ class ChatCommand extends Command
      */
     public function handle(): void
     {
-        $response = OpenAI::chat()->create(
-            Prompt::make(
-                system: 'Act as a good programmer who knows Laravel.',
+        $response = OpenAI::completions()->create(
+            CompletionPrompt::make(
                 prompt: $this->prompt(),
             )->toArray()
         );
 
-        $tips = trim(Arr::get($response, 'choices.0.message.content'));
+        $tips = trim(Arr::get($response, 'choices.0.text'));
         $this->info($tips);
 
         $this->line('strlen: '.mb_strlen($tips));
@@ -52,8 +51,8 @@ class ChatCommand extends Command
         }
 
         Notification::route('discord', config('services.discord.channel'))
-                    ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
-                    ->notify(new TipsNotification($tips));
+            ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
+            ->notify(new TipsNotification($tips));
     }
 
     protected function prompt(): string
@@ -66,15 +65,14 @@ class ChatCommand extends Command
         ])->random();
 
         $lang = Lottery::odds(chances: 8, outOf: 10)
-                       ->winner(fn () => 'Answer in japanese.')
-                       ->loser(fn () => 'Answer in english.')
-                       ->choose();
+            ->winner(fn () => 'Answer in japanese.')
+            ->loser(fn () => 'Answer in english.')
+            ->choose();
 
         return collect([
             $prompt,
             $lang,
             'Please provide only one answer.',
-        ])->dump()
-          ->join(PHP_EOL);
+        ])->dump()->join(PHP_EOL);
     }
 }
