@@ -21,9 +21,7 @@ class ChatTest extends TestCase
             CreateResponse::fake([
                 'choices' => [
                     [
-                        'message' => [
-                            'content' => 'test',
-                        ],
+                        'text' => 'test',
                     ],
                 ],
             ]),
