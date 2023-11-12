@@ -3,8 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use OpenAI\Laravel\Facades\OpenAI;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
+use OpenAI\Laravel\Facades\OpenAI;
 
 class ImageCommand extends Command implements PromptsForMissingInput
 {
