@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
-use App\Chat\CompletionPrompt;
+use App\Chat\Prompt;
 use App\Notifications\ReleaseNotification;
 use Illuminate\Console\Command;
 use Illuminate\Http\Client\RequestException;
@@ -78,17 +78,18 @@ class ReleaseCommand extends Command
 
     private function chat(string $body): string
     {
-        $response = OpenAI::completions()->create(
-            CompletionPrompt::make(
+        $response = OpenAI::chat()->create(
+            Prompt::make(
+                system: 'You are Laravel mentor.',
                 prompt: fn () => collect([
-                    '次のリリースノートを日本語訳。',
+                    '次のLaravelのリリースノートを日本語で要約してください。',
                     '',
                     trim($body),
                 ])->join(PHP_EOL)
             )->withTemperature(0.0)->toArray()
         );
 
-        $content = trim(Arr::get($response, 'choices.0.text'));
+        $content = trim(Arr::get($response, 'choices.0.message.content'));
         $this->info($content);
 
         $this->line('strlen: '.mb_strlen($content));
