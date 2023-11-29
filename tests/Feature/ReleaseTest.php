@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
 use OpenAI\Laravel\Facades\OpenAI;
-use OpenAI\Responses\Completions\CreateResponse;
+use OpenAI\Responses\Chat\CreateResponse;
 use Tests\TestCase;
 
 class ReleaseTest extends TestCase
@@ -28,8 +28,8 @@ class ReleaseTest extends TestCase
         OpenAI::fake([
             CreateResponse::fake([
                 'choices' => [
-                    [
-                        'text' => 'test',
+                    'message' => [
+                        'content' => 'test',
                     ],
                 ],
             ]),
