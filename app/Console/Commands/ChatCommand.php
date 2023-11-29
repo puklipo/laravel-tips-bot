@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Console\Commands;
 
 use App\Chat\CompletionPrompt;
+use App\Chat\Prompt;
 use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
@@ -34,13 +35,14 @@ class ChatCommand extends Command
      */
     public function handle(): void
     {
-        $response = OpenAI::completions()->create(
-            CompletionPrompt::make(
+        $response = OpenAI::chat()->create(
+            Prompt::make(
+                system: 'You are Laravel mentor.',
                 prompt: $this->prompt(),
             )->toArray()
         );
 
-        $tips = trim(Arr::get($response, 'choices.0.text'));
+        $tips = trim(Arr::get($response, 'choices.0.message.content'));
         $this->info($tips);
 
         $this->line('strlen: '.mb_strlen($tips));
