@@ -6,7 +6,7 @@ namespace Tests\Feature;
 
 use Illuminate\Support\Facades\Notification;
 use OpenAI\Laravel\Facades\OpenAI;
-use OpenAI\Responses\Completions\CreateResponse;
+use OpenAI\Responses\Chat\CreateResponse;
 use Tests\TestCase;
 
 class ChatTest extends TestCase
