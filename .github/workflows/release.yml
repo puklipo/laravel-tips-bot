@@ -28,6 +28,9 @@ jobs:
         run: |
           php artisan chat:release laravel/framework
           php artisan chat:release laravel/laravel
+          php artisan chat:release laravel/breeze
+          php artisan chat:release laravel/jetstream
+          php artisan chat:release livewire/livewire
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           DISCORD_CHANNEL: ${{ secrets.DISCORD_CHANNEL }}
