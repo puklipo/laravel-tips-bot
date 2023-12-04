@@ -26,8 +26,8 @@ jobs:
           php artisan key:generate
       - name: Run chat:release
         run: |
-          php artisan chat:release framework
-          php artisan chat:release laravel
+          php artisan chat:release laravel/framework
+          php artisan chat:release laravel/laravel
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           DISCORD_CHANNEL: ${{ secrets.DISCORD_CHANNEL }}
