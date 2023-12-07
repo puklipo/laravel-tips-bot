@@ -3,7 +3,7 @@ name: tips
 on:
 #  push:
   schedule:
-    - cron: '0 3 1 * *' #UTC
+    - cron: '0 10 * * *' #UTC
 
 jobs:
   tips:
