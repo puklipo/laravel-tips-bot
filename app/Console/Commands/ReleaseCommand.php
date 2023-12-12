@@ -39,6 +39,7 @@ class ReleaseCommand extends Command
     public function handle(): void
     {
         Http::baseUrl('https://api.github.com/repos/')
+            ->timeout(120)
             ->get($this->argument('repo').'/releases', [
                 'per_page' => 5,
             ])
