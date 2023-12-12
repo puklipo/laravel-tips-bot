@@ -6,13 +6,14 @@ namespace App\Console\Commands;
 
 use App\Chat\Prompt;
 use App\Notifications\ReleaseNotification;
+use GuzzleHttp\Client;
 use Illuminate\Console\Command;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
-use OpenAI\Laravel\Facades\OpenAI;
+use OpenAI;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ReleaseCommand extends Command
@@ -79,7 +80,13 @@ class ReleaseCommand extends Command
 
     private function chat(string $body): string
     {
-        $response = OpenAI::chat()->create(
+        $client = OpenAI::factory()
+            ->withHttpClient(new Client(['timeout' => 60]))
+            ->withApiKey(config('openai.api_key'))
+            ->withHttpHeader('OpenAI-Beta', 'assistants=v1')
+            ->make();
+
+        $response = $client->chat()->create(
             Prompt::make(
                 system: 'You are Laravel mentor.',
                 prompt: fn () => collect([
