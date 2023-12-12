@@ -63,6 +63,8 @@ class ReleaseCommand extends Command
 
         $note = $this->chat(body: $release['body']);
 
+        $this->info($note);
+
         if (blank($note)) {
             return;
         }
