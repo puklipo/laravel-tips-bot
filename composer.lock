@@ -3569,16 +3569,16 @@
         },
         {
             "name": "revolution/laravel-nostr",
-            "version": "0.1.6",
+            "version": "0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-nostr.git",
-                "reference": "820e3d73920dac9d1807f548dabce69f708fe689"
+                "reference": "be8a8248bf264478b02c089f5787cf0333300dd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/820e3d73920dac9d1807f548dabce69f708fe689",
-                "reference": "820e3d73920dac9d1807f548dabce69f708fe689",
+                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/be8a8248bf264478b02c089f5787cf0333300dd0",
+                "reference": "be8a8248bf264478b02c089f5787cf0333300dd0",
                 "shasum": ""
             },
             "require": {
@@ -3621,9 +3621,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-nostr/issues",
-                "source": "https://github.com/kawax/laravel-nostr/tree/0.1.6"
+                "source": "https://github.com/kawax/laravel-nostr/tree/0.1.8"
             },
-            "time": "2023-12-03T02:37:28+00:00"
+            "time": "2023-12-17T07:19:05+00:00"
         },
         {
             "name": "revolution/laravel-str-mixins",
