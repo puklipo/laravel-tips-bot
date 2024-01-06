@@ -2,7 +2,7 @@ name: release
 
 on:
   schedule:
-    - cron: '0 1 * * *' #UTC
+    - cron: '0 3 * * *' #UTC
 
 jobs:
   release:
