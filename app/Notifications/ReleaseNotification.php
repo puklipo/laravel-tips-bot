@@ -38,7 +38,7 @@ class ReleaseNotification extends Notification
     public function via(object $notifiable): array
     {
         return [
-            DiscordChannel::class,
+            //DiscordChannel::class,
             NostrChannel::class,
         ];
     }
