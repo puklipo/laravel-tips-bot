@@ -39,3 +39,4 @@ jobs:
           DISCORD_CHANNEL: ${{ secrets.DISCORD_CHANNEL }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           NOSTR_SK: ${{ secrets.NOSTR_SK }}
+          NOSTR_API_BASE: ${{ secrets.NOSTR_API_BASE }}
