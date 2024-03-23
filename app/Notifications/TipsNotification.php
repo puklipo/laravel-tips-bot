@@ -36,7 +36,7 @@ class TipsNotification extends Notification
     {
         return [
             NostrChannel::class,
-            DiscordChannel::class,
+            //DiscordChannel::class,
             HttpChannel::class,
         ];
     }
