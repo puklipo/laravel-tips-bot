@@ -14,7 +14,7 @@ class HttpChannel
     {
         $message = $notification->toHttp($notifiable);
 
-        $response= Http::withToken(config('tips.api_token'))
+        $response = Http::withToken(config('tips.api_token'))
             ->post('https://puklipo.com/api/status', $message);
 
         info($response->body());
