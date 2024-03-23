@@ -57,7 +57,7 @@ class ReleaseCommand extends Command
 
         $date = Carbon::parse(time: $release['published_at'], timezone: 'UTC');
 
-        if ($date->tz(config('app.tz'))->addDay()->lessThan(now())) {
+        if ($date->tz(config('app.timezone'))->addDay()->lessThan(now())) {
             return;
         }
 
