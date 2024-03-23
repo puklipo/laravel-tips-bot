@@ -10,6 +10,7 @@ class HttpChannel
 {
     /**
      * Send the given notification.
+     *
      * @throws RequestException
      */
     public function send(object $notifiable, Notification $notification): void
@@ -17,7 +18,7 @@ class HttpChannel
         $message = $notification->toHttp($notifiable);
         $token = $notifiable->routeNotificationFor('http', $notification);
 
-        $response = Http::withToken($token)
+        Http::withToken($token)
             ->post('https://puklipo.com/api/status', $message)
             ->throw();
     }
