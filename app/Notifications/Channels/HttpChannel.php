@@ -20,7 +20,5 @@ class HttpChannel
         $response = Http::withToken($token)
             ->post('https://puklipo.com/api/status', $message)
             ->throw();
-
-        info($response->body());
     }
 }
