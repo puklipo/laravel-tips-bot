@@ -8,7 +8,6 @@
         "php": "^8.2",
         "guzzlehttp/guzzle": "^7.8",
         "laravel/framework": "^11.0",
-        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.8",
         "openai-php/laravel": "^0.8.1",
         "revolution/laravel-nostr": "^0.3.0",
