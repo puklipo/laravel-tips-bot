@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Notifications;
 
+use App\Notifications\Channels\HttpChannel;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
@@ -40,6 +41,7 @@ class ReleaseNotification extends Notification
         return [
             NostrChannel::class,
             DiscordChannel::class,
+            HttpChannel::class,
         ];
     }
 
@@ -69,5 +71,19 @@ class ReleaseNotification extends Notification
             content: $content,
             tags: [HashTag::make(t: 'laravel')],
         );
+    }
+
+    public function toHttp(object $notifiable): array
+    {
+        $content = collect([
+            $this->url,
+            '',
+            $this->note,
+        ])->join(PHP_EOL);
+
+        return [
+            'content' => $content,
+            'title' => $this->repo.' '.$this->ver,
+        ];
     }
 }

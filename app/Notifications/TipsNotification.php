@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Notifications;
 
+use App\Notifications\Channels\HttpChannel;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
@@ -36,6 +37,7 @@ class TipsNotification extends Notification
         return [
             NostrChannel::class,
             DiscordChannel::class,
+            HttpChannel::class,
         ];
     }
 
@@ -50,5 +52,12 @@ class TipsNotification extends Notification
             content: $this->tips.PHP_EOL.'#laravel',
             tags: [HashTag::make(t: 'laravel')],
         );
+    }
+
+    public function toHttp(object $notifiable): array
+    {
+        return [
+            'content' => $this->tips,
+        ];
     }
 }
