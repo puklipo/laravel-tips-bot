@@ -15,11 +15,18 @@ class HttpChannel
      */
     public function send(object $notifiable, Notification $notification): void
     {
+        /**
+         * @var array $message
+         */
         $message = $notification->toHttp($notifiable);
+
+        /**
+         * @var string $token
+         */
         $token = $notifiable->routeNotificationFor('http', $notification);
 
         Http::withToken($token)
-            ->post('https://puklipo.com/api/status', $message)
+            ->post(url: 'https://puklipo.com/api/status', data: $message)
             ->throw();
     }
 }
