@@ -71,6 +71,7 @@ class ReleaseCommand extends Command
 
         Notification::route('discord', config('services.discord.channel'))
             ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
+            ->route('http', config('tips.api_token'))
             ->notify(new ReleaseNotification(
                 repo: $this->argument('repo'),
                 ver: $release['tag_name'],
