@@ -9,8 +9,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Str;
-use NotificationChannels\Discord\DiscordChannel;
-use NotificationChannels\Discord\DiscordMessage;
+use Revolution\Laravel\Notification\DiscordWebhook\DiscordChannel;
+use Revolution\Laravel\Notification\DiscordWebhook\DiscordMessage;
 use Revolution\Nostr\Notifications\NostrChannel;
 use Revolution\Nostr\Notifications\NostrMessage;
 use Revolution\Nostr\Tags\HashTag;
@@ -40,21 +40,19 @@ class ReleaseNotification extends Notification
     {
         return [
             NostrChannel::class,
-            //DiscordChannel::class,
+            DiscordChannel::class,
             HttpChannel::class,
         ];
     }
 
-    public function toDiscord(object $notifiable): DiscordMessage
+    public function toDiscordWebhook(object $notifiable): DiscordMessage
     {
-        $content = collect([
-            $this->repo.' '.$this->ver,
-            $this->url,
-            '',
-            $this->note,
-        ])->join(PHP_EOL);
-
-        return DiscordMessage::create(body: Str::truncate($content, 1800));
+        return DiscordMessage::create()
+            ->embeds([[
+                'title' => $this->repo.' '.$this->ver,
+                'description' => Str::truncate($this->note, 1800),
+                'url' => $this->url,
+            ]]);
     }
 
     public function toNostr(object $notifiable): NostrMessage

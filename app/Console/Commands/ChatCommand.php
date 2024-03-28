@@ -52,7 +52,7 @@ class ChatCommand extends Command
             return;
         }
 
-        Notification::route('discord', config('services.discord.channel'))
+        Notification::route('discord-webhook', config('services.discord.webhook'))
             ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
             ->route('http', config('tips.api_token'))
             ->notify(new TipsNotification($tips));

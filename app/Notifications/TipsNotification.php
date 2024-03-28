@@ -9,8 +9,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Str;
-use NotificationChannels\Discord\DiscordChannel;
-use NotificationChannels\Discord\DiscordMessage;
+use Revolution\Laravel\Notification\DiscordWebhook\DiscordChannel;
+use Revolution\Laravel\Notification\DiscordWebhook\DiscordMessage;
 use Revolution\Nostr\Notifications\NostrChannel;
 use Revolution\Nostr\Notifications\NostrMessage;
 use Revolution\Nostr\Tags\HashTag;
@@ -36,14 +36,14 @@ class TipsNotification extends Notification
     {
         return [
             NostrChannel::class,
-            //DiscordChannel::class,
+            DiscordChannel::class,
             HttpChannel::class,
         ];
     }
 
-    public function toDiscord(object $notifiable): DiscordMessage
+    public function toDiscordWebhook(object $notifiable): DiscordMessage
     {
-        return DiscordMessage::create(body: Str::truncate($this->tips, 1800));
+        return DiscordMessage::create(content: Str::truncate($this->tips, 1800));
     }
 
     public function toNostr(object $notifiable): NostrMessage

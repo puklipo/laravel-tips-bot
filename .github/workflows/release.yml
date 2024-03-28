@@ -37,8 +37,7 @@ jobs:
           php artisan chat:release tailwindlabs/tailwindcss
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          DISCORD_CHANNEL: ${{ secrets.DISCORD_CHANNEL }}
-          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           NOSTR_SK: ${{ secrets.NOSTR_SK }}
           NOSTR_API_BASE: ${{ secrets.NOSTR_API_BASE }}
           TIPS_API_TOKEN: ${{ secrets.TIPS_API_TOKEN }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}

@@ -16,6 +16,6 @@ class NostrTest extends TestCase
         Nostr::shouldReceive('pool->publish')->twice();
 
         $this->artisan('nostr:profile')
-             ->assertSuccessful();
+            ->assertSuccessful();
     }
 }

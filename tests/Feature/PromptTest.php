@@ -20,9 +20,9 @@ class PromptTest extends TestCase
     public function test_with(): void
     {
         $p = Prompt::make(system: 'sys', prompt: 'test')
-                   ->withModel('model')
-                   ->withMaxTokens(1)
-                   ->withTemperature(0.5);
+            ->withModel('model')
+            ->withMaxTokens(1)
+            ->withTemperature(0.5);
 
         $this->assertSame('model', $p->toArray()['model']);
         $this->assertSame(1, $p->toArray()['max_tokens']);
