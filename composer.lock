@@ -3436,16 +3436,16 @@
         },
         {
             "name": "revolution/laravel-nostr",
-            "version": "0.3.1",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-nostr.git",
-                "reference": "4404165f973e4b152017bfbd374f48917591570f"
+                "reference": "c815ef4e770383aa5b4eb2cab2c7a7fb14b40d28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/4404165f973e4b152017bfbd374f48917591570f",
-                "reference": "4404165f973e4b152017bfbd374f48917591570f",
+                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/c815ef4e770383aa5b4eb2cab2c7a7fb14b40d28",
+                "reference": "c815ef4e770383aa5b4eb2cab2c7a7fb14b40d28",
                 "shasum": ""
             },
             "require": {
@@ -3455,7 +3455,6 @@
             },
             "require-dev": {
                 "orchestra/testbench": "^8.0||^9.0",
-                "phpunit/phpunit": "^10.5",
                 "textalk/websocket": "^1.6"
             },
             "type": "library",
@@ -3488,9 +3487,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-nostr/issues",
-                "source": "https://github.com/kawax/laravel-nostr/tree/0.3.1"
+                "source": "https://github.com/kawax/laravel-nostr/tree/0.3.3"
             },
-            "time": "2024-03-20T04:15:23+00:00"
+            "time": "2024-04-17T23:41:22+00:00"
         },
         {
             "name": "revolution/laravel-notification-discord-webhook",
@@ -7655,16 +7654,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.18",
+            "version": "10.5.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "835df1709ac6c968ba34bf23f3c30e5d5a266de8"
+                "reference": "c726f0de022368f6ed103e452a765d3304a996a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/835df1709ac6c968ba34bf23f3c30e5d5a266de8",
-                "reference": "835df1709ac6c968ba34bf23f3c30e5d5a266de8",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c726f0de022368f6ed103e452a765d3304a996a4",
+                "reference": "c726f0de022368f6ed103e452a765d3304a996a4",
                 "shasum": ""
             },
             "require": {
@@ -7736,7 +7735,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.18"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.19"
             },
             "funding": [
                 {
@@ -7752,7 +7751,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-14T07:05:31+00:00"
+            "time": "2024-04-17T14:06:18+00:00"
         },
         {
             "name": "sebastian/cli-parser",
