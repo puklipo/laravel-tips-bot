@@ -35,8 +35,7 @@ class NostrProfile extends Command
         $profile = new Profile(
             name: 'laravel_tips',
             display_name: 'Laravel Tips [bot]',
-            about: 'ChatGPT APIによる自動生成なので内容は間違いを多く含みます。「間違いを指摘してLaravelのスキルを上げる」のがおすすめの使い方。'.PHP_EOL.
-            'As it is generated automatically by the ChatGPT API, the content contains many errors. It is recommended to use it to point out mistakes and increase your Laravel skills.',
+            about: 'Tipsの投稿は週一回に減らしてアップデート情報の日本語訳が中心',
             website: 'https://puklipo.com/',
             nip05: 'pcse@getalby.com',
             lud16: 'pcse@getalby.com',
