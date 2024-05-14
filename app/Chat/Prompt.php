@@ -9,7 +9,7 @@ use Illuminate\Contracts\Support\Arrayable;
 
 class Prompt implements Arrayable
 {
-    protected string $model = 'gpt-4-turbo';
+    protected string $model = 'gpt-4o';
     protected int $max_tokens = 1000;
     protected float $temperature = 1.0;
 
