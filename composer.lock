@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39f0c6f5848874fb710e1d47c15f2c66",
+    "content-hash": "1b3ce15e826540a14fc7a2096208fb21",
     "packages": [
         {
             "name": "brick/math",
@@ -2318,16 +2318,16 @@
         },
         {
             "name": "openai-php/client",
-            "version": "v0.8.5",
+            "version": "v0.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openai-php/client.git",
-                "reference": "0f755fafa4d3f8d5c8ed964d3166d078fac0605a"
+                "reference": "a4e519a3efa380c1dc9d64b1fd1fecf8fc466ba2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openai-php/client/zipball/0f755fafa4d3f8d5c8ed964d3166d078fac0605a",
-                "reference": "0f755fafa4d3f8d5c8ed964d3166d078fac0605a",
+                "url": "https://api.github.com/repos/openai-php/client/zipball/a4e519a3efa380c1dc9d64b1fd1fecf8fc466ba2",
+                "reference": "a4e519a3efa380c1dc9d64b1fd1fecf8fc466ba2",
                 "shasum": ""
             },
             "require": {
@@ -2342,15 +2342,15 @@
             "require-dev": {
                 "guzzlehttp/guzzle": "^7.8.1",
                 "guzzlehttp/psr7": "^2.6.2",
-                "laravel/pint": "^1.15.0",
-                "mockery/mockery": "^1.6.11",
+                "laravel/pint": "^1.16.0",
+                "mockery/mockery": "^1.6.12",
                 "nunomaduro/collision": "^7.10.0",
-                "pestphp/pest": "^2.34.6",
+                "pestphp/pest": "^2.34.7",
                 "pestphp/pest-plugin-arch": "^2.7",
-                "pestphp/pest-plugin-type-coverage": "^2.8.1",
-                "phpstan/phpstan": "^1.10.66",
-                "rector/rector": "^1.0.4",
-                "symfony/var-dumper": "^6.4.4"
+                "pestphp/pest-plugin-type-coverage": "^2.8.2",
+                "phpstan/phpstan": "^1.11.2",
+                "rector/rector": "^1.1.0",
+                "symfony/var-dumper": "^6.4.7"
             },
             "type": "library",
             "autoload": {
@@ -2390,7 +2390,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openai-php/client/issues",
-                "source": "https://github.com/openai-php/client/tree/v0.8.5"
+                "source": "https://github.com/openai-php/client/tree/v0.9.2"
             },
             "funding": [
                 {
@@ -2406,26 +2406,26 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-15T19:11:23+00:00"
+            "time": "2024-05-27T19:27:25+00:00"
         },
         {
             "name": "openai-php/laravel",
-            "version": "v0.8.1",
+            "version": "v0.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openai-php/laravel.git",
-                "reference": "cdcf65d19a9a847cfdf249e7b1b6897ea6e9b650"
+                "reference": "9ab48cde625af63bc30e2ca442ee6a58b0fd85c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openai-php/laravel/zipball/cdcf65d19a9a847cfdf249e7b1b6897ea6e9b650",
-                "reference": "cdcf65d19a9a847cfdf249e7b1b6897ea6e9b650",
+                "url": "https://api.github.com/repos/openai-php/laravel/zipball/9ab48cde625af63bc30e2ca442ee6a58b0fd85c0",
+                "reference": "9ab48cde625af63bc30e2ca442ee6a58b0fd85c0",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.8.1",
                 "laravel/framework": "^9.46.0|^10.34.2|^11.0",
-                "openai-php/client": "^v0.8.0",
+                "openai-php/client": "^v0.9.1",
                 "php": "^8.1.0"
             },
             "require-dev": {
@@ -2475,7 +2475,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openai-php/laravel/issues",
-                "source": "https://github.com/openai-php/laravel/tree/v0.8.1"
+                "source": "https://github.com/openai-php/laravel/tree/v0.9.1"
             },
             "funding": [
                 {
@@ -2495,7 +2495,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-12-05T14:08:09+00:00"
+            "time": "2024-05-25T21:21:21+00:00"
         },
         {
             "name": "php-http/discovery",
