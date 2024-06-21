@@ -1052,16 +1052,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v11.11.0",
+            "version": "v11.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "194102876df42f9f5bb618efa55fa7e15ebf40aa"
+                "reference": "c9b52e84bd18f155e5ba59b948c7da3e7f37e87f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/194102876df42f9f5bb618efa55fa7e15ebf40aa",
-                "reference": "194102876df42f9f5bb618efa55fa7e15ebf40aa",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c9b52e84bd18f155e5ba59b948c7da3e7f37e87f",
+                "reference": "c9b52e84bd18f155e5ba59b948c7da3e7f37e87f",
                 "shasum": ""
             },
             "require": {
@@ -1253,7 +1253,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-06-18T17:40:27+00:00"
+            "time": "2024-06-20T10:54:53+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -1918,16 +1918,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.5.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "415782b7e48223342f1a616c16c45a95b15b2318"
+                "reference": "39c8ef752db6865717cc3fba63970c16f057982c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/415782b7e48223342f1a616c16c45a95b15b2318",
-                "reference": "415782b7e48223342f1a616c16c45a95b15b2318",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/39c8ef752db6865717cc3fba63970c16f057982c",
+                "reference": "39c8ef752db6865717cc3fba63970c16f057982c",
                 "shasum": ""
             },
             "require": {
@@ -2020,7 +2020,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-03T17:25:54+00:00"
+            "time": "2024-06-20T15:52:59+00:00"
         },
         {
             "name": "nette/schema",
@@ -3425,16 +3425,16 @@
         },
         {
             "name": "revolution/laravel-nostr",
-            "version": "0.3.4",
+            "version": "0.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-nostr.git",
-                "reference": "30b07846f4462045f600491740af233952fcd096"
+                "reference": "84a08d2bd9b6964cbf50b4fc1ed08af5823cf50f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/30b07846f4462045f600491740af233952fcd096",
-                "reference": "30b07846f4462045f600491740af233952fcd096",
+                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/84a08d2bd9b6964cbf50b4fc1ed08af5823cf50f",
+                "reference": "84a08d2bd9b6964cbf50b4fc1ed08af5823cf50f",
                 "shasum": ""
             },
             "require": {
@@ -3476,9 +3476,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-nostr/issues",
-                "source": "https://github.com/kawax/laravel-nostr/tree/0.3.4"
+                "source": "https://github.com/kawax/laravel-nostr/tree/0.3.5"
             },
-            "time": "2024-04-23T07:18:12+00:00"
+            "time": "2024-06-20T11:01:58+00:00"
         },
         {
             "name": "revolution/laravel-notification-discord-webhook",
@@ -7647,16 +7647,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.22",
+            "version": "10.5.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "8afb89b399b17c2ce2618015bdc9f81a117c5ee1"
+                "reference": "5f124e3e3e561006047b532fd0431bf5bb6b9015"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8afb89b399b17c2ce2618015bdc9f81a117c5ee1",
-                "reference": "8afb89b399b17c2ce2618015bdc9f81a117c5ee1",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5f124e3e3e561006047b532fd0431bf5bb6b9015",
+                "reference": "5f124e3e3e561006047b532fd0431bf5bb6b9015",
                 "shasum": ""
             },
             "require": {
@@ -7728,7 +7728,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.22"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.24"
             },
             "funding": [
                 {
@@ -7744,7 +7744,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-19T05:29:34+00:00"
+            "time": "2024-06-20T13:09:54+00:00"
         },
         {
             "name": "sebastian/cli-parser",
