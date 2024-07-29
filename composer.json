@@ -9,7 +9,7 @@
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "openai-php/laravel": "^0.10.1",
-        "revolution/laravel-nostr": "^0.3.0",
+        "revolution/laravel-nostr": "^0.4.0",
         "revolution/laravel-notification-discord-webhook": "^1.0",
         "revolution/laravel-str-mixins": "^2.4"
     },
