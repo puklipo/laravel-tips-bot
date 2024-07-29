@@ -32,7 +32,7 @@ class ReleaseTest extends TestCase
                         'index' => 0,
                         'message' => [
                             'content' => 'test',
-                        ]
+                        ],
                     ],
                 ],
             ]),

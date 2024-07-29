@@ -22,7 +22,7 @@ class ChatTest extends TestCase
                         'index' => 0,
                         'message' => [
                             'content' => 'test',
-                        ]
+                        ],
                     ],
                 ],
             ]),
