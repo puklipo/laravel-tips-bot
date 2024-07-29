@@ -28,8 +28,11 @@ class ReleaseTest extends TestCase
         OpenAI::fake([
             CreateResponse::fake([
                 'choices' => [
-                    'message' => [
-                        'content' => 'test',
+                    [
+                        'index' => 0,
+                        'message' => [
+                            'content' => 'test',
+                        ]
                     ],
                 ],
             ]),

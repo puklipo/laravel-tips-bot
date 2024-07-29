@@ -19,7 +19,10 @@ class ChatTest extends TestCase
             CreateResponse::fake([
                 'choices' => [
                     [
-                        'text' => 'test',
+                        'index' => 0,
+                        'message' => [
+                            'content' => 'test',
+                        ]
                     ],
                 ],
             ]),

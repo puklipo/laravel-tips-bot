@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
-use App\Chat\CompletionPrompt;
 use App\Chat\Prompt;
 use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
