@@ -3427,16 +3427,16 @@
         },
         {
             "name": "revolution/laravel-nostr",
-            "version": "0.4.0",
+            "version": "0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-nostr.git",
-                "reference": "6afb4c067bc9a2227425a8c2ce435525c466ea5c"
+                "reference": "3a249426d5dbd2f10113c7bc73b7197932cfa202"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/6afb4c067bc9a2227425a8c2ce435525c466ea5c",
-                "reference": "6afb4c067bc9a2227425a8c2ce435525c466ea5c",
+                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/3a249426d5dbd2f10113c7bc73b7197932cfa202",
+                "reference": "3a249426d5dbd2f10113c7bc73b7197932cfa202",
                 "shasum": ""
             },
             "require": {
@@ -3478,9 +3478,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-nostr/issues",
-                "source": "https://github.com/kawax/laravel-nostr/tree/0.4.0"
+                "source": "https://github.com/kawax/laravel-nostr/tree/0.4.1"
             },
-            "time": "2024-07-08T04:04:38+00:00"
+            "time": "2024-08-25T02:27:51+00:00"
         },
         {
             "name": "revolution/laravel-notification-discord-webhook",
