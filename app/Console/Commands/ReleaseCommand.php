@@ -61,6 +61,10 @@ class ReleaseCommand extends Command
             return;
         }
 
+        if (blank($release['body'])) {
+            return;
+        }
+
         $note = $this->chat(body: $release['body']);
 
         $this->info($note);
@@ -87,7 +91,10 @@ class ReleaseCommand extends Command
                 system: 'You are Laravel mentor.',
                 prompt: fn () => collect([
                     '次のリリースノートを日本語で要約してください。',
-                    '',
+                    '- 結果だけを出力。',
+                    '- @から始まるユーザー名を含めない。',
+                    '- URLを含めない。',
+                    '----',
                     trim($body),
                 ])->join(PHP_EOL)
             )->withTemperature(0.0)->toArray()
