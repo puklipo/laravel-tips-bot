@@ -1,7 +1,7 @@
 name: release
 
 on:
-  push:
+  #push:
   schedule:
     - cron: '0 1 * * *' #UTC
 
