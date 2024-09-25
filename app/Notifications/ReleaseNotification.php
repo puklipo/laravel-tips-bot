@@ -10,6 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Str;
 use Revolution\Laravel\Notification\DiscordWebhook\DiscordChannel;
+use Revolution\Laravel\Notification\DiscordWebhook\DiscordEmbed;
 use Revolution\Laravel\Notification\DiscordWebhook\DiscordMessage;
 use Revolution\Nostr\Notifications\NostrChannel;
 use Revolution\Nostr\Notifications\NostrMessage;
@@ -48,11 +49,11 @@ class ReleaseNotification extends Notification
     public function toDiscordWebhook(object $notifiable): DiscordMessage
     {
         return DiscordMessage::create()
-            ->embeds([[
-                'title' => $this->repo.' '.$this->ver,
-                'description' => Str::truncate($this->note, 1800),
-                'url' => $this->url,
-            ]]);
+            ->embed(DiscordEmbed::make(
+                title: $this->repo.' '.$this->ver,
+                description: Str::truncate($this->note, 1800),
+                url: $this->url,
+            ));
     }
 
     public function toNostr(object $notifiable): NostrMessage
