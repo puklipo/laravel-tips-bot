@@ -31,11 +31,9 @@ jobs:
           php artisan chat:release laravel/laravel
           php artisan chat:release laravel/breeze
           php artisan chat:release laravel/jetstream
-          php artisan chat:release laravel/sail
           php artisan chat:release livewire/livewire
           php artisan chat:release livewire/volt
-          php artisan chat:release alpinejs/alpine
-          php artisan chat:release tailwindlabs/tailwindcss
+          php artisan chat:release composer/composer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NOSTR_SK: ${{ secrets.NOSTR_SK }}
