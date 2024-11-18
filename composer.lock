@@ -3789,16 +3789,16 @@
         },
         {
             "name": "revolution/laravel-nostr",
-            "version": "0.6.10",
+            "version": "0.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-nostr.git",
-                "reference": "f7233abc013ffdd127bf52bfbe6c7be450e15553"
+                "reference": "bdd67b348460ea9c11e8de707d813d7baccff9de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/f7233abc013ffdd127bf52bfbe6c7be450e15553",
-                "reference": "f7233abc013ffdd127bf52bfbe6c7be450e15553",
+                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/bdd67b348460ea9c11e8de707d813d7baccff9de",
+                "reference": "bdd67b348460ea9c11e8de707d813d7baccff9de",
                 "shasum": ""
             },
             "require": {
@@ -3843,22 +3843,22 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-nostr/issues",
-                "source": "https://github.com/kawax/laravel-nostr/tree/0.6.10"
+                "source": "https://github.com/kawax/laravel-nostr/tree/0.6.12"
             },
-            "time": "2024-11-01T11:52:06+00:00"
+            "time": "2024-11-17T10:04:07+00:00"
         },
         {
             "name": "revolution/laravel-notification-discord-webhook",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-notification-discord-webhook.git",
-                "reference": "2c594da70b242c61258675b1492d76cd3d83859b"
+                "reference": "2d518400401bd8bad5e9a8490f19dcd68e54e9bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-notification-discord-webhook/zipball/2c594da70b242c61258675b1492d76cd3d83859b",
-                "reference": "2c594da70b242c61258675b1492d76cd3d83859b",
+                "url": "https://api.github.com/repos/kawax/laravel-notification-discord-webhook/zipball/2d518400401bd8bad5e9a8490f19dcd68e54e9bf",
+                "reference": "2d518400401bd8bad5e9a8490f19dcd68e54e9bf",
                 "shasum": ""
             },
             "require": {
@@ -3891,9 +3891,9 @@
                 "notification"
             ],
             "support": {
-                "source": "https://github.com/kawax/laravel-notification-discord-webhook/tree/1.2.0"
+                "source": "https://github.com/kawax/laravel-notification-discord-webhook/tree/1.2.1"
             },
-            "time": "2024-09-24T04:41:19+00:00"
+            "time": "2024-11-17T10:25:17+00:00"
         },
         {
             "name": "revolution/laravel-str-mixins",
