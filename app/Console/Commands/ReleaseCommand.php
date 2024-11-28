@@ -74,7 +74,7 @@ class ReleaseCommand extends Command
         }
 
         Notification::route('discord-webhook', config('services.discord.webhook'))
-            ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
+            //->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
             ->route('http', config('tips.api_token'))
             ->notify(new ReleaseNotification(
                 repo: $this->argument('repo'),
