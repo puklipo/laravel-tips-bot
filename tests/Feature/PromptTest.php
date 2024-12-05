@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Feature;
+
 use App\Chat\Prompt;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
