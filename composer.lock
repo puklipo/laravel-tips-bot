@@ -3116,16 +3116,16 @@
         },
         {
             "name": "phrity/websocket",
-            "version": "3.2.0",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/websocket-php.git",
-                "reference": "5488e59e7e68d9e129a112fc7ede6e72a2c83b01"
+                "reference": "52a3744573ecc1b740f03bca3d5d6f3088bd16f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/websocket-php/zipball/5488e59e7e68d9e129a112fc7ede6e72a2c83b01",
-                "reference": "5488e59e7e68d9e129a112fc7ede6e72a2c83b01",
+                "url": "https://api.github.com/repos/sirn-se/websocket-php/zipball/52a3744573ecc1b740f03bca3d5d6f3088bd16f3",
+                "reference": "52a3744573ecc1b740f03bca3d5d6f3088bd16f3",
                 "shasum": ""
             },
             "require": {
@@ -3171,9 +3171,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/websocket-php/issues",
-                "source": "https://github.com/sirn-se/websocket-php/tree/3.2.0"
+                "source": "https://github.com/sirn-se/websocket-php/tree/3.2.1"
             },
-            "time": "2024-09-28T08:44:22+00:00"
+            "time": "2025-01-03T12:41:36+00:00"
         },
         {
             "name": "psr/clock",
