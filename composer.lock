@@ -4205,16 +4205,16 @@
         },
         {
             "name": "swentel/nostr-php",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nostrver-se/nostr-php.git",
-                "reference": "cca30f99b07d6f2d1d645f670ac56d3c36b65bd1"
+                "reference": "6ef1e05da3845e352593c7d119fc00e716b3321f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nostrver-se/nostr-php/zipball/cca30f99b07d6f2d1d645f670ac56d3c36b65bd1",
-                "reference": "cca30f99b07d6f2d1d645f670ac56d3c36b65bd1",
+                "url": "https://api.github.com/repos/nostrver-se/nostr-php/zipball/6ef1e05da3845e352593c7d119fc00e716b3321f",
+                "reference": "6ef1e05da3845e352593c7d119fc00e716b3321f",
                 "shasum": ""
             },
             "require": {
@@ -4266,9 +4266,9 @@
                 "chat": "https://t.me/nostr_php",
                 "issue": "https://github.com/swentel/nostr-php/issues",
                 "issues": "https://github.com/nostrver-se/nostr-php/issues",
-                "source": "https://github.com/nostrver-se/nostr-php/tree/1.5.2"
+                "source": "https://github.com/nostrver-se/nostr-php/tree/push"
             },
-            "time": "2024-12-05T09:03:53+00:00"
+            "time": "2025-01-04T21:46:58+00:00"
         },
         {
             "name": "symfony/clock",
