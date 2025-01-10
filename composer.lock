@@ -2945,16 +2945,16 @@
         },
         {
             "name": "phrity/net-stream",
-            "version": "2.1.1",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/phrity-net-stream.git",
-                "reference": "b44451b35a94942792d9857dfbad89f816d0b6ef"
+                "reference": "e6ace997168bebcce814c95cd5c78c78663ae49a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/phrity-net-stream/zipball/b44451b35a94942792d9857dfbad89f816d0b6ef",
-                "reference": "b44451b35a94942792d9857dfbad89f816d0b6ef",
+                "url": "https://api.github.com/repos/sirn-se/phrity-net-stream/zipball/e6ace997168bebcce814c95cd5c78c78663ae49a",
+                "reference": "e6ace997168bebcce814c95cd5c78c78663ae49a",
                 "shasum": ""
             },
             "require": {
@@ -2999,9 +2999,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/phrity-net-stream/issues",
-                "source": "https://github.com/sirn-se/phrity-net-stream/tree/2.1.1"
+                "source": "https://github.com/sirn-se/phrity-net-stream/tree/2.1.2"
             },
-            "time": "2024-12-07T15:38:18+00:00"
+            "time": "2025-01-09T08:07:34+00:00"
         },
         {
             "name": "phrity/net-uri",
