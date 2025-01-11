@@ -3116,16 +3116,16 @@
         },
         {
             "name": "phrity/websocket",
-            "version": "3.2.1",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/websocket-php.git",
-                "reference": "52a3744573ecc1b740f03bca3d5d6f3088bd16f3"
+                "reference": "6dceb42be8bfd500806a5508721ae14cf0d4d737"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/websocket-php/zipball/52a3744573ecc1b740f03bca3d5d6f3088bd16f3",
-                "reference": "52a3744573ecc1b740f03bca3d5d6f3088bd16f3",
+                "url": "https://api.github.com/repos/sirn-se/websocket-php/zipball/6dceb42be8bfd500806a5508721ae14cf0d4d737",
+                "reference": "6dceb42be8bfd500806a5508721ae14cf0d4d737",
                 "shasum": ""
             },
             "require": {
@@ -3137,6 +3137,7 @@
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.0",
+                "phpstan/phpstan": "^2.0",
                 "phpunit/phpunit": "^10.0 | ^11.0",
                 "phrity/net-mock": "^2.1",
                 "phrity/util-errorhandler": "^1.1",
@@ -3171,9 +3172,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/websocket-php/issues",
-                "source": "https://github.com/sirn-se/websocket-php/tree/3.2.1"
+                "source": "https://github.com/sirn-se/websocket-php/tree/3.2.2"
             },
-            "time": "2025-01-03T12:41:36+00:00"
+            "time": "2025-01-10T09:41:26+00:00"
         },
         {
             "name": "psr/clock",
