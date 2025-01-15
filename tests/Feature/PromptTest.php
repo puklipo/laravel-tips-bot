@@ -21,7 +21,7 @@ class PromptTest extends TestCase
 
     public function test_with(): void
     {
-        $p = Prompt::make( prompt: 'test')
+        $p = Prompt::make(prompt: 'test')
             ->withModel('model');
 
         $this->assertSame('model', $p->toArray()['model']);
