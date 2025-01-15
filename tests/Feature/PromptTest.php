@@ -16,7 +16,7 @@ class PromptTest extends TestCase
         $p = Prompt::make(system: 'sys', prompt: 'test');
 
         $this->assertInstanceOf(Prompt::class, $p);
-        $this->assertSame('sys', $p->toArray()['messages'][0]['content']);
+        $this->assertSame('test', $p->toArray()['messages'][0]['content']);
     }
 
     public function test_with(): void
@@ -27,7 +27,7 @@ class PromptTest extends TestCase
             ->withTemperature(0.5);
 
         $this->assertSame('model', $p->toArray()['model']);
-        $this->assertSame(1, $p->toArray()['max_tokens']);
+        $this->assertSame(1, $p->toArray()['max_completion_tokens']);
         $this->assertSame(0.5, $p->toArray()['temperature']);
     }
 
@@ -38,6 +38,6 @@ class PromptTest extends TestCase
             prompt: fn () => app()->version(),
         );
 
-        $this->assertSame(app()->version(), $p->toArray()['messages'][1]['content']);
+        $this->assertSame(app()->version(), $p->toArray()['messages'][0]['content']);
     }
 }
