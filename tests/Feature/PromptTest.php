@@ -13,7 +13,7 @@ class PromptTest extends TestCase
 {
     public function test_make(): void
     {
-        $p = Prompt::make(system: 'sys', prompt: 'test');
+        $p = Prompt::make(prompt: 'test');
 
         $this->assertInstanceOf(Prompt::class, $p);
         $this->assertSame('test', $p->toArray()['messages'][0]['content']);
@@ -21,20 +21,15 @@ class PromptTest extends TestCase
 
     public function test_with(): void
     {
-        $p = Prompt::make(system: 'sys', prompt: 'test')
-            ->withModel('model')
-            ->withMaxTokens(1)
-            ->withTemperature(0.5);
+        $p = Prompt::make( prompt: 'test')
+            ->withModel('model');
 
         $this->assertSame('model', $p->toArray()['model']);
-        //$this->assertSame(1, $p->toArray()['max_completion_tokens']);
-        //$this->assertSame(0.5, $p->toArray()['temperature']);
     }
 
     public function test_closure(): void
     {
         $p = new Prompt(
-            system: 'sys',
             prompt: fn () => app()->version(),
         );
 

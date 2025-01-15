@@ -36,7 +36,6 @@ class ChatCommand extends Command
     {
         $response = OpenAI::chat()->create(
             Prompt::make(
-                system: 'You are Laravel mentor.',
                 prompt: $this->prompt(),
             )->toArray()
         );

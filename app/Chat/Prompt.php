@@ -10,39 +10,21 @@ use Illuminate\Contracts\Support\Arrayable;
 class Prompt implements Arrayable
 {
     protected string $model = 'o1-mini';
-    protected int $max_tokens = 30000;
-    protected float $temperature = 1.0;
 
     public function __construct(
-        protected readonly string $system,
         protected readonly string|Closure $prompt,
     ) {
     }
 
     public static function make(
-        string $system,
         string|Closure $prompt,
     ): static {
-        return new static(system: $system, prompt: $prompt);
+        return new static(prompt: $prompt);
     }
 
     public function withModel(string $model): static
     {
         $this->model = $model;
-
-        return $this;
-    }
-
-    public function withMaxTokens(int $max_tokens): static
-    {
-        $this->max_tokens = $max_tokens;
-
-        return $this;
-    }
-
-    public function withTemperature(float $temperature): static
-    {
-        $this->temperature = $temperature;
 
         return $this;
     }
@@ -62,10 +44,7 @@ class Prompt implements Arrayable
     {
         return [
             'model' => $this->model,
-            //'max_completion_tokens' => $this->max_tokens,
-            //'temperature' => $this->temperature,
             'messages' => [
-                //['role' => 'developer', 'content' => $this->system],
                 [
                     'role' => 'user',
                     'content' => is_callable($this->prompt) ? call_user_func($this->prompt) : $this->prompt,

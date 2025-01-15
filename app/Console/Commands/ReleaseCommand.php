@@ -88,7 +88,6 @@ class ReleaseCommand extends Command
     {
         $response = OpenAI::chat()->create(
             Prompt::make(
-                system: 'You are Laravel mentor.',
                 prompt: fn () => collect([
                     '次のリリースノートを日本語で要約してください。',
                     '- 結果だけを出力。',
@@ -97,7 +96,7 @@ class ReleaseCommand extends Command
                     '----',
                     trim($body),
                 ])->join(PHP_EOL)
-            )->withTemperature(0.0)->toArray()
+            )->toArray()
         );
 
         $content = trim(Arr::get($response, 'choices.0.message.content'));
