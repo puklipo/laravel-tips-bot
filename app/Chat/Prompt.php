@@ -65,7 +65,7 @@ class Prompt implements Arrayable
             'max_tokens' => $this->max_tokens,
             'temperature' => $this->temperature,
             'messages' => [
-                ['role' => 'developer', 'content' => $this->system],
+                //['role' => 'developer', 'content' => $this->system],
                 [
                     'role' => 'user',
                     'content' => is_callable($this->prompt) ? call_user_func($this->prompt) : $this->prompt,
