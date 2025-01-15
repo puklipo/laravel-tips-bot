@@ -62,7 +62,7 @@ class Prompt implements Arrayable
     {
         return [
             'model' => $this->model,
-            'max_tokens' => $this->max_tokens,
+            'max_completion_tokens' => $this->max_tokens,
             'temperature' => $this->temperature,
             'messages' => [
                 //['role' => 'developer', 'content' => $this->system],
