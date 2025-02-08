@@ -59,13 +59,13 @@ class ChatCommand extends Command
     protected function prompt(): string
     {
         $prompt = collect([
-            'Tell me one Laravel tips.',
+            'Tell me one advanced Laravel tips.',
             //'Select one page from the official Laravel documentation and explain it.',
             //'Generate one Laravel Frequently Asked Questions and Answers.',
             //'Generate one unusual question and answer for Laravel.',
         ])->random();
 
-        $lang = Lottery::odds(chances: 8, outOf: 10)
+        $lang = Lottery::odds(chances: 5, outOf: 10)
             ->winner(fn () => 'Answer in japanese.')
             ->loser(fn () => 'Answer in english.')
             ->choose();
