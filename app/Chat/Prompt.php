@@ -9,7 +9,7 @@ use Illuminate\Contracts\Support\Arrayable;
 
 class Prompt implements Arrayable
 {
-    protected string $model = 'o1-mini';
+    protected string $model = 'o3-mini';
 
     public function __construct(
         protected readonly string|Closure $prompt,
