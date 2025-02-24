@@ -628,6 +628,86 @@
             "time": "2023-10-12T05:21:21+00:00"
         },
         {
+            "name": "genkgo/php-asn1",
+            "version": "v2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/genkgo/php-asn1.git",
+                "reference": "4de712c68bbf51c00551cb45f55642e30fed1fdb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/genkgo/php-asn1/zipball/4de712c68bbf51c00551cb45f55642e30fed1fdb",
+                "reference": "4de712c68bbf51c00551cb45f55642e30fed1fdb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "~2.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "suggest": {
+                "ext-bcmath": "BCmath is the fallback extension for big integer calculations",
+                "ext-curl": "For loading OID information from the web if they have not bee defined statically",
+                "ext-gmp": "GMP is the preferred extension for big integer calculations",
+                "phpseclib/bcmath_compat": "BCmath polyfill for servers where neither GMP nor BCmath is available"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FG\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frederik Bosch",
+                    "email": "f.bosch@genkgo.nl",
+                    "role": "Author"
+                },
+                {
+                    "name": "Friedrich Große",
+                    "email": "friedrich.grosse@gmail.com",
+                    "homepage": "https://github.com/FGrosse",
+                    "role": "Author"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/genkgo/php-asn1/contributors"
+                }
+            ],
+            "description": "A PHP Framework that allows you to encode and decode arbitrary ASN.1 structures using the ITU-T X.690 Encoding Rules.",
+            "homepage": "https://github.com/FGrosse/PHPASN1",
+            "keywords": [
+                "DER",
+                "asn.1",
+                "asn1",
+                "ber",
+                "binary",
+                "decoding",
+                "encoding",
+                "x.509",
+                "x.690",
+                "x509",
+                "x690"
+            ],
+            "support": {
+                "issues": "https://github.com/genkgo/php-asn1/issues",
+                "source": "https://github.com/genkgo/php-asn1/tree/v2.8.0"
+            },
+            "time": "2025-02-12T20:20:53+00:00"
+        },
+        {
             "name": "graham-campbell/result-type",
             "version": "v1.1.3",
             "source": {
@@ -2735,6 +2815,185 @@
             "time": "2024-10-17T20:34:07+00:00"
         },
         {
+            "name": "paragonie/ecc",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/phpecc.git",
+                "reference": "fdba22a506492eb6e5fe38c501c0df61eaf0b54c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/phpecc/zipball/fdba22a506492eb6e5fe38c501c0df61eaf0b54c",
+                "reference": "fdba22a506492eb6e5fe38c501c0df61eaf0b54c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "genkgo/php-asn1": "^2",
+                "paragonie/sodium_compat": "^1|^2",
+                "php": "^7.1||^8.0"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "phpunit/phpunit": "^6|^7|^8|^9",
+                "squizlabs/php_codesniffer": "^2|^3",
+                "symfony/yaml": "^2.6|^3.0|^4",
+                "vimeo/psalm": "^2|^3|^4|^5"
+            },
+            "suggest": {
+                "ext-openssl": "(PHP 8.1, OpenSSL 3+) Improved performance, less worries about side-channels"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mdanter\\Ecc\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com",
+                    "role": "New Maintainer"
+                },
+                {
+                    "name": "Matyas Danter",
+                    "homepage": "http://matejdanter.com/",
+                    "role": "Previous Author"
+                },
+                {
+                    "name": "Thibaud Fabre",
+                    "email": "thibaud@aztech.io",
+                    "homepage": "http://aztech.io",
+                    "role": "Previous Maintainer"
+                },
+                {
+                    "name": "Thomas Kerin",
+                    "email": "afk11@users.noreply.github.com",
+                    "role": "Previous Maintainer"
+                }
+            ],
+            "description": "PHP Elliptic Curve Cryptography library",
+            "homepage": "https://github.com/phpecc/phpecc",
+            "keywords": [
+                "Diffie",
+                "ECDSA",
+                "Hellman",
+                "curve",
+                "ecdh",
+                "elliptic",
+                "nistp192",
+                "nistp224",
+                "nistp256",
+                "nistp384",
+                "nistp521",
+                "phpecc",
+                "secp256k1",
+                "secp256r1"
+            ],
+            "support": {
+                "issues": "https://github.com/paragonie/phpecc/issues",
+                "source": "https://github.com/paragonie/phpecc/tree/v2.4.0"
+            },
+            "time": "2025-01-21T17:53:03+00:00"
+        },
+        {
+            "name": "paragonie/sodium_compat",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/sodium_compat.git",
+                "reference": "a673d5f310477027cead2e2f2b6db5d8368157cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/sodium_compat/zipball/a673d5f310477027cead2e2f2b6db5d8368157cb",
+                "reference": "a673d5f310477027cead2e2f2b6db5d8368157cb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "php-64bit": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7|^8|^9",
+                "vimeo/psalm": "^4|^5"
+            },
+            "suggest": {
+                "ext-sodium": "Better performance, password hashing (Argon2i), secure memory management (memzero), and better security."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "ISC"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com"
+                },
+                {
+                    "name": "Frank Denis",
+                    "email": "jedisct1@pureftpd.org"
+                }
+            ],
+            "description": "Pure PHP implementation of libsodium; uses the PHP extension if it exists",
+            "keywords": [
+                "Authentication",
+                "BLAKE2b",
+                "ChaCha20",
+                "ChaCha20-Poly1305",
+                "Chapoly",
+                "Curve25519",
+                "Ed25519",
+                "EdDSA",
+                "Edwards-curve Digital Signature Algorithm",
+                "Elliptic Curve Diffie-Hellman",
+                "Poly1305",
+                "Pure-PHP cryptography",
+                "RFC 7748",
+                "RFC 8032",
+                "Salpoly",
+                "Salsa20",
+                "X25519",
+                "XChaCha20-Poly1305",
+                "XSalsa20-Poly1305",
+                "Xchacha20",
+                "Xsalsa20",
+                "aead",
+                "cryptography",
+                "ecdh",
+                "elliptic curve",
+                "elliptic curve cryptography",
+                "encryption",
+                "libsodium",
+                "php",
+                "public-key cryptography",
+                "secret-key cryptography",
+                "side-channel resistant"
+            ],
+            "support": {
+                "issues": "https://github.com/paragonie/sodium_compat/issues",
+                "source": "https://github.com/paragonie/sodium_compat/tree/v2.1.0"
+            },
+            "time": "2024-09-04T12:51:01+00:00"
+        },
+        {
             "name": "php-http/discovery",
             "version": "1.20.0",
             "source": {
@@ -3954,24 +4213,24 @@
         },
         {
             "name": "revolution/laravel-notification-discord-webhook",
-            "version": "1.2.1",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-notification-discord-webhook.git",
-                "reference": "2d518400401bd8bad5e9a8490f19dcd68e54e9bf"
+                "reference": "3b1e4f39da82da8b6dd83359773986372a470c92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-notification-discord-webhook/zipball/2d518400401bd8bad5e9a8490f19dcd68e54e9bf",
-                "reference": "2d518400401bd8bad5e9a8490f19dcd68e54e9bf",
+                "url": "https://api.github.com/repos/kawax/laravel-notification-discord-webhook/zipball/3b1e4f39da82da8b6dd83359773986372a470c92",
+                "reference": "3b1e4f39da82da8b6dd83359773986372a470c92",
                 "shasum": ""
             },
             "require": {
-                "illuminate/notifications": "^10.0||^11.0",
-                "php": "^8.1"
+                "illuminate/notifications": "^11.0||^12.0",
+                "php": "^8.2"
             },
             "require-dev": {
-                "orchestra/testbench": "^8.0||^9.0"
+                "orchestra/testbench": "^9.0"
             },
             "type": "library",
             "autoload": {
@@ -3996,9 +4255,9 @@
                 "notification"
             ],
             "support": {
-                "source": "https://github.com/kawax/laravel-notification-discord-webhook/tree/1.2.1"
+                "source": "https://github.com/kawax/laravel-notification-discord-webhook/tree/1.3.0"
             },
-            "time": "2024-11-17T10:25:17+00:00"
+            "time": "2025-02-23T03:37:07+00:00"
         },
         {
             "name": "revolution/laravel-str-mixins",
@@ -4206,26 +4465,26 @@
         },
         {
             "name": "swentel/nostr-php",
-            "version": "1.5.3",
+            "version": "1.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nostrver-se/nostr-php.git",
-                "reference": "6ef1e05da3845e352593c7d119fc00e716b3321f"
+                "reference": "048469fb24023dcb63d92eda1a926e94ac8d691d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nostrver-se/nostr-php/zipball/6ef1e05da3845e352593c7d119fc00e716b3321f",
-                "reference": "6ef1e05da3845e352593c7d119fc00e716b3321f",
+                "url": "https://api.github.com/repos/nostrver-se/nostr-php/zipball/048469fb24023dcb63d92eda1a926e94ac8d691d",
+                "reference": "048469fb24023dcb63d92eda1a926e94ac8d691d",
                 "shasum": ""
             },
             "require": {
                 "bitwasp/bech32": "^0.0.1",
                 "ext-gmp": "*",
                 "ext-xml": "*",
+                "paragonie/ecc": "^2.4",
                 "php": ">=8.1 <8.5",
                 "phrity/websocket": "^3.0",
-                "simplito/elliptic-php": "^1.0",
-                "uma/phpecc": "^0.2.0"
+                "simplito/elliptic-php": "^1.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.51",
@@ -4267,9 +4526,9 @@
                 "chat": "https://t.me/nostr_php",
                 "issue": "https://github.com/swentel/nostr-php/issues",
                 "issues": "https://github.com/nostrver-se/nostr-php/issues",
-                "source": "https://github.com/nostrver-se/nostr-php/tree/push"
+                "source": "https://github.com/nostrver-se/nostr-php/tree/1.5.4"
             },
-            "time": "2025-01-04T21:46:58+00:00"
+            "time": "2025-02-21T13:49:38+00:00"
         },
         {
             "name": "symfony/clock",
@@ -6553,164 +6812,6 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.3.0"
             },
             "time": "2024-12-21T16:25:41+00:00"
-        },
-        {
-            "name": "uma/phpasn1",
-            "version": "v2.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/1ma/PHPASN1.git",
-                "reference": "dd805d3157ddc90515ee13562a9bb241c68f4f88"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/1ma/PHPASN1/zipball/dd805d3157ddc90515ee13562a9bb241c68f4f88",
-                "reference": "dd805d3157ddc90515ee13562a9bb241c68f4f88",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "php-coveralls/php-coveralls": "^2.0",
-                "phpunit/phpunit": "^9.6"
-            },
-            "suggest": {
-                "ext-bcmath": "BCmath is the fallback extension for big integer calculations",
-                "ext-curl": "For loading OID information from the web if they have not bee defined statically",
-                "ext-gmp": "GMP is the preferred extension for big integer calculations",
-                "phpseclib/bcmath_compat": "BCmath polyfill for servers where neither GMP nor BCmath is available"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FG\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Friedrich Große",
-                    "email": "friedrich.grosse@gmail.com",
-                    "homepage": "https://github.com/FGrosse",
-                    "role": "Author"
-                },
-                {
-                    "name": "All contributors",
-                    "homepage": "https://github.com/FGrosse/PHPASN1/contributors"
-                }
-            ],
-            "description": "A PHP Framework that allows you to encode and decode arbitrary ASN.1 structures using the ITU-T X.690 Encoding Rules.",
-            "homepage": "https://github.com/FGrosse/PHPASN1",
-            "keywords": [
-                "DER",
-                "asn.1",
-                "asn1",
-                "ber",
-                "binary",
-                "decoding",
-                "encoding",
-                "x.509",
-                "x.690",
-                "x509",
-                "x690"
-            ],
-            "support": {
-                "source": "https://github.com/1ma/PHPASN1/tree/v2.5.1"
-            },
-            "abandoned": "genkgo/php-asn1",
-            "time": "2024-11-29T17:34:36+00:00"
-        },
-        {
-            "name": "uma/phpecc",
-            "version": "v0.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/1ma/phpecc.git",
-                "reference": "e269be5eaef099fb46831037d097c647a6da2f69"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/1ma/phpecc/zipball/e269be5eaef099fb46831037d097c647a6da2f69",
-                "reference": "e269be5eaef099fb46831037d097c647a6da2f69",
-                "shasum": ""
-            },
-            "require": {
-                "ext-gmp": "*",
-                "php": "^8.0",
-                "uma/phpasn1": "^2.5.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.0",
-                "squizlabs/php_codesniffer": "^2.0",
-                "symfony/yaml": "^6.4 || ^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mdanter\\Ecc\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matyas Danter",
-                    "homepage": "http://matejdanter.com/",
-                    "role": "Author"
-                },
-                {
-                    "name": "Thibaud Fabre",
-                    "email": "thibaud@aztech.io",
-                    "homepage": "http://aztech.io",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Thomas Kerin",
-                    "email": "afk11@users.noreply.github.com",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Ology Newswire, Inc",
-                    "email": "protocol@vpsqr.com",
-                    "homepage": "https://vpsqr.com/",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Temporary fork of public-square/phpecc",
-            "homepage": "https://github.com/1ma/phpecc",
-            "keywords": [
-                "Diffie",
-                "ECDSA",
-                "Hellman",
-                "curve",
-                "ecdh",
-                "elliptic",
-                "nistp192",
-                "nistp224",
-                "nistp256",
-                "nistp384",
-                "nistp521",
-                "phpecc",
-                "schnorr",
-                "secp256k1",
-                "secp256r1"
-            ],
-            "support": {
-                "source": "https://github.com/1ma/phpecc/tree/v0.2.1"
-            },
-            "abandoned": "paragonie/ecc",
-            "time": "2025-01-21T00:38:50+00:00"
         },
         {
             "name": "valtzu/guzzle-websocket-middleware",
