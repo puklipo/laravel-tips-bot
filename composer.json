@@ -6,10 +6,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^11.0",
+        "laravel/framework": "^12.0",
         "laravel/tinker": "^2.9",
-        "openai-php/laravel": "^0.10.1",
-        "revolution/laravel-nostr": "^0.6",
+        "openai-php/laravel": "^0.11.0",
+        "revolution/laravel-nostr": "^1.0.0",
         "revolution/laravel-notification-discord-webhook": "^1.0",
         "revolution/laravel-str-mixins": "^2.4"
     },
