@@ -29,8 +29,6 @@ jobs:
         run: |
           php artisan chat:release laravel/framework
           php artisan chat:release laravel/laravel
-          php artisan chat:release laravel/breeze
-          php artisan chat:release laravel/jetstream
           php artisan chat:release livewire/livewire
           php artisan chat:release livewire/volt
           php artisan chat:release composer/composer
