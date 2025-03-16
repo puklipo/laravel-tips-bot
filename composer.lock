@@ -3205,27 +3205,28 @@
         },
         {
             "name": "phrity/net-stream",
-            "version": "2.1.2",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/phrity-net-stream.git",
-                "reference": "e6ace997168bebcce814c95cd5c78c78663ae49a"
+                "reference": "1d5d8f8176d048c03dad237ca70f9a38b11209b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/phrity-net-stream/zipball/e6ace997168bebcce814c95cd5c78c78663ae49a",
-                "reference": "e6ace997168bebcce814c95cd5c78c78663ae49a",
+                "url": "https://api.github.com/repos/sirn-se/phrity-net-stream/zipball/1d5d8f8176d048c03dad237ca70f9a38b11209b5",
+                "reference": "1d5d8f8176d048c03dad237ca70f9a38b11209b5",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.0",
+                "php": "^8.1",
                 "phrity/util-errorhandler": "^1.1",
                 "psr/http-factory": "^1.0",
                 "psr/http-message": "^1.1 | ^2.0"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.0",
-                "phpunit/phpunit": "^9.0 | ^10.0 | ^11.0",
+                "phpstan/phpstan": "^2.0",
+                "phpunit/phpunit": "^10.0 | ^11.0",
                 "phrity/net-uri": "^2.0",
                 "squizlabs/php_codesniffer": "^3.5"
             },
@@ -3259,9 +3260,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/phrity-net-stream/issues",
-                "source": "https://github.com/sirn-se/phrity-net-stream/tree/2.1.2"
+                "source": "https://github.com/sirn-se/phrity-net-stream/tree/2.2.0"
             },
-            "time": "2025-01-09T08:07:34+00:00"
+            "time": "2025-01-31T14:14:33+00:00"
         },
         {
             "name": "phrity/net-uri",
@@ -3376,21 +3377,21 @@
         },
         {
             "name": "phrity/websocket",
-            "version": "3.2.6",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/websocket-php.git",
-                "reference": "1d73abaa485d73645c2fc875694952b6f9535d6e"
+                "reference": "73132b31f87b5f673ed492d9d4a4794cbbafe05c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/websocket-php/zipball/1d73abaa485d73645c2fc875694952b6f9535d6e",
-                "reference": "1d73abaa485d73645c2fc875694952b6f9535d6e",
+                "url": "https://api.github.com/repos/sirn-se/websocket-php/zipball/73132b31f87b5f673ed492d9d4a4794cbbafe05c",
+                "reference": "73132b31f87b5f673ed492d9d4a4794cbbafe05c",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.1",
-                "phrity/net-stream": "~2.1.0",
+                "phrity/net-stream": "^2.2",
                 "phrity/net-uri": "^2.1",
                 "psr/http-message": "^1.1 | ^2.0",
                 "psr/log": "^1.0 | ^2.0 | ^3.0"
@@ -3399,7 +3400,7 @@
                 "php-coveralls/php-coveralls": "^2.0",
                 "phpstan/phpstan": "^2.0",
                 "phpunit/phpunit": "^10.0 | ^11.0 | ^12.0",
-                "phrity/net-mock": "~2.1.0",
+                "phrity/net-mock": "^2.2",
                 "phrity/util-errorhandler": "^1.1",
                 "squizlabs/php_codesniffer": "^3.5"
             },
@@ -3432,9 +3433,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/websocket-php/issues",
-                "source": "https://github.com/sirn-se/websocket-php/tree/3.2.6"
+                "source": "https://github.com/sirn-se/websocket-php/tree/3.3.0"
             },
-            "time": "2025-03-10T14:13:06+00:00"
+            "time": "2025-03-14T14:27:33+00:00"
         },
         {
             "name": "psr/clock",
@@ -7417,16 +7418,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.17.0",
+            "version": "2.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "075bc0c26631110584175de6523ab3f1652eb28e"
+                "reference": "a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/075bc0c26631110584175de6523ab3f1652eb28e",
-                "reference": "075bc0c26631110584175de6523ab3f1652eb28e",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e",
+                "reference": "a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e",
                 "shasum": ""
             },
             "require": {
@@ -7476,7 +7477,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.17.0"
+                "source": "https://github.com/filp/whoops/tree/2.18.0"
             },
             "funding": [
                 {
@@ -7484,7 +7485,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-25T12:00:00+00:00"
+            "time": "2025-03-15T12:00:00+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
