@@ -4453,16 +4453,16 @@
         },
         {
             "name": "swentel/nostr-php",
-            "version": "1.5.4",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nostrver-se/nostr-php.git",
-                "reference": "048469fb24023dcb63d92eda1a926e94ac8d691d"
+                "reference": "541d9d074f942522425399efe0a77c80e44a1e21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nostrver-se/nostr-php/zipball/048469fb24023dcb63d92eda1a926e94ac8d691d",
-                "reference": "048469fb24023dcb63d92eda1a926e94ac8d691d",
+                "url": "https://api.github.com/repos/nostrver-se/nostr-php/zipball/541d9d074f942522425399efe0a77c80e44a1e21",
+                "reference": "541d9d074f942522425399efe0a77c80e44a1e21",
                 "shasum": ""
             },
             "require": {
@@ -4470,6 +4470,7 @@
                 "ext-gmp": "*",
                 "ext-xml": "*",
                 "paragonie/ecc": "^2.4",
+                "paragonie/sodium_compat": "^2.1",
                 "php": ">=8.1 <8.5",
                 "phrity/websocket": "^3.0",
                 "simplito/elliptic-php": "^1.0"
@@ -4514,9 +4515,9 @@
                 "chat": "https://t.me/nostr_php",
                 "issue": "https://github.com/swentel/nostr-php/issues",
                 "issues": "https://github.com/nostrver-se/nostr-php/issues",
-                "source": "https://github.com/nostrver-se/nostr-php/tree/1.5.4"
+                "source": "https://github.com/nostrver-se/nostr-php/tree/1.6.0"
             },
-            "time": "2025-02-21T13:49:38+00:00"
+            "time": "2025-03-17T14:43:56+00:00"
         },
         {
             "name": "symfony/clock",
