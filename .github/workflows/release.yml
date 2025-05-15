@@ -30,7 +30,8 @@ jobs:
           php artisan chat:release laravel/framework
           php artisan chat:release laravel/laravel
           php artisan chat:release livewire/livewire
-          php artisan chat:release livewire/volt
+          php artisan chat:release livewire/flux
+          php artisan chat:release tailwindlabs/tailwindcss
           php artisan chat:release composer/composer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
