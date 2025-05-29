@@ -4316,12 +4316,12 @@
             "version": "1.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kawax/laravel-notification-discord-webhook.git",
+                "url": "https://github.com/invokable/laravel-notification-discord-webhook.git",
                 "reference": "3b1e4f39da82da8b6dd83359773986372a470c92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-notification-discord-webhook/zipball/3b1e4f39da82da8b6dd83359773986372a470c92",
+                "url": "https://api.github.com/repos/invokable/laravel-notification-discord-webhook/zipball/3b1e4f39da82da8b6dd83359773986372a470c92",
                 "reference": "3b1e4f39da82da8b6dd83359773986372a470c92",
                 "shasum": ""
             },
@@ -4355,7 +4355,7 @@
                 "notification"
             ],
             "support": {
-                "source": "https://github.com/kawax/laravel-notification-discord-webhook/tree/1.3.0"
+                "source": "https://github.com/invokable/laravel-notification-discord-webhook/tree/1.3.0"
             },
             "time": "2025-02-23T03:37:07+00:00"
         },
