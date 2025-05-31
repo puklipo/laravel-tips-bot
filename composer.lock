@@ -4257,12 +4257,12 @@
             "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kawax/laravel-nostr.git",
+                "url": "https://github.com/invokable/laravel-nostr.git",
                 "reference": "9984679fa2f112631be8c434b28eb5a9a6b7c3cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-nostr/zipball/9984679fa2f112631be8c434b28eb5a9a6b7c3cb",
+                "url": "https://api.github.com/repos/invokable/laravel-nostr/zipball/9984679fa2f112631be8c434b28eb5a9a6b7c3cb",
                 "reference": "9984679fa2f112631be8c434b28eb5a9a6b7c3cb",
                 "shasum": ""
             },
@@ -4306,9 +4306,14 @@
                 "nostr"
             ],
             "support": {
-                "issues": "https://github.com/kawax/laravel-nostr/issues",
-                "source": "https://github.com/kawax/laravel-nostr/tree/1.0.0"
+                "source": "https://github.com/invokable/laravel-nostr/tree/1.0.0"
             },
+            "funding": [
+                {
+                    "url": "https://github.com/invokable",
+                    "type": "github"
+                }
+            ],
             "time": "2025-02-23T03:30:43+00:00"
         },
         {
@@ -4364,12 +4369,12 @@
             "version": "2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kawax/laravel-str-mixins.git",
+                "url": "https://github.com/invokable/laravel-str-mixins.git",
                 "reference": "1e2a22f2d91e942396ee5390a5b3bd39950c419f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-str-mixins/zipball/1e2a22f2d91e942396ee5390a5b3bd39950c419f",
+                "url": "https://api.github.com/repos/invokable/laravel-str-mixins/zipball/1e2a22f2d91e942396ee5390a5b3bd39950c419f",
                 "reference": "1e2a22f2d91e942396ee5390a5b3bd39950c419f",
                 "shasum": ""
             },
@@ -4411,9 +4416,14 @@
                 "str"
             ],
             "support": {
-                "issues": "https://github.com/kawax/laravel-str-mixins/issues",
-                "source": "https://github.com/kawax/laravel-str-mixins/tree/2.7.0"
+                "source": "https://github.com/invokable/laravel-str-mixins/tree/2.7.0"
             },
+            "funding": [
+                {
+                    "url": "https://github.com/invokable",
+                    "type": "github"
+                }
+            ],
             "time": "2025-02-18T03:41:34+00:00"
         },
         {
