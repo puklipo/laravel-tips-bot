@@ -7,6 +7,8 @@ namespace Tests\Feature\Prism;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
 use Prism\Prism\Prism;
+use Prism\Prism\Testing\TextResponseFake;
+use Prism\Prism\ValueObjects\Usage;
 use Tests\TestCase;
 
 class ReleaseTest extends TestCase
@@ -26,16 +28,11 @@ class ReleaseTest extends TestCase
             ]),
         ]);
 
-        Prism::fake([
-            'text' => 'これは新機能とバグ修正を含むテストリリースです。',
-            'usage' => (object) [
-                'promptTokens' => 120,
-                'completionTokens' => 58,
-                'cacheWriteInputTokens' => 0,
-                'cacheReadInputTokens' => 0,
-                'thoughtTokens' => 0,
-            ],
-        ]);
+        $fakeResponse = TextResponseFake::make()
+            ->withText('これは新機能とバグ修正を含むテストリリースです。')
+            ->withUsage(new Usage(120, 58));
+
+        Prism::fake([$fakeResponse]);
 
         $response = $this->artisan('prism:chat:release');
 

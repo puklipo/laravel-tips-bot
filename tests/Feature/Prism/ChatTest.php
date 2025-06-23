@@ -6,6 +6,8 @@ namespace Tests\Feature\Prism;
 
 use Illuminate\Support\Facades\Notification;
 use Prism\Prism\Prism;
+use Prism\Prism\Testing\TextResponseFake;
+use Prism\Prism\ValueObjects\Usage;
 use Tests\TestCase;
 
 class ChatTest extends TestCase
@@ -14,16 +16,11 @@ class ChatTest extends TestCase
     {
         Notification::fake();
 
-        Prism::fake([
-            'text' => 'This is a fake Laravel tip about using Eloquent relationships effectively.',
-            'usage' => (object) [
-                'promptTokens' => 85,
-                'completionTokens' => 42,
-                'cacheWriteInputTokens' => 0,
-                'cacheReadInputTokens' => 0,
-                'thoughtTokens' => 0,
-            ],
-        ]);
+        $fakeResponse = TextResponseFake::make()
+            ->withText('This is a fake Laravel tip about using Eloquent relationships effectively.')
+            ->withUsage(new Usage(85, 42));
+
+        Prism::fake([$fakeResponse]);
 
         $response = $this->artisan('prism:chat:tips');
 
