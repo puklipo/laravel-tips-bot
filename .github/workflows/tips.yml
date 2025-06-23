@@ -28,7 +28,7 @@ jobs:
       - name: Run tips command
         run: php artisan ${{ env.TIPS_COMMAND }}
         env:
-          TIPS_COMMAND: ${{ vars.TIPS_COMMAND || 'chat:tips' }}
+          TIPS_COMMAND: ${{ vars.TIPS_COMMAND || 'prism:chat:tips' }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
