@@ -12,8 +12,8 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
-use Prism\Prism\Prism;
 use Prism\Bedrock\Bedrock;
+use Prism\Prism\Prism;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ReleaseCommand extends Command
@@ -87,10 +87,10 @@ class ReleaseCommand extends Command
 
     private function calculateTotalTokens($usage): int
     {
-        return $usage->promptTokens + 
-               $usage->completionTokens + 
-               ($usage->cacheWriteInputTokens ?? 0) + 
-               ($usage->cacheReadInputTokens ?? 0) + 
+        return $usage->promptTokens +
+               $usage->completionTokens +
+               ($usage->cacheWriteInputTokens ?? 0) +
+               ($usage->cacheReadInputTokens ?? 0) +
                ($usage->thoughtTokens ?? 0);
     }
 

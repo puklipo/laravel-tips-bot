@@ -9,8 +9,8 @@ use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Lottery;
-use Prism\Prism\Prism;
 use Prism\Bedrock\Bedrock;
+use Prism\Prism\Prism;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ChatTipsCommand extends Command
@@ -61,10 +61,10 @@ class ChatTipsCommand extends Command
 
     protected function calculateTotalTokens($usage): int
     {
-        return $usage->promptTokens + 
-               $usage->completionTokens + 
-               ($usage->cacheWriteInputTokens ?? 0) + 
-               ($usage->cacheReadInputTokens ?? 0) + 
+        return $usage->promptTokens +
+               $usage->completionTokens +
+               ($usage->cacheWriteInputTokens ?? 0) +
+               ($usage->cacheReadInputTokens ?? 0) +
                ($usage->thoughtTokens ?? 0);
     }
 

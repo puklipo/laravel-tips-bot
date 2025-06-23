@@ -39,7 +39,7 @@ class PromptTest extends TestCase
     public function test_get_prompt_content(): void
     {
         $p = PrismPrompt::make(prompt: 'test content');
-        
+
         $this->assertSame('test content', $p->getPromptContent());
     }
 
@@ -47,7 +47,7 @@ class PromptTest extends TestCase
     {
         $p = PrismPrompt::make(prompt: 'test')
             ->withModel('custom-model');
-        
+
         $this->assertSame('custom-model', $p->getModel());
     }
 }
