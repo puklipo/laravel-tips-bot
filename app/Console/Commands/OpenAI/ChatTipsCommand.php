@@ -74,6 +74,6 @@ class ChatTipsCommand extends Command
             $prompt,
             $lang,
             'Please provide only one answer.',
-        ])->dump()->join(PHP_EOL);
+        ])->join(PHP_EOL);
     }
 }
