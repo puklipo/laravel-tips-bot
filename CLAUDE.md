@@ -100,9 +100,7 @@ php artisan ide-helper:meta           # Generate meta files
 ### AWS Bedrock Configuration (Optional - for Prism commands)
 - `AWS_ACCESS_KEY_ID`: AWS access key for Bedrock
 - `AWS_SECRET_ACCESS_KEY`: AWS secret key for Bedrock  
-- `AWS_DEFAULT_REGION`: AWS region (default: us-east-1)
-- `BEDROCK_MODEL`: Bedrock model ID (default: anthropic.claude-3-haiku-20240307-v1:0)
-- `AWS_USE_PATH_STYLE_ENDPOINT`: AWS path style endpoint setting (default: false)
+- `AWS_REGION`: AWS region (default: us-east-1)
 
 ### Required for All Commands
 - `TIPS_API_TOKEN`: API token for HTTP endpoint notifications
