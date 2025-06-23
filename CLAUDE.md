@@ -54,8 +54,8 @@ vendor/bin/phpunit tests/Unit/        # Run unit tests only
 
 ### Code Quality
 ```bash
-./vendor/bin/pint                     # Run Laravel Pint linter (dry run)
-./vendor/bin/pint --test --ansi       # Test code style without fixing
+vendor/bin/pint                     # Run Laravel Pint linter (dry run)
+vendor/bin/pint --test       # Test code style without fixing
 ```
 
 ### Bot Operations
