@@ -85,6 +85,15 @@ class ReleaseCommand extends Command
             ));
     }
 
+    private function calculateTotalTokens($usage): int
+    {
+        return $usage->promptTokens + 
+               $usage->completionTokens + 
+               ($usage->cacheWriteInputTokens ?? 0) + 
+               ($usage->cacheReadInputTokens ?? 0) + 
+               ($usage->thoughtTokens ?? 0);
+    }
+
     private function chat(string $body): string
     {
         $prompt = PrismPrompt::make(
@@ -107,7 +116,7 @@ class ReleaseCommand extends Command
         $this->info($content);
 
         $this->line('strlen: '.mb_strlen($content));
-        $this->line('usage: '.$response->usage);
+        $this->line('total_tokens: '.$this->calculateTotalTokens($response->usage));
 
         return $content;
     }
