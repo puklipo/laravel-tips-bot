@@ -51,7 +51,8 @@
             "@php artisan key:generate --ansi"
         ],
         "ide-helper:models": "@php artisan ide-helper:models -N",
-        "pint": "./vendor/bin/pint --test --ansi"
+        "test": "php artisan test",
+        "pint": "vendor/bin/pint"
     },
     "extra": {
         "laravel": {
