@@ -10,7 +10,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Lottery;
 use PrismPHP\Prism\Prism;
-use PrismPHP\Prism\Providers\Bedrock\BedrockProvider;
+use PrismPHP\Prism\Providers\Bedrock\Bedrock;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ChatTipsCommand extends Command
@@ -38,16 +38,8 @@ class ChatTipsCommand extends Command
             prompt: $this->prompt(),
         );
 
-        $prism = new Prism(
-            provider: new BedrockProvider(
-                region: config('services.bedrock.region', 'us-east-1'),
-                accessKey: config('services.bedrock.access_key'),
-                secretKey: config('services.bedrock.secret_key'),
-            )
-        );
-
-        $response = $prism->text()
-            ->using($prompt->getModel())
+        $response = Prism::text()
+            ->using(Bedrock::KEY, $prompt->getModel())
             ->withPrompt($prompt->getPromptContent())
             ->generate();
 
