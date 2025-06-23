@@ -48,7 +48,7 @@ return [
             'url' => env('VOYAGEAI_URL', 'https://api.voyageai.com/v1'),
         ],
         'bedrock' => [ // Key should match Bedrock::KEY
-            'region' => env('AWS_REGION', 'us-east-1'),
+            'region' => env('AWS_REGION', 'us-east-2'),
 
             // Set to true to ignore other auth configuration and use the AWS SDK default credential chain
             // read more at https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/guide_credentials_default_chain.html
