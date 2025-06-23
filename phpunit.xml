@@ -26,5 +26,9 @@
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
+        <env name="NOSTR_SK" value="test_secret_key"/>
+        <env name="TIPS_API_TOKEN" value="test_api_token"/>
+        <env name="DISCORD_WEBHOOK" value="https://discord.com/api/webhooks/test"/>
+        <env name="OPENAI_API_KEY" value="test_openai_key"/>
     </php>
 </phpunit>

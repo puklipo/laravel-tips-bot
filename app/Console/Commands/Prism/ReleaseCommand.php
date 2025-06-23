@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands;
+namespace App\Console\Commands\Prism;
 
-use App\Chat\OpenAIPrompt;
+use App\Chat\PrismPrompt;
 use App\Notifications\ReleaseNotification;
 use Illuminate\Console\Command;
 use Illuminate\Http\Client\RequestException;
@@ -12,7 +12,8 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
-use OpenAI\Laravel\Facades\OpenAI;
+use Prism\Prism\Prism;
+use Prism\Bedrock\Bedrock;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ReleaseCommand extends Command
@@ -22,14 +23,14 @@ class ReleaseCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'chat:release {repo=laravel/framework}';
+    protected $signature = 'prism:chat:release {repo=laravel/framework}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Generate release summaries using Prism+Bedrock';
 
     /**
      * Execute the console command.
@@ -86,24 +87,27 @@ class ReleaseCommand extends Command
 
     private function chat(string $body): string
     {
-        $response = OpenAI::chat()->create(
-            OpenAIPrompt::make(
-                prompt: fn () => collect([
-                    '次のリリースノートを日本語で要約してください。',
-                    '- 結果だけを出力。',
-                    '- @から始まるユーザー名を含めない。',
-                    '- URLを含めない。',
-                    '----',
-                    trim($body),
-                ])->join(PHP_EOL)
-            )->toArray()
+        $prompt = PrismPrompt::make(
+            prompt: fn () => collect([
+                '次のリリースノートを日本語で要約してください。',
+                '- 結果だけを出力。',
+                '- @から始まるユーザー名を含めない。',
+                '- URLを含めない。',
+                '----',
+                trim($body),
+            ])->join(PHP_EOL)
         );
 
-        $content = trim(Arr::get($response, 'choices.0.message.content'));
+        $response = Prism::text()
+            ->using(Bedrock::KEY, $prompt->getModel())
+            ->withPrompt($prompt->getPromptContent())
+            ->generate();
+
+        $content = trim($response->text);
         $this->info($content);
 
         $this->line('strlen: '.mb_strlen($content));
-        $this->line('total_tokens: '.Arr::get($response, 'usage.total_tokens'));
+        $this->line('usage: '.$response->usage);
 
         return $content;
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\OpenAI;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
@@ -38,7 +38,7 @@ class ReleaseTest extends TestCase
             ]),
         ]);
 
-        $response = $this->artisan('chat:release');
+        $response = $this->artisan('openai:chat:release');
 
         $response->assertSuccessful();
     }

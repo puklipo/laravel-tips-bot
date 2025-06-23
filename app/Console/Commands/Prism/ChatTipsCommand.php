@@ -2,49 +2,52 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands;
+namespace App\Console\Commands\Prism;
 
-use App\Chat\OpenAIPrompt;
+use App\Chat\PrismPrompt;
 use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Lottery;
-use OpenAI\Laravel\Facades\OpenAI;
+use Prism\Prism\Prism;
+use Prism\Bedrock\Bedrock;
 use Revolution\Nostr\Notifications\NostrRoute;
 
-class ChatCommand extends Command
+class ChatTipsCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'chat:tips';
+    protected $signature = 'prism:chat:tips';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Generate Laravel tips using Prism+Bedrock';
 
     /**
      * Execute the console command.
      */
     public function handle(): void
     {
-        $response = OpenAI::chat()->create(
-            OpenAIPrompt::make(
-                prompt: $this->prompt(),
-            )->toArray()
+        $prompt = PrismPrompt::make(
+            prompt: $this->prompt(),
         );
 
-        $tips = trim(Arr::get($response, 'choices.0.message.content'));
+        $response = Prism::text()
+            ->using(Bedrock::KEY, $prompt->getModel())
+            ->withPrompt($prompt->getPromptContent())
+            ->generate();
+
+        $tips = trim($response->text);
         $this->info($tips);
 
         $this->line('strlen: '.mb_strlen($tips));
-        $this->line('total_tokens: '.Arr::get($response, 'usage.total_tokens'));
+        $this->line('usage: '.$response->usage);
 
         if (blank($tips)) {
             return;
@@ -74,6 +77,6 @@ class ChatCommand extends Command
             $prompt,
             $lang,
             'Please provide only one answer.',
-        ])->dump()->join(PHP_EOL);
+        ])->join(PHP_EOL);
     }
 }

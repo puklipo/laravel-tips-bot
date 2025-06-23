@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands;
+namespace App\Console\Commands\OpenAI;
 
 use App\Chat\OpenAIPrompt;
 use App\Notifications\TipsNotification;
@@ -13,21 +13,21 @@ use Illuminate\Support\Lottery;
 use OpenAI\Laravel\Facades\OpenAI;
 use Revolution\Nostr\Notifications\NostrRoute;
 
-class ChatCommand extends Command
+class ChatTipsCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'chat:tips';
+    protected $signature = 'openai:chat:tips';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Generate Laravel tips using OpenAI';
 
     /**
      * Execute the console command.

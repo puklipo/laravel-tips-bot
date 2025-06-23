@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Feature;
+namespace Tests\Feature\OpenAI;
 
 use Illuminate\Support\Facades\Notification;
 use OpenAI\Laravel\Facades\OpenAI;
@@ -28,7 +28,7 @@ class ChatTest extends TestCase
             ]),
         ]);
 
-        $response = $this->artisan('chat:tips');
+        $response = $this->artisan('openai:chat:tips');
 
         $response->assertSuccessful();
     }

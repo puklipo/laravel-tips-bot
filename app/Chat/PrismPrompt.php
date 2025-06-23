@@ -7,14 +7,13 @@ namespace App\Chat;
 use Closure;
 use Illuminate\Contracts\Support\Arrayable;
 
-class Prompt implements Arrayable
+class PrismPrompt implements Arrayable
 {
-    protected string $model = 'o4-mini';
+    protected string $model = 'anthropic.claude-3-haiku-20240307-v1:0';
 
     public function __construct(
         protected readonly string|Closure $prompt,
-    ) {
-    }
+    ) {}
 
     public static function make(
         string|Closure $prompt,
@@ -51,5 +50,21 @@ class Prompt implements Arrayable
                 ],
             ],
         ];
+    }
+
+    /**
+     * Get the prompt content for Prism usage
+     */
+    public function getPromptContent(): string
+    {
+        return is_callable($this->prompt) ? call_user_func($this->prompt) : $this->prompt;
+    }
+
+    /**
+     * Get the model for Bedrock usage
+     */
+    public function getModel(): string
+    {
+        return $this->model;
     }
 }
