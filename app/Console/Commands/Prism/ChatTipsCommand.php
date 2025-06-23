@@ -47,7 +47,7 @@ class ChatTipsCommand extends Command
         $this->info($tips);
 
         $this->line('strlen: '.mb_strlen($tips));
-        $this->line('usage: '.$response->usage);
+        $this->line('total_tokens: '.$this->calculateTotalTokens($response->usage));
 
         if (blank($tips)) {
             return;
@@ -57,6 +57,15 @@ class ChatTipsCommand extends Command
             ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
             ->route('http', config('tips.api_token'))
             ->notify(new TipsNotification($tips));
+    }
+
+    protected function calculateTotalTokens($usage): int
+    {
+        return $usage->promptTokens + 
+               $usage->completionTokens + 
+               ($usage->cacheWriteInputTokens ?? 0) + 
+               ($usage->cacheReadInputTokens ?? 0) + 
+               ($usage->thoughtTokens ?? 0);
     }
 
     protected function prompt(): string
