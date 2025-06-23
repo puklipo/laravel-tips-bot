@@ -60,9 +60,9 @@ class ChatTipsCommand extends Command
     {
         $prompt = collect([
             'Tell me one advanced Laravel tips.',
-            //'Select one page from the official Laravel documentation and explain it.',
-            //'Generate one Laravel Frequently Asked Questions and Answers.',
-            //'Generate one unusual question and answer for Laravel.',
+            // 'Select one page from the official Laravel documentation and explain it.',
+            // 'Generate one Laravel Frequently Asked Questions and Answers.',
+            // 'Generate one unusual question and answer for Laravel.',
         ])->random();
 
         $lang = Lottery::odds(chances: 5, outOf: 10)

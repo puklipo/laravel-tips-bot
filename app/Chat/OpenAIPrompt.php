@@ -13,8 +13,7 @@ class OpenAIPrompt implements Arrayable
 
     public function __construct(
         protected readonly string|Closure $prompt,
-    ) {
-    }
+    ) {}
 
     public static function make(
         string|Closure $prompt,

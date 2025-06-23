@@ -28,7 +28,7 @@ class GenerateKeysCommand extends Command
     {
         $keys = Nostr::native()->key()->generate();
 
-        //$keys = Nostr::native()->key()->fromNsec(nsec: '');
+        // $keys = Nostr::native()->key()->fromNsec(nsec: '');
 
         $this->info('NOSTR_SK='.$keys->json('sk', ''));
         $this->line('NOSTR_NSEC='.$keys->json('nsec', ''));
