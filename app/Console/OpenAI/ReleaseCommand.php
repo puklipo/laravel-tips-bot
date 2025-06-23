@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands;
+namespace App\Console\OpenAI;
 
 use App\Chat\OpenAIPrompt;
 use App\Notifications\ReleaseNotification;
@@ -22,14 +22,14 @@ class ReleaseCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'chat:release {repo=laravel/framework}';
+    protected $signature = 'openai:chat:release {repo=laravel/framework}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Generate release summaries using OpenAI';
 
     /**
      * Execute the console command.
