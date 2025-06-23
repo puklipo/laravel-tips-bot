@@ -12,8 +12,8 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
-use PrismPHP\Prism\Prism;
-use PrismPHP\Prism\Providers\Bedrock\Bedrock;
+use Prism\Prism\Prism;
+use Prism\Bedrock\Bedrock;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ReleaseCommand extends Command

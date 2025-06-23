@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Feature\Prism;
 
 use Tests\TestCase;
@@ -8,7 +10,7 @@ class ReleaseTest extends TestCase
 {
     public function test_release(): void
     {
-        // Skip this test for now due to Prism/Bedrock setup complexity
-        $this->markTestSkipped('Prism/Bedrock integration test skipped - requires AWS credentials and complex setup');
+        // Skip this test for now due to Bedrock provider compatibility issue
+        $this->markTestSkipped('Prism/Bedrock provider compatibility issue - bedrock package has missing abstract method implementations');
     }
 }
