@@ -50,4 +50,5 @@ jobs:
           allowed_tools: |
             Bash(php:*)
             Bash(composer:*)
+            Bash(vendor/bin/phpunit)
             Bash(vendor/bin/pint)
