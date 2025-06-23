@@ -27,13 +27,14 @@ jobs:
           php artisan key:generate
       - name: Run release command
         run: |
-          php artisan ${{ vars.RELEASE_COMMAND || 'chat:release' }} laravel/framework
-          php artisan ${{ vars.RELEASE_COMMAND || 'chat:release' }} laravel/laravel
-          php artisan ${{ vars.RELEASE_COMMAND || 'chat:release' }} livewire/livewire
-          php artisan ${{ vars.RELEASE_COMMAND || 'chat:release' }} livewire/flux
-          php artisan ${{ vars.RELEASE_COMMAND || 'chat:release' }} tailwindlabs/tailwindcss
-          php artisan ${{ vars.RELEASE_COMMAND || 'chat:release' }} composer/composer
+          php artisan ${{ env.RELEASE_COMMAND }} laravel/framework
+          php artisan ${{ env.RELEASE_COMMAND }} laravel/laravel
+          php artisan ${{ env.RELEASE_COMMAND }} livewire/livewire
+          php artisan ${{ env.RELEASE_COMMAND }} livewire/flux
+          php artisan ${{ env.RELEASE_COMMAND }} tailwindlabs/tailwindcss
+          php artisan ${{ env.RELEASE_COMMAND }} composer/composer
         env:
+          RELEASE_COMMAND: ${{ vars.RELEASE_COMMAND || 'chat:release' }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
