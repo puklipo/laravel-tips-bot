@@ -9,8 +9,8 @@ use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Lottery;
-use PrismPHP\Prism\Prism;
-use PrismPHP\Prism\Providers\Bedrock\Bedrock;
+use Prism\Prism\Prism;
+use Prism\Bedrock\Bedrock;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ChatTipsCommand extends Command
@@ -77,6 +77,6 @@ class ChatTipsCommand extends Command
             $prompt,
             $lang,
             'Please provide only one answer.',
-        ])->dump()->join(PHP_EOL);
+        ])->join(PHP_EOL);
     }
 }
