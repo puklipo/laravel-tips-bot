@@ -133,6 +133,7 @@ class ChatTipsCommand extends Command
         return collect([
             $prompt,
             $lang,
+            'Use ## for markdown headings.',
             'Please provide only one answer.',
         ])->join(PHP_EOL);
     }
