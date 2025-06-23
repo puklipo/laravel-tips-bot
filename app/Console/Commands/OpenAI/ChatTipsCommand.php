@@ -58,12 +58,7 @@ class ChatTipsCommand extends Command
 
     protected function prompt(): string
     {
-        $prompt = collect([
-            'Tell me one advanced Laravel tips.',
-            // 'Select one page from the official Laravel documentation and explain it.',
-            // 'Generate one Laravel Frequently Asked Questions and Answers.',
-            // 'Generate one unusual question and answer for Laravel.',
-        ])->random();
+        $prompt = collect(config('prompt.tips'))->random();
 
         $lang = Lottery::odds(chances: 5, outOf: 10)
             ->winner(fn () => 'Answer in japanese.')
@@ -73,6 +68,7 @@ class ChatTipsCommand extends Command
         return collect([
             $prompt,
             $lang,
+            'Use ## for markdown headings.',
             'Please provide only one answer.',
         ])->join(PHP_EOL);
     }
