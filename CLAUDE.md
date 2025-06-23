@@ -90,6 +90,7 @@ php artisan ide-helper:meta           # Generate meta files
 - **Provider-Specific Commands**: Clear namespace separation between OpenAI and Prism implementations
 - **Automated Testing**: PHPUnit test suite with feature and unit tests
 - **GitHub Actions**: Automated testing, Claude integration, and scheduled tip generation
+- **Compatibility Note**: Prism versions above 0.75 have compatibility issues with Bedrock, so we're currently fixed at version 0.74. Will upgrade once the issues are resolved.
 
 ## Environment Variables Required
 
