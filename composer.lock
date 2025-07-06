@@ -4609,16 +4609,16 @@
         },
         {
             "name": "revolution/laravel-nostr",
-            "version": "1.1.3",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-nostr.git",
-                "reference": "a8e1d36fcbde2f6c5415347f122b0118b868df99"
+                "reference": "ca0b7c7543add3b16ec96b1d9121e0aecd118b6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-nostr/zipball/a8e1d36fcbde2f6c5415347f122b0118b868df99",
-                "reference": "a8e1d36fcbde2f6c5415347f122b0118b868df99",
+                "url": "https://api.github.com/repos/invokable/laravel-nostr/zipball/ca0b7c7543add3b16ec96b1d9121e0aecd118b6f",
+                "reference": "ca0b7c7543add3b16ec96b1d9121e0aecd118b6f",
                 "shasum": ""
             },
             "require": {
@@ -4663,7 +4663,7 @@
             ],
             "support": {
                 "issues": "https://github.com/invokable/laravel-nostr/issues",
-                "source": "https://github.com/invokable/laravel-nostr/tree/1.1.3"
+                "source": "https://github.com/invokable/laravel-nostr/tree/1.1.5"
             },
             "funding": [
                 {
@@ -4671,7 +4671,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-23T06:30:04+00:00"
+            "time": "2025-07-05T12:21:22+00:00"
         },
         {
             "name": "revolution/laravel-notification-discord-webhook",
@@ -8239,16 +8239,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.13.2",
+            "version": "1.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "d25e62e636b0a9b01e3bdebb7823b474876dd829"
+                "reference": "faed855a7b5f4d4637717c2b3863e277116beb36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/d25e62e636b0a9b01e3bdebb7823b474876dd829",
-                "reference": "d25e62e636b0a9b01e3bdebb7823b474876dd829",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/faed855a7b5f4d4637717c2b3863e277116beb36",
+                "reference": "faed855a7b5f4d4637717c2b3863e277116beb36",
                 "shasum": ""
             },
             "require": {
@@ -8287,7 +8287,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.2"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.3"
             },
             "funding": [
                 {
@@ -8295,7 +8295,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-04T14:07:32+00:00"
+            "time": "2025-07-05T12:25:42+00:00"
         },
         {
             "name": "nunomaduro/collision",
