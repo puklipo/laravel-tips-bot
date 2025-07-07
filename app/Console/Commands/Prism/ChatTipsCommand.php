@@ -41,7 +41,7 @@ class ChatTipsCommand extends Command
         $response = Prism::text()
             ->using(Bedrock::KEY, $prompt->getModel())
             ->withPrompt($prompt->getPromptContent())
-            ->generate();
+            ->asText();
 
         $tips = trim($response->text);
         $this->info($tips);
