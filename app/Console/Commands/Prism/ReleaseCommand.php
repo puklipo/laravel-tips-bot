@@ -110,7 +110,7 @@ class ReleaseCommand extends Command
         $response = Prism::text()
             ->using(Bedrock::KEY, $prompt->getModel())
             ->withPrompt($prompt->getPromptContent())
-            ->generate();
+            ->asText();
 
         $content = trim($response->text);
         $this->info($content);
