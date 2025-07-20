@@ -4611,16 +4611,16 @@
         },
         {
             "name": "revolution/laravel-nostr",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-nostr.git",
-                "reference": "ca0b7c7543add3b16ec96b1d9121e0aecd118b6f"
+                "reference": "e5864fe3e2670ca2ed553ad26af0351750a980dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-nostr/zipball/ca0b7c7543add3b16ec96b1d9121e0aecd118b6f",
-                "reference": "ca0b7c7543add3b16ec96b1d9121e0aecd118b6f",
+                "url": "https://api.github.com/repos/invokable/laravel-nostr/zipball/e5864fe3e2670ca2ed553ad26af0351750a980dd",
+                "reference": "e5864fe3e2670ca2ed553ad26af0351750a980dd",
                 "shasum": ""
             },
             "require": {
@@ -4665,7 +4665,7 @@
             ],
             "support": {
                 "issues": "https://github.com/invokable/laravel-nostr/issues",
-                "source": "https://github.com/invokable/laravel-nostr/tree/1.1.5"
+                "source": "https://github.com/invokable/laravel-nostr/tree/1.1.6"
             },
             "funding": [
                 {
@@ -4673,7 +4673,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-05T12:21:22+00:00"
+            "time": "2025-07-20T04:36:56+00:00"
         },
         {
             "name": "revolution/laravel-notification-discord-webhook",
