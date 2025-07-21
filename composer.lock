@@ -1734,16 +1734,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.7.0",
+            "version": "2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "6fbb36d44824ed4091adbcf4c7d4a3923cdb3405"
+                "reference": "10732241927d3971d28e7ea7b5712721fa2296ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/6fbb36d44824ed4091adbcf4c7d4a3923cdb3405",
-                "reference": "6fbb36d44824ed4091adbcf4c7d4a3923cdb3405",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/10732241927d3971d28e7ea7b5712721fa2296ca",
+                "reference": "10732241927d3971d28e7ea7b5712721fa2296ca",
                 "shasum": ""
             },
             "require": {
@@ -1772,7 +1772,7 @@
                 "symfony/process": "^5.4 | ^6.0 | ^7.0",
                 "symfony/yaml": "^2.3 | ^3.0 | ^4.0 | ^5.0 | ^6.0 | ^7.0",
                 "unleashedtech/php-coding-standard": "^3.1.1",
-                "vimeo/psalm": "^4.24.0 || ^5.0.0"
+                "vimeo/psalm": "^4.24.0 || ^5.0.0 || ^6.0.0"
             },
             "suggest": {
                 "symfony/yaml": "v2.3+ required if using the Front Matter extension"
@@ -1837,7 +1837,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-05T12:20:28+00:00"
+            "time": "2025-07-20T12:47:49+00:00"
         },
         {
             "name": "league/config",
@@ -4725,16 +4725,16 @@
         },
         {
             "name": "revolution/laravel-str-mixins",
-            "version": "2.7.0",
+            "version": "2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-str-mixins.git",
-                "reference": "1e2a22f2d91e942396ee5390a5b3bd39950c419f"
+                "reference": "2f70853cb0a41d930ac4325b88b5c3f071c37d70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-str-mixins/zipball/1e2a22f2d91e942396ee5390a5b3bd39950c419f",
-                "reference": "1e2a22f2d91e942396ee5390a5b3bd39950c419f",
+                "url": "https://api.github.com/repos/invokable/laravel-str-mixins/zipball/2f70853cb0a41d930ac4325b88b5c3f071c37d70",
+                "reference": "2f70853cb0a41d930ac4325b88b5c3f071c37d70",
                 "shasum": ""
             },
             "require": {
@@ -4743,7 +4743,8 @@
                 "php": "^8.2"
             },
             "require-dev": {
-                "orchestra/testbench": "^9.0"
+                "laravel/pint": "^1.22",
+                "orchestra/testbench": "^9.0||^10.0"
             },
             "type": "library",
             "extra": {
@@ -4775,7 +4776,7 @@
                 "str"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-str-mixins/tree/2.7.0"
+                "source": "https://github.com/invokable/laravel-str-mixins/tree/2.7.1"
             },
             "funding": [
                 {
@@ -4783,7 +4784,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-18T03:41:34+00:00"
+            "time": "2025-06-21T10:07:11+00:00"
         },
         {
             "name": "simplito/bigint-wrapper-php",
