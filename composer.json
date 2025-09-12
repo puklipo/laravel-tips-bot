@@ -8,7 +8,7 @@
         "php": "^8.2",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.9",
-        "prism-php/prism": "^0.83",
+        "prism-php/prism": "^0.89",
         "prism-php/bedrock": "^1.5",
         "revolution/laravel-nostr": "^1.0.0",
         "revolution/laravel-notification-discord-webhook": "^1.0",
@@ -21,7 +21,7 @@
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^8.1",
-        "phpunit/phpunit": "^11.2"
+        "phpunit/phpunit": "^12.0"
     },
     "autoload": {
         "psr-4": {
