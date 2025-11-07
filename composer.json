@@ -8,7 +8,7 @@
         "php": "^8.2",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.9",
-        "prism-php/prism": "^0.84",
+        "prism-php/prism": "^v0.98.0",
         "prism-php/bedrock": "^1.5",
         "revolution/laravel-nostr": "^1.0.0",
         "revolution/laravel-notification-discord-webhook": "^1.0",
