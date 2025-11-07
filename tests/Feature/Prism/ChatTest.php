@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\Feature\Prism;
 
 use Illuminate\Support\Facades\Notification;
-use Prism\Prism\Prism;
+use Prism\Prism\Facades\Prism;
 use Prism\Prism\Testing\TextResponseFake;
 use Prism\Prism\ValueObjects\Usage;
 use Tests\TestCase;

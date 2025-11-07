@@ -13,7 +13,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
 use Prism\Bedrock\Bedrock;
-use Prism\Prism\Prism;
+use Prism\Prism\Facades\Prism;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ReleaseCommand extends Command

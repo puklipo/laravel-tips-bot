@@ -10,7 +10,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Lottery;
 use Prism\Bedrock\Bedrock;
-use Prism\Prism\Prism;
+use Prism\Prism\Facades\Prism;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ChatTipsCommand extends Command
