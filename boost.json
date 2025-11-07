@@ -1,0 +1,12 @@
+{
+    "agents": [
+        "copilot"
+    ],
+    "editors": [
+        "copilot-cli"
+    ],
+    "guidelines": [
+        "prism-php/prism",
+        "revolution/laravel-boost-copilot-cli"
+    ]
+}
