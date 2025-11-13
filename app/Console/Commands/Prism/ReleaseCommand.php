@@ -74,7 +74,7 @@ class ReleaseCommand extends Command
             return;
         }
 
-        sleep(5);
+        sleep(1);
 
         Notification::route('discord-webhook', config('services.discord.webhook'))
             ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
