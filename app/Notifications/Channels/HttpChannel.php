@@ -27,7 +27,6 @@ class HttpChannel
 
         Http::withToken($token)
             ->post(url: 'https://puklipo.com/api/status', data: $message)
-            ->dontTruncateExceptions()
             ->throw();
     }
 }
