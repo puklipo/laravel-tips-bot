@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Notifications\Channels;
 
 use Illuminate\Http\Client\RequestException;
@@ -26,6 +28,7 @@ class HttpChannel
         $token = $notifiable->routeNotificationFor('http', $notification);
 
         Http::withToken($token)
+            ->withUserAgent('laravel-tips')
             ->post(url: 'https://puklipo.com/api/status', data: $message)
             ->throw();
     }
