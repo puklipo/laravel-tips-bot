@@ -74,6 +74,8 @@ class ReleaseCommand extends Command
             return;
         }
 
+        sleep(2);
+
         Notification::route('discord-webhook', config('services.discord.webhook'))
             ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
             ->route('http', config('tips.api_token'))
