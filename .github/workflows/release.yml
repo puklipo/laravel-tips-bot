@@ -30,6 +30,7 @@ jobs:
         run: |
           php artisan ${{ env.RELEASE_COMMAND }} laravel/framework
           php artisan ${{ env.RELEASE_COMMAND }} laravel/laravel
+          php artisan ${{ env.RELEASE_COMMAND }} laravel/boost
           php artisan ${{ env.RELEASE_COMMAND }} livewire/livewire
           #php artisan ${{ env.RELEASE_COMMAND }} livewire/flux
           #php artisan ${{ env.RELEASE_COMMAND }} tailwindlabs/tailwindcss
