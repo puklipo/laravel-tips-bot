@@ -8,7 +8,7 @@ This is a Laravel-based bot that generates and distributes Laravel tips using AW
 
 ### Core Components
 
-- **Chat System**: Prism+Bedrock integration for AWS Claude models (default model: us.anthropic.claude-sonnet-4-5-20250929-v1:0)
+- **Chat System**: Prism+Bedrock integration for AWS Claude models (default model: `global.anthropic.claude-sonnet-4-5-20250929-v1:0`)
     - `app/Chat/PrismPrompt.php`: Prism+Bedrock integration for AWS Claude models
 - **Console Commands**:
     - **Prism+Bedrock Commands** (`app/Console/Commands/Prism/`):
