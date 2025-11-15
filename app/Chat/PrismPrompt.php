@@ -9,7 +9,7 @@ use Illuminate\Contracts\Support\Arrayable;
 
 class PrismPrompt implements Arrayable
 {
-    protected string $model = 'us.anthropic.claude-sonnet-4-5-20250929-v1:0';
+    protected string $model = 'global.anthropic.claude-sonnet-4-5-20250929-v1:0';
 
     public function __construct(
         protected readonly string|Closure $prompt,
