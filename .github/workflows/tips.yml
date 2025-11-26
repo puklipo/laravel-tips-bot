@@ -29,10 +29,13 @@ jobs:
       - name: Run tips command
         run: php artisan ${{ env.TIPS_COMMAND }}
         env:
-          TIPS_COMMAND: 'prism:chat:tips'
+          AWS_BEDROCK_MODEL: 'global.anthropic.claude-sonnet-4-5-20250929-v1:0'
+          AWS_BEDROCK_API_KEY: ${{ secrets.AWS_BEDROCK_API_KEY }}
+          TIPS_COMMAND: 'chat:tips'
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-east-2'
+          AWS_DEFAULT_REGION: 'us-east-2'
           NOSTR_SK: ${{ secrets.NOSTR_SK }}
           NOSTR_API_BASE: ${{ secrets.NOSTR_API_BASE }}
           TIPS_API_TOKEN: ${{ secrets.TIPS_API_TOKEN }}

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Feature\Prism;
+namespace Tests\Feature;
 
 use Illuminate\Support\Facades\Notification;
-use Prism\Prism\Facades\Prism;
-use Prism\Prism\Testing\TextResponseFake;
-use Prism\Prism\ValueObjects\Usage;
+use Revolution\Amazon\Bedrock\Facades\Bedrock;
+use Revolution\Amazon\Bedrock\Testing\TextResponseFake;
+use Revolution\Amazon\Bedrock\ValueObjects\Usage;
 use Tests\TestCase;
 
 class ChatTest extends TestCase
@@ -20,9 +20,9 @@ class ChatTest extends TestCase
             ->withText('This is a fake Laravel tip about using Eloquent relationships effectively.')
             ->withUsage(new Usage(85, 42));
 
-        Prism::fake([$fakeResponse]);
+        Bedrock::fake([$fakeResponse]);
 
-        $response = $this->artisan('prism:chat:tips');
+        $response = $this->artisan('chat:tips');
 
         $response->assertSuccessful();
     }

@@ -2,15 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands\Prism;
+namespace App\Console\Commands;
 
-use App\Chat\PrismPrompt;
 use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Lottery;
-use Prism\Bedrock\Bedrock;
-use Prism\Prism\Facades\Prism;
+use Revolution\Amazon\Bedrock\Facades\Bedrock;
+use Revolution\Amazon\Bedrock\ValueObjects\Usage;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ChatTipsCommand extends Command
@@ -20,27 +19,23 @@ class ChatTipsCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'prism:chat:tips';
+    protected $signature = 'chat:tips';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Generate Laravel tips using Prism+Bedrock';
+    protected $description = 'Generate Laravel tips using Bedrock';
 
     /**
      * Execute the console command.
      */
     public function handle(): void
     {
-        $prompt = PrismPrompt::make(
-            prompt: $this->prompt(),
-        );
-
-        $response = Prism::text()
-            ->using(Bedrock::KEY, $prompt->getModel())
-            ->withPrompt($prompt->getPromptContent())
+        $response = Bedrock::text()
+            ->using(Bedrock::KEY, config('bedrock.model'))
+            ->withPrompt($this->prompt())
             ->asText();
 
         $tips = trim($response->text);
@@ -59,13 +54,10 @@ class ChatTipsCommand extends Command
             ->notify(new TipsNotification($tips));
     }
 
-    protected function calculateTotalTokens($usage): int
+    protected function calculateTotalTokens(Usage $usage): int
     {
         return $usage->promptTokens +
-               $usage->completionTokens +
-               ($usage->cacheWriteInputTokens ?? 0) +
-               ($usage->cacheReadInputTokens ?? 0) +
-               ($usage->thoughtTokens ?? 0);
+               $usage->completionTokens;
     }
 
     protected function prompt(): string

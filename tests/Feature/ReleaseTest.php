@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Feature\Prism;
+namespace Tests\Feature;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
-use Prism\Prism\Facades\Prism;
-use Prism\Prism\Testing\TextResponseFake;
-use Prism\Prism\ValueObjects\Usage;
+use Revolution\Amazon\Bedrock\Facades\Bedrock;
+use Revolution\Amazon\Bedrock\Testing\TextResponseFake;
+use Revolution\Amazon\Bedrock\ValueObjects\Usage;
 use Tests\TestCase;
 
 class ReleaseTest extends TestCase
@@ -32,9 +32,9 @@ class ReleaseTest extends TestCase
             ->withText('これは新機能とバグ修正を含むテストリリースです。')
             ->withUsage(new Usage(120, 58));
 
-        Prism::fake([$fakeResponse]);
+        Bedrock::fake([$fakeResponse]);
 
-        $response = $this->artisan('prism:chat:release');
+        $response = $this->artisan('chat:release');
 
         $response->assertSuccessful();
     }

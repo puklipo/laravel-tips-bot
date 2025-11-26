@@ -6,7 +6,7 @@
         "copilot-cli"
     ],
     "guidelines": [
-        "prism-php/prism",
-        "revolution/laravel-boost-copilot-cli"
+        "revolution/laravel-boost-copilot-cli",
+        "revolution/laravel-amazon-bedrock"
     ]
 }
