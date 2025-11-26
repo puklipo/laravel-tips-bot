@@ -2,21 +2,18 @@
 
 ## Project Overview
 
-This is a Laravel-based bot that generates and distributes Laravel tips using AWS Bedrock (via Prism PHP). The bot sends tips to multiple channels including Discord webhooks, Nostr protocol, and HTTP endpoints.
+This is a Laravel-based bot that generates and distributes Laravel tips using AWS Bedrock (via revolution/laravel-amazon-bedrock package). The bot sends tips to multiple channels including Discord webhooks, Nostr protocol, and HTTP endpoints.
 
 ## Architecture
 
 ### Core Components
 
-- **Chat System**: Prism+Bedrock integration for AWS Claude models (default model: `global.anthropic.claude-sonnet-4-5-20250929-v1:0`)
-    - `app/Chat/PrismPrompt.php`: Prism+Bedrock integration for AWS Claude models
-- **Console Commands**:
-    - **Prism+Bedrock Commands** (`app/Console/Commands/Prism/`):
-        - `ChatTipsCommand`: Bedrock tip generation (`php artisan prism:chat:tips`)
-        - `ReleaseCommand`: Bedrock release summaries (`php artisan prism:chat:release`)
-    - **Other Commands**:
-        - `NostrProfile`: Nostr protocol profile management (`php artisan nostr:profile`)
-        - `GenerateKeysCommand`: Key generation utilities
+- **Chat System**: AWS Bedrock integration using revolution/laravel-amazon-bedrock package (default model: `global.anthropic.claude-sonnet-4-5-20250929-v1:0`)
+- **Console Commands** (`app/Console/Commands/`):
+    - `ChatTipsCommand`: Bedrock tip generation (`php artisan chat:tips`)
+    - `ReleaseCommand`: Bedrock release summaries (`php artisan chat:release`)
+    - `NostrProfile`: Nostr protocol profile management (`php artisan nostr:profile`)
+    - `GenerateKeysCommand`: Key generation utilities (`php artisan nostr:generate-keys`)
 - **Notifications System** (`app/Notifications/`):
     - `TipsNotification`: Multi-channel tip distribution
     - `ReleaseNotification`: Release announcements
@@ -24,7 +21,7 @@ This is a Laravel-based bot that generates and distributes Laravel tips using AW
 
 ### Configuration
 
-- **Prism+Bedrock**: Configured via `config/prism.php` with support for multiple AI providers including AWS Bedrock
+- **AWS Bedrock**: Configured via `config/bedrock.php`
 - **Nostr**: Protocol configuration in `config/nostr.php`
 - **Tips**: API token configuration in `config/tips.php`
 - **Services**: Discord webhook configuration in `config/services.php`
@@ -53,12 +50,13 @@ vendor/bin/pint --test       # Test code style without fixing
 
 ### Bot Operations
 ```bash
-# Prism+Bedrock commands  
-php artisan prism:chat:tips           # Generate tips using AWS Bedrock via Prism
-php artisan prism:chat:release        # Generate release summaries using AWS Bedrock via Prism
+# AWS Bedrock commands  
+php artisan chat:tips                 # Generate tips using AWS Bedrock
+php artisan chat:release              # Generate release summaries using AWS Bedrock
 
-# Other commands
+# Nostr commands
 php artisan nostr:profile             # Manage Nostr profile
+php artisan nostr:generate-keys       # Generate Nostr keys
 ```
 
 ### IDE Support
@@ -72,16 +70,16 @@ php artisan ide-helper:meta           # Generate meta files
 
 - **Multi-language Support**: Tips can be generated in English or Japanese (5/10 probability for Japanese)
 - **Multiple Distribution Channels**: Discord, Nostr protocol, and HTTP endpoints
-- **AWS Bedrock Integration**: Uses Prism PHP library with Claude Sonnet models via AWS Bedrock
+- **AWS Bedrock Integration**: Uses revolution/laravel-amazon-bedrock package with Claude Sonnet models
 - **Automated Testing**: PHPUnit test suite with feature and unit tests
-- **GitHub Actions**: Automated testing, Claude integration, and scheduled tip generation
+- **GitHub Actions**: Automated testing and scheduled tip generation
 
 ## Environment Variables Required
 
 ### AWS Bedrock Configuration
-- `AWS_ACCESS_KEY_ID`: AWS access key for Bedrock
-- `AWS_SECRET_ACCESS_KEY`: AWS secret key for Bedrock
-- `AWS_REGION`: AWS region (default: us-east-1)
+- `AWS_BEDROCK_MODEL`: Bedrock model ID (default: `global.anthropic.claude-sonnet-4-5-20250929-v1:0`)
+- `AWS_BEDROCK_API_KEY`: AWS access key for Bedrock
+- `AWS_DEFAULT_REGION`: AWS region (default: us-east-1)
 
 ### Required for All Commands
 - `TIPS_API_TOKEN`: API token for HTTP endpoint notifications
@@ -89,20 +87,18 @@ php artisan ide-helper:meta           # Generate meta files
 - `NOSTR_SK`: Nostr private key for Nostr protocol notifications
 
 ### GitHub Actions Repository Variables
-- `TIPS_COMMAND`: Command to run for tips (default: `prism:chat:tips`)
-- `RELEASE_COMMAND`: Command to run for releases (default: `prism:chat:release`)
+- `AWS_BEDROCK_MODEL`: Bedrock model ID to use (change this to use a new model)
+- `TIPS_COMMAND`: Command to run for tips (default: `chat:tips`)
+- `RELEASE_COMMAND`: Command to run for releases (default: `chat:release`)
 
 ## Testing Strategy
 
 Tests are organized into Feature and Unit test suites:
 
 ### Feature Tests
-- **Prism Tests** (`tests/Feature/Prism/`):
-    - `ChatTest.php`: Prism+Bedrock chat functionality testing
-    - `PromptTest.php`: Prism prompt generation testing
-    - `ReleaseTest.php`: Prism release functionality testing
-- **General Tests**:
-    - `tests/Feature/NostrTest.php`: Nostr protocol integration
+- `tests/Feature/ChatTest.php`: AWS Bedrock chat functionality testing
+- `tests/Feature/ReleaseTest.php`: AWS Bedrock release functionality testing
+- `tests/Feature/NostrTest.php`: Nostr protocol integration
 
 ### Unit Tests
 - `tests/Unit/ExampleTest.php`: Basic unit test examples
