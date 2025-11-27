@@ -43,7 +43,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-east-2'
-          AWS_DEFAULT_REGION: 'us-east-2'
+          AWS_DEFAULT_REGION: 'us-east-1'
           NOSTR_SK: ${{ secrets.NOSTR_SK }}
           NOSTR_API_BASE: ${{ secrets.NOSTR_API_BASE }}
           TIPS_API_TOKEN: ${{ secrets.TIPS_API_TOKEN }}
