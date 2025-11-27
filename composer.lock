@@ -4008,16 +4008,16 @@
         },
         {
             "name": "revolution/laravel-amazon-bedrock",
-            "version": "0.1.2",
+            "version": "0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-amazon-bedrock.git",
-                "reference": "d5e2be22999e93ad9600c8ad557a1bef22ad5871"
+                "reference": "01f1f4aa68a7af0684389966620eb7c876cd6637"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/d5e2be22999e93ad9600c8ad557a1bef22ad5871",
-                "reference": "d5e2be22999e93ad9600c8ad557a1bef22ad5871",
+                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/01f1f4aa68a7af0684389966620eb7c876cd6637",
+                "reference": "01f1f4aa68a7af0684389966620eb7c876cd6637",
                 "shasum": ""
             },
             "require": {
@@ -4064,7 +4064,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.1.2"
+                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.1.3"
             },
             "funding": [
                 {
@@ -4072,7 +4072,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-27T02:53:08+00:00"
+            "time": "2025-11-27T03:12:36+00:00"
         },
         {
             "name": "revolution/laravel-nostr",
