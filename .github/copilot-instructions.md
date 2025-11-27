@@ -53,17 +53,6 @@ vendor/bin/pint --test       # Test code style without fixing
 # AWS Bedrock commands  
 php artisan chat:tips                 # Generate tips using AWS Bedrock
 php artisan chat:release              # Generate release summaries using AWS Bedrock
-
-# Nostr commands
-php artisan nostr:profile             # Manage Nostr profile
-php artisan nostr:generate-keys       # Generate Nostr keys
-```
-
-### IDE Support
-```bash
-php artisan ide-helper:generate       # Generate IDE helper files
-php artisan ide-helper:models -N      # Generate model helpers
-php artisan ide-helper:meta           # Generate meta files
 ```
 
 ## Key Features
@@ -88,8 +77,6 @@ php artisan ide-helper:meta           # Generate meta files
 
 ### GitHub Actions Repository Variables
 - `AWS_BEDROCK_MODEL`: Bedrock model ID to use (change this to use a new model)
-- `TIPS_COMMAND`: Command to run for tips (default: `chat:tips`)
-- `RELEASE_COMMAND`: Command to run for releases (default: `chat:release`)
 
 ## Testing Strategy
 
