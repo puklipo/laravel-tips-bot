@@ -488,6 +488,64 @@
             "time": "2025-10-31T18:51:33+00:00"
         },
         {
+            "name": "dsbaars/chacha20",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dsbaars/PHP-ChaCha20.git",
+                "reference": "4edfef042c329313935a3dd516278e27c2939b5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dsbaars/PHP-ChaCha20/zipball/4edfef042c329313935a3dd516278e27c2939b5f",
+                "reference": "4edfef042c329313935a3dd516278e27c2939b5f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpunit/phpunit": "~12.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/functions.php"
+                ],
+                "psr-4": {
+                    "ChaCha20\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leigh",
+                    "homepage": "https://github.com/lt"
+                },
+                {
+                    "name": "Djuri Baars",
+                    "homepage": "https://github.com/dsbaars"
+                }
+            ],
+            "description": "Pure PHP implementation of the ChaCha20 encryption algorithm.",
+            "homepage": "https://github.com/dsbaars/PHP-ChaCha20",
+            "keywords": [
+                "cipher",
+                "encryption",
+                "security",
+                "stream"
+            ],
+            "support": {
+                "source": "https://github.com/dsbaars/PHP-ChaCha20/tree/0.3.0"
+            },
+            "time": "2025-11-28T16:51:46+00:00"
+        },
+        {
             "name": "egulias/email-validator",
             "version": "4.0.4",
             "source": {
@@ -2141,60 +2199,6 @@
                 }
             ],
             "time": "2025-11-18T12:17:23+00:00"
-        },
-        {
-            "name": "leigh/chacha20",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lt/PHP-ChaCha20.git",
-                "reference": "7aeffd53228be384b4a8986c9a8d9578acb171a4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lt/PHP-ChaCha20/zipball/7aeffd53228be384b4a8986c9a8d9578acb171a4",
-                "reference": "7aeffd53228be384b4a8986c9a8d9578acb171a4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "lib/functions.php"
-                ],
-                "psr-4": {
-                    "ChaCha20\\": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Leigh",
-                    "homepage": "https://github.com/lt"
-                }
-            ],
-            "description": "Pure PHP implementation of the ChaCha20 encryption algorithm.",
-            "homepage": "https://github.com/lt/PHP-ChaCha20",
-            "keywords": [
-                "cipher",
-                "encryption",
-                "security",
-                "stream"
-            ],
-            "support": {
-                "issues": "https://github.com/lt/PHP-ChaCha20/issues",
-                "source": "https://github.com/lt/PHP-ChaCha20/tree/0.2.0"
-            },
-            "abandoned": true,
-            "time": "2016-01-14T11:24:17+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4008,16 +4012,16 @@
         },
         {
             "name": "revolution/laravel-amazon-bedrock",
-            "version": "0.1.6",
+            "version": "0.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-amazon-bedrock.git",
-                "reference": "597eb5f0dbf23800abb69e5cbdff096c264261fa"
+                "reference": "ac93dfdbae577ca702524028b5f32ff8427c4e31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/597eb5f0dbf23800abb69e5cbdff096c264261fa",
-                "reference": "597eb5f0dbf23800abb69e5cbdff096c264261fa",
+                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/ac93dfdbae577ca702524028b5f32ff8427c4e31",
+                "reference": "ac93dfdbae577ca702524028b5f32ff8427c4e31",
                 "shasum": ""
             },
             "require": {
@@ -4064,7 +4068,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.1.6"
+                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.1.7"
             },
             "funding": [
                 {
@@ -4072,20 +4076,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-12-03T02:42:52+00:00"
+            "time": "2025-12-04T00:43:02+00:00"
         },
         {
             "name": "revolution/laravel-nostr",
-            "version": "1.1.6",
+            "version": "1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-nostr.git",
-                "reference": "e5864fe3e2670ca2ed553ad26af0351750a980dd"
+                "reference": "d28f8d12e23d320d56921c932774b3c2547dca22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-nostr/zipball/e5864fe3e2670ca2ed553ad26af0351750a980dd",
-                "reference": "e5864fe3e2670ca2ed553ad26af0351750a980dd",
+                "url": "https://api.github.com/repos/invokable/laravel-nostr/zipball/d28f8d12e23d320d56921c932774b3c2547dca22",
+                "reference": "d28f8d12e23d320d56921c932774b3c2547dca22",
                 "shasum": ""
             },
             "require": {
@@ -4098,7 +4102,8 @@
             },
             "require-dev": {
                 "laravel/pint": "^1.22",
-                "orchestra/testbench": "^9.0||^10.0"
+                "orchestra/testbench": "^9.0||^10.0",
+                "revolution/laravel-boost-copilot-cli": "^1.0"
             },
             "type": "library",
             "extra": {
@@ -4130,7 +4135,7 @@
             ],
             "support": {
                 "issues": "https://github.com/invokable/laravel-nostr/issues",
-                "source": "https://github.com/invokable/laravel-nostr/tree/1.1.6"
+                "source": "https://github.com/invokable/laravel-nostr/tree/1.1.7"
             },
             "funding": [
                 {
@@ -4138,7 +4143,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-20T04:36:56+00:00"
+            "time": "2025-12-04T10:54:55+00:00"
         },
         {
             "name": "revolution/laravel-notification-discord-webhook",
@@ -4407,25 +4412,25 @@
         },
         {
             "name": "swentel/nostr-php",
-            "version": "1.9.2",
+            "version": "1.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nostrver-se/nostr-php.git",
-                "reference": "8fb8337354b2e9d48a901276c7814d7fa7b25653"
+                "reference": "c415dd1bf20c1b414eca94005288cc137a79e0d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nostrver-se/nostr-php/zipball/8fb8337354b2e9d48a901276c7814d7fa7b25653",
-                "reference": "8fb8337354b2e9d48a901276c7814d7fa7b25653",
+                "url": "https://api.github.com/repos/nostrver-se/nostr-php/zipball/c415dd1bf20c1b414eca94005288cc137a79e0d7",
+                "reference": "c415dd1bf20c1b414eca94005288cc137a79e0d7",
                 "shasum": ""
             },
             "require": {
                 "bitwasp/bech32": "^0.0.1",
+                "dsbaars/chacha20": "^0.3.0",
                 "ext-gmp": "*",
                 "ext-xml": "*",
-                "leigh/chacha20": "^0.2.0",
                 "paragonie/ecc": "^2.4",
-                "php": ">=8.1 <8.5",
+                "php": ">=8.2 <8.6",
                 "phrity/websocket": "^3.0",
                 "simplito/elliptic-php": "^1.0"
             },
@@ -4466,9 +4471,9 @@
                 "chat": "https://t.me/nostr_php",
                 "issue": "https://github.com/swentel/nostr-php/issues",
                 "issues": "https://github.com/nostrver-se/nostr-php/issues",
-                "source": "https://github.com/nostrver-se/nostr-php/tree/1.9.2"
+                "source": "https://github.com/nostrver-se/nostr-php/tree/1.9.3"
             },
-            "time": "2025-06-04T14:51:06+00:00"
+            "time": "2025-12-04T09:09:22+00:00"
         },
         {
             "name": "symfony/clock",
