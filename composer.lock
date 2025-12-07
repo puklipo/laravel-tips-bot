@@ -2564,16 +2564,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.6.2",
+            "version": "v5.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "3a454ca033b9e06b63282ce19562e892747449bb"
+                "reference": "dca41cd15c2ac9d055ad70dbfd011130757d1f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/3a454ca033b9e06b63282ce19562e892747449bb",
-                "reference": "3a454ca033b9e06b63282ce19562e892747449bb",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/dca41cd15c2ac9d055ad70dbfd011130757d1f82",
+                "reference": "dca41cd15c2ac9d055ad70dbfd011130757d1f82",
                 "shasum": ""
             },
             "require": {
@@ -2616,9 +2616,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.7.0"
             },
-            "time": "2025-10-21T19:32:17+00:00"
+            "time": "2025-12-06T11:56:16+00:00"
         },
         {
             "name": "nunomaduro/termwind",
@@ -3082,30 +3082,30 @@
         },
         {
             "name": "phrity/net-stream",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/phrity-net-stream.git",
-                "reference": "c621bb3108a5a02bba64df2e5f0cd7ada02665b5"
+                "reference": "6d220446043c0b2bf512cfd89caa2494ad9afdd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/phrity-net-stream/zipball/c621bb3108a5a02bba64df2e5f0cd7ada02665b5",
-                "reference": "c621bb3108a5a02bba64df2e5f0cd7ada02665b5",
+                "url": "https://api.github.com/repos/sirn-se/phrity-net-stream/zipball/6d220446043c0b2bf512cfd89caa2494ad9afdd1",
+                "reference": "6d220446043c0b2bf512cfd89caa2494ad9afdd1",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.1",
                 "phrity/util-errorhandler": "^1.1",
                 "psr/http-factory": "^1.0",
-                "psr/http-message": "^1.1 | ^2.0"
+                "psr/http-message": "^1.1 || ^2.0"
             },
             "require-dev": {
-                "php-coveralls/php-coveralls": "^2.0",
                 "phpstan/phpstan": "^2.0",
-                "phpunit/phpunit": "^10.0 | ^11.0  | ^12.0",
+                "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0",
                 "phrity/net-uri": "^2.0",
-                "squizlabs/php_codesniffer": "^3.5"
+                "robiningelbrecht/phpunit-coverage-tools": "^1.9",
+                "squizlabs/php_codesniffer": "^3.5 || ^4.0"
             },
             "type": "library",
             "autoload": {
@@ -3137,9 +3137,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/phrity-net-stream/issues",
-                "source": "https://github.com/sirn-se/phrity-net-stream/tree/2.3.1"
+                "source": "https://github.com/sirn-se/phrity-net-stream/tree/2.3.2"
             },
-            "time": "2025-08-08T09:51:04+00:00"
+            "time": "2025-12-06T12:42:13+00:00"
         },
         {
             "name": "phrity/net-uri",
@@ -3257,16 +3257,16 @@
         },
         {
             "name": "phrity/websocket",
-            "version": "3.6.0",
+            "version": "3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/websocket-php.git",
-                "reference": "3f16b2564a230bbce716cccaff2f6156a60a8798"
+                "reference": "44348ac56a2c32945783a02645c137558eaa1d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/websocket-php/zipball/3f16b2564a230bbce716cccaff2f6156a60a8798",
-                "reference": "3f16b2564a230bbce716cccaff2f6156a60a8798",
+                "url": "https://api.github.com/repos/sirn-se/websocket-php/zipball/44348ac56a2c32945783a02645c137558eaa1d5e",
+                "reference": "44348ac56a2c32945783a02645c137558eaa1d5e",
                 "shasum": ""
             },
             "require": {
@@ -3275,18 +3275,17 @@
                 "phrity/net-stream": "^2.3",
                 "phrity/net-uri": "^2.1",
                 "psr/http-message": "^1.1 | ^2.0",
-                "psr/log": "^1.0 | ^2.0 | ^3.0"
+                "psr/log": "^1.0 || ^2.0 || ^3.0"
             },
             "require-dev": {
                 "guzzlehttp/psr7": "^2.0",
-                "php-coveralls/php-coveralls": "^2.0",
                 "phpstan/phpstan": "^2.0",
-                "phpunit/phpunit": "^10.0 | ^11.0 | ^12.0",
+                "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0",
                 "phrity/logger-console": "^1.0",
                 "phrity/net-mock": "^2.3",
                 "phrity/util-errorhandler": "^1.1",
                 "robiningelbrecht/phpunit-coverage-tools": "^1.9",
-                "squizlabs/php_codesniffer": "^3.5"
+                "squizlabs/php_codesniffer": "^3.5 || ^4.0"
             },
             "type": "library",
             "autoload": {
@@ -3317,9 +3316,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/websocket-php/issues",
-                "source": "https://github.com/sirn-se/websocket-php/tree/3.6.0"
+                "source": "https://github.com/sirn-se/websocket-php/tree/3.6.1"
             },
-            "time": "2025-09-08T16:21:41+00:00"
+            "time": "2025-12-06T13:42:55+00:00"
         },
         {
             "name": "psr/clock",
@@ -8723,16 +8722,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.5.0",
+            "version": "12.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "fef037fe50d20ce826cdbd741b7a2afcdec5f45b"
+                "reference": "e33a5132ea24119400f6ce5bce6665922e968bad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fef037fe50d20ce826cdbd741b7a2afcdec5f45b",
-                "reference": "fef037fe50d20ce826cdbd741b7a2afcdec5f45b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e33a5132ea24119400f6ce5bce6665922e968bad",
+                "reference": "e33a5132ea24119400f6ce5bce6665922e968bad",
                 "shasum": ""
             },
             "require": {
@@ -8800,7 +8799,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.5.0"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.5.1"
             },
             "funding": [
                 {
@@ -8824,7 +8823,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-05T04:59:40+00:00"
+            "time": "2025-12-06T12:19:17+00:00"
         },
         {
             "name": "revolution/laravel-boost-copilot-cli",
