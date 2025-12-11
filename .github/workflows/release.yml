@@ -32,6 +32,7 @@ jobs:
           php artisan chat:release laravel/laravel
           php artisan chat:release laravel/boost
           php artisan chat:release livewire/livewire
+          php artisan chat:release github/copilot-cli
           #php artisan chat:release livewire/flux
           #php artisan chat:release tailwindlabs/tailwindcss
           #php artisan chat:release composer/composer
