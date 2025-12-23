@@ -2478,16 +2478,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.1.0",
+            "version": "v4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "fa1f0b8261ed150447979eb22e373b7b7ad5a8e0"
+                "reference": "c99059c0315591f1a0db7ad6002000288ab8dc72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/fa1f0b8261ed150447979eb22e373b7b7ad5a8e0",
-                "reference": "fa1f0b8261ed150447979eb22e373b7b7ad5a8e0",
+                "url": "https://api.github.com/repos/nette/utils/zipball/c99059c0315591f1a0db7ad6002000288ab8dc72",
+                "reference": "c99059c0315591f1a0db7ad6002000288ab8dc72",
                 "shasum": ""
             },
             "require": {
@@ -2561,9 +2561,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.1.0"
+                "source": "https://github.com/nette/utils/tree/v4.1.1"
             },
-            "time": "2025-12-01T17:49:23+00:00"
+            "time": "2025-12-22T12:14:32+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3029,16 +3029,16 @@
         },
         {
             "name": "phrity/http",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/phrity-http.git",
-                "reference": "8f9d8eb92cd34cf7b9ec092b45730ec3ba668937"
+                "reference": "1e7eee67359287b94aae2b7d40b730d5f5394943"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/phrity-http/zipball/8f9d8eb92cd34cf7b9ec092b45730ec3ba668937",
-                "reference": "8f9d8eb92cd34cf7b9ec092b45730ec3ba668937",
+                "url": "https://api.github.com/repos/sirn-se/phrity-http/zipball/1e7eee67359287b94aae2b7d40b730d5f5394943",
+                "reference": "1e7eee67359287b94aae2b7d40b730d5f5394943",
                 "shasum": ""
             },
             "require": {
@@ -3074,14 +3074,16 @@
             "homepage": "https://phrity.sirn.se/http",
             "keywords": [
                 "HTTP Factories",
+                "HTTP Serializer",
                 "http",
-                "psr-17"
+                "psr-17",
+                "psr-7"
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/phrity-http/issues",
-                "source": "https://github.com/sirn-se/phrity-http/tree/1.0.1"
+                "source": "https://github.com/sirn-se/phrity-http/tree/1.1.0"
             },
-            "time": "2025-12-05T10:19:08+00:00"
+            "time": "2025-12-22T20:22:29+00:00"
         },
         {
             "name": "phrity/net-stream",
@@ -3260,16 +3262,16 @@
         },
         {
             "name": "phrity/websocket",
-            "version": "3.6.1",
+            "version": "3.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/websocket-php.git",
-                "reference": "44348ac56a2c32945783a02645c137558eaa1d5e"
+                "reference": "b9816ed2b4a10c8c42bd0b6398044ab506869756"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/websocket-php/zipball/44348ac56a2c32945783a02645c137558eaa1d5e",
-                "reference": "44348ac56a2c32945783a02645c137558eaa1d5e",
+                "url": "https://api.github.com/repos/sirn-se/websocket-php/zipball/b9816ed2b4a10c8c42bd0b6398044ab506869756",
+                "reference": "b9816ed2b4a10c8c42bd0b6398044ab506869756",
                 "shasum": ""
             },
             "require": {
@@ -3319,9 +3321,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/websocket-php/issues",
-                "source": "https://github.com/sirn-se/websocket-php/tree/3.6.1"
+                "source": "https://github.com/sirn-se/websocket-php/tree/3.6.2"
             },
-            "time": "2025-12-06T13:42:55+00:00"
+            "time": "2025-12-21T09:58:16+00:00"
         },
         {
             "name": "psr/clock",
