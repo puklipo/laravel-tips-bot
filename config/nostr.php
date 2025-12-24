@@ -22,7 +22,7 @@ return [
      * The first relay is used as the primary relay.
      */
     'relays' => [
-        'wss://relay.nostr.band',
+        // 'wss://relay.nostr.band',
 
         'wss://relay.damus.io',
     ],
