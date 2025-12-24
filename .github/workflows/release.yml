@@ -37,7 +37,7 @@ jobs:
           #php artisan chat:release tailwindlabs/tailwindcss
           #php artisan chat:release composer/composer
         env:
-          AWS_BEDROCK_MODEL: 'global.anthropic.claude-sonnet-4-5-20250929-v1:0'
+          AWS_BEDROCK_MODEL: 'global.anthropic.claude-haiku-4-5-20251001-v1:0'
           AWS_BEDROCK_API_KEY: ${{ secrets.AWS_BEDROCK_API_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
