@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup PHP, with composer and extensions
         uses: shivammathur/setup-php@v2 #https://github.com/shivammathur/setup-php
         with:
@@ -32,6 +32,7 @@ jobs:
           php artisan chat:release laravel/laravel
           php artisan chat:release laravel/boost
           php artisan chat:release livewire/livewire
+          php artisan chat:release inertiajs/inertia
           php artisan chat:release github/copilot-cli
           #php artisan chat:release livewire/flux
           #php artisan chat:release tailwindlabs/tailwindcss
