@@ -58,11 +58,11 @@ class ReleaseCommand extends Command
 
         $date = Carbon::parse(time: $release['published_at'], timezone: 'UTC');
 
-        if ($date->tz(config('app.timezone'))->addDay()->lessThan(now())) {
+        if ($date->tz(config('app.timezone'))->plus(days: 1)->lessThan(now())) {
             return;
         }
 
-        if (Str::length($release['body']) < 100) {
+        if (Str::length($release['body']) < 50) {
             $this->info('Release body is too short, skipping.');
             $this->line($release['body']);
 
