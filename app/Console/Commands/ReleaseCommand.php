@@ -77,7 +77,7 @@ class ReleaseCommand extends Command
             return;
         }
 
-        sleep(1);
+        sleep(5);
 
         Notification::route('discord-webhook', config('services.discord.webhook'))
             ->route('http', config('tips.api_token'))
