@@ -80,8 +80,8 @@ class ReleaseCommand extends Command
         sleep(1);
 
         Notification::route('discord-webhook', config('services.discord.webhook'))
-            ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
             ->route('http', config('tips.api_token'))
+            ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
             ->notify(new ReleaseNotification(
                 repo: $this->argument('repo'),
                 ver: $release['tag_name'],
