@@ -14,7 +14,6 @@
         "revolution/laravel-str-mixins": "^2.4"
     },
     "require-dev": {
-        "barryvdh/laravel-ide-helper": "^3.0",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
@@ -48,7 +47,8 @@
             "@php artisan key:generate --ansi"
         ],
         "test": "php artisan test",
-        "pint": "vendor/bin/pint"
+        "pint": "vendor/bin/pint",
+        "boost": "@php artisan boost:install --no-interaction --ansi"
     },
     "extra": {
         "laravel": {
