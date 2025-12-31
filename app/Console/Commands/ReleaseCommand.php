@@ -11,6 +11,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Str;
 use Revolution\Amazon\Bedrock\Facades\Bedrock;
 use Revolution\Amazon\Bedrock\ValueObjects\Usage;
 use Revolution\Nostr\Notifications\NostrRoute;
@@ -61,7 +62,10 @@ class ReleaseCommand extends Command
             return;
         }
 
-        if (blank($release['body'])) {
+        if (Str::length($release['body']) < 100) {
+            $this->info('Release body is too short, skipping.');
+            $this->line($release['body']);
+
             return;
         }
 
