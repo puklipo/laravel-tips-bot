@@ -10,8 +10,6 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Lottery;
-use Revolution\Amazon\Bedrock\Facades\Bedrock;
-use Revolution\Amazon\Bedrock\ValueObjects\Usage;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ChatTipsCommand extends Command
@@ -35,17 +33,8 @@ class ChatTipsCommand extends Command
      */
     public function handle(): void
     {
-        //        $response = Bedrock::text()
-        //            ->using(Bedrock::KEY, config('bedrock.model'))
-        //            ->withPrompt($this->prompt())
-        //            ->asText();
-        //
-        //        $tips = trim($response->text);
         $tips = $this->copilot();
         $this->info($tips);
-
-        // $this->line('strlen: '.mb_strlen($tips));
-        // $this->line('total_tokens: '.$this->calculateTotalTokens($response->usage));
 
         if (blank($tips)) {
             return;
@@ -55,12 +44,6 @@ class ChatTipsCommand extends Command
             // ->route('nostr', NostrRoute::to(sk: config('nostr.keys.sk')))
             ->route('http', config('tips.api_token'))
             ->notify(new TipsNotification($tips));
-    }
-
-    protected function calculateTotalTokens(Usage $usage): int
-    {
-        return $usage->promptTokens +
-               $usage->completionTokens;
     }
 
     private function copilot(): string

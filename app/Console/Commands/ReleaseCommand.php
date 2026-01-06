@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Revolution\Amazon\Bedrock\Facades\Bedrock;
-use Revolution\Amazon\Bedrock\ValueObjects\Usage;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ReleaseCommand extends Command
@@ -90,28 +88,6 @@ class ReleaseCommand extends Command
                 url: $release['html_url'],
                 note: $note,
             ));
-    }
-
-    private function calculateTotalTokens(Usage $usage): int
-    {
-        return $usage->promptTokens +
-               $usage->completionTokens;
-    }
-
-    private function chat(string $body): string
-    {
-        $response = Bedrock::text()
-            ->using(Bedrock::KEY, config('bedrock.model'))
-            ->withPrompt($this->prompt($body))
-            ->asText();
-
-        $content = trim($response->text);
-        $this->info($content);
-
-        $this->line('strlen: '.mb_strlen($content));
-        $this->line('total_tokens: '.$this->calculateTotalTokens($response->usage));
-
-        return $content;
     }
 
     private function copilot(string $body): string
