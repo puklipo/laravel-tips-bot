@@ -26,9 +26,13 @@ jobs:
         run: |
           cp .env.example .env
           php artisan key:generate
+      - name: Install Copilot CLI
+        run: |
+          curl -fsSL https://gh.io/copilot-install | bash
       - name: Run tips command
         run: php artisan chat:tips
         env:
+          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
           AWS_BEDROCK_MODEL: 'global.anthropic.claude-haiku-4-5-20251001-v1:0'
           AWS_BEDROCK_API_KEY: ${{ secrets.AWS_BEDROCK_API_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

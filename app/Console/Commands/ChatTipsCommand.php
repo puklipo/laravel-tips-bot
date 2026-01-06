@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
+use App\Copilot\CopilotRuntime;
 use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Lottery;
 use Revolution\Amazon\Bedrock\Facades\Bedrock;
 use Revolution\Amazon\Bedrock\ValueObjects\Usage;
@@ -33,16 +35,17 @@ class ChatTipsCommand extends Command
      */
     public function handle(): void
     {
-        $response = Bedrock::text()
-            ->using(Bedrock::KEY, config('bedrock.model'))
-            ->withPrompt($this->prompt())
-            ->asText();
-
-        $tips = trim($response->text);
+        //        $response = Bedrock::text()
+        //            ->using(Bedrock::KEY, config('bedrock.model'))
+        //            ->withPrompt($this->prompt())
+        //            ->asText();
+        //
+        //        $tips = trim($response->text);
+        $tips = $this->copilot();
         $this->info($tips);
 
-        $this->line('strlen: '.mb_strlen($tips));
-        $this->line('total_tokens: '.$this->calculateTotalTokens($response->usage));
+        // $this->line('strlen: '.mb_strlen($tips));
+        // $this->line('total_tokens: '.$this->calculateTotalTokens($response->usage));
 
         if (blank($tips)) {
             return;
@@ -60,6 +63,17 @@ class ChatTipsCommand extends Command
                $usage->completionTokens;
     }
 
+    private function copilot(): string
+    {
+        $content = CopilotRuntime::run($this->prompt());
+
+        $this->info($content);
+
+        // $this->line('strlen: '.mb_strlen($content));
+
+        return $content;
+    }
+
     protected function prompt(): string
     {
         $prompt = collect(config('prompt.tips'))->random();
@@ -74,6 +88,7 @@ class ChatTipsCommand extends Command
             $lang,
             'Use ## for markdown headings.',
             'Please provide only one answer.',
+            'Write output into '.Storage::path('copilot.md'),
         ])->join(PHP_EOL);
     }
 }

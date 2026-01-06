@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
+use App\Copilot\CopilotRuntime;
 use App\Notifications\ReleaseNotification;
 use Illuminate\Console\Command;
 use Illuminate\Http\Client\RequestException;
@@ -11,6 +12,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Revolution\Amazon\Bedrock\Facades\Bedrock;
 use Revolution\Amazon\Bedrock\ValueObjects\Usage;
@@ -69,7 +71,7 @@ class ReleaseCommand extends Command
             return;
         }
 
-        $note = $this->chat(body: $release['body']);
+        $note = $this->copilot(body: $release['body']);
 
         $this->info($note);
 
@@ -112,11 +114,22 @@ class ReleaseCommand extends Command
         return $content;
     }
 
+    private function copilot(string $body): string
+    {
+        $content = CopilotRuntime::run($this->prompt($body));
+
+        $this->info($content);
+
+        // $this->line('strlen: '.mb_strlen($content));
+
+        return $content;
+    }
+
     protected function prompt(string $body): string
     {
         return collect([
             '次のリリースノートを日本語で要約してください。',
-            '- 結果だけを出力。',
+            '- 結果だけをMarkdown形式で出力して '.Storage::path('copilot.md').' に保存。',
             '- @から始まるユーザー名を含めない。',
             '- URLを含めない。',
             '----',
