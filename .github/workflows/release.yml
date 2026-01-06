@@ -21,7 +21,7 @@ jobs:
           extensions: mbstring
           coverage: none
       - name: Install Composer dependencies
-        run: composer install -q
+        run: composer install --no-dev
       - name: env
         run: |
           cp .env.example .env
