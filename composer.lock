@@ -685,24 +685,24 @@
         },
         {
             "name": "genkgo/php-asn1",
-            "version": "v2.8.0",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/genkgo/php-asn1.git",
-                "reference": "4de712c68bbf51c00551cb45f55642e30fed1fdb"
+                "reference": "42060ed45344789fb9f21f9f1864fc47b9e3507b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/genkgo/php-asn1/zipball/4de712c68bbf51c00551cb45f55642e30fed1fdb",
-                "reference": "4de712c68bbf51c00551cb45f55642e30fed1fdb",
+                "url": "https://api.github.com/repos/genkgo/php-asn1/zipball/42060ed45344789fb9f21f9f1864fc47b9e3507b",
+                "reference": "42060ed45344789fb9f21f9f1864fc47b9e3507b",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "~2.0",
-                "phpunit/phpunit": "^9.0"
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
             },
             "suggest": {
                 "ext-bcmath": "BCmath is the fallback extension for big integer calculations",
@@ -727,11 +727,6 @@
             ],
             "authors": [
                 {
-                    "name": "Frederik Bosch",
-                    "email": "f.bosch@genkgo.nl",
-                    "role": "Author"
-                },
-                {
                     "name": "Friedrich Große",
                     "email": "friedrich.grosse@gmail.com",
                     "homepage": "https://github.com/FGrosse",
@@ -739,7 +734,7 @@
                 },
                 {
                     "name": "All contributors",
-                    "homepage": "https://github.com/genkgo/php-asn1/contributors"
+                    "homepage": "https://github.com/FGrosse/PHPASN1/contributors"
                 }
             ],
             "description": "A PHP Framework that allows you to encode and decode arbitrary ASN.1 structures using the ITU-T X.690 Encoding Rules.",
@@ -759,9 +754,9 @@
             ],
             "support": {
                 "issues": "https://github.com/genkgo/php-asn1/issues",
-                "source": "https://github.com/genkgo/php-asn1/tree/v2.8.0"
+                "source": "https://github.com/genkgo/php-asn1/tree/v2.5.0"
             },
-            "time": "2025-02-12T20:20:53+00:00"
+            "time": "2022-12-19T11:08:26+00:00"
         },
         {
             "name": "graham-campbell/result-type",
