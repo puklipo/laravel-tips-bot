@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'keys' => [
         'sk' => env('NOSTR_SK'),
