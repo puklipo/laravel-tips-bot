@@ -25,7 +25,7 @@ class CopilotRuntime
             // プロンプトの段階で結果はファイルに書き出すように指示する。
             if (Storage::exists('copilot.md')) {
                 $response = Storage::get('copilot.md');
-                // Storage::delete('copilot.md');
+                Storage::delete('copilot.md');
 
                 return $response ?? '';
             }
