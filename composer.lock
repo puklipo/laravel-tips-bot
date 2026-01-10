@@ -8537,16 +8537,16 @@
         },
         {
             "name": "revolution/laravel-boost-copilot-cli",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-boost-copilot-cli.git",
-                "reference": "ee91688271f968086df09ca9bb02afc120630850"
+                "reference": "26d3a79647bba5bb1e1f9f20df57b4df742e54af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-boost-copilot-cli/zipball/ee91688271f968086df09ca9bb02afc120630850",
-                "reference": "ee91688271f968086df09ca9bb02afc120630850",
+                "url": "https://api.github.com/repos/invokable/laravel-boost-copilot-cli/zipball/26d3a79647bba5bb1e1f9f20df57b4df742e54af",
+                "reference": "26d3a79647bba5bb1e1f9f20df57b4df742e54af",
                 "shasum": ""
             },
             "require": {
@@ -8580,8 +8580,7 @@
             ],
             "authors": [
                 {
-                    "name": "puklipo",
-                    "email": "pcs.engineer.team@gmail.com"
+                    "name": "puklipo"
                 },
                 {
                     "name": "kawax",
@@ -8595,7 +8594,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-boost-copilot-cli/tree/1.1.1"
+                "source": "https://github.com/invokable/laravel-boost-copilot-cli/tree/1.1.2"
             },
             "funding": [
                 {
@@ -8603,7 +8602,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-12-19T05:13:43+00:00"
+            "time": "2026-01-09T22:40:00+00:00"
         },
         {
             "name": "sebastian/cli-parser",
