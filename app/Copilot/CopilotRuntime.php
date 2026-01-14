@@ -16,19 +16,20 @@ class CopilotRuntime
      */
     public static function run(string $prompt): string
     {
-        $result = Process::input($prompt)->run('copilot --allow-all-tools');
+        $result = Process::input($prompt)
+            ->timeout(600)
+            ->idleTimeout(600)
+            ->run(config('copilot.command'));
 
-        if ($result->successful()) {
+        if ($result->successful() && Storage::exists('copilot.md')) {
             info($result->output());
 
             // そのままの実行結果には余計な情報が含まれているため、ファイルから取得する
             // プロンプトの段階で結果はファイルに書き出すように指示する。
-            if (Storage::exists('copilot.md')) {
-                $response = Storage::get('copilot.md');
-                Storage::delete('copilot.md');
+            $response = Storage::get('copilot.md');
+            Storage::delete('copilot.md');
 
-                return $response ?? '';
-            }
+            return $response ?? '';
         }
 
         logger()->error('Command failed: '.$result->errorOutput());

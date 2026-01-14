@@ -58,7 +58,7 @@ class ReleaseCommand extends Command
 
         $date = Carbon::parse(time: $release['published_at'], timezone: 'UTC');
 
-        if ($date->tz(config('app.timezone'))->plus(days: 1)->lessThan(now())) {
+        if ($date->plus(hours: 1)->lt(now('UTC'))) {
             return;
         }
 
@@ -104,7 +104,7 @@ class ReleaseCommand extends Command
     protected function prompt(string $body): string
     {
         return collect([
-            '次のリリースノートを日本語で要約してください。',
+            '次の`'.$this->argument('repo').'`のリリースノートを日本語で要約してください。',
             '- 結果だけをMarkdown形式で出力して '.Storage::path('copilot.md').' に保存。',
             '- @から始まるユーザー名を含めない。',
             '- URLを含めない。',
