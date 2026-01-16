@@ -40,6 +40,7 @@ class ReleaseCommand extends Command
     public function handle(): void
     {
         Http::baseUrl('https://api.github.com/repos/')
+            ->withToken(config('services.github.token'))
             ->timeout(120)
             ->get($this->argument('repo').'/releases', [
                 'per_page' => 5,
@@ -76,8 +77,6 @@ class ReleaseCommand extends Command
         if (blank($note)) {
             return;
         }
-
-        sleep(5);
 
         Notification::route('discord-webhook', config('services.discord.webhook'))
             ->route('http', config('tips.api_token'))

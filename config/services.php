@@ -6,4 +6,8 @@ return [
     'discord' => [
         'webhook' => env('DISCORD_WEBHOOK'),
     ],
+
+    'github' => [
+        'token' => env('GITHUB_TOKEN'),
+    ],
 ];
