@@ -59,7 +59,7 @@ class ReleaseCommand extends Command
 
         $date = Carbon::parse(time: $release['published_at'], timezone: 'UTC');
 
-        if ($date->plus(hours: 1)->lt(now('UTC'))) {
+        if ($date->plus(hours: 6)->lt(now('UTC'))) {
             return;
         }
 
