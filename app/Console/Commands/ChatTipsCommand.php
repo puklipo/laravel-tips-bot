@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
-use App\Copilot\CopilotRuntime;
 use App\Notifications\TipsNotification;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Notification;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Lottery;
+use Illuminate\Support\Str;
+use Revolution\Copilot\Facades\Copilot;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ChatTipsCommand extends Command
@@ -48,7 +48,9 @@ class ChatTipsCommand extends Command
 
     private function copilot(): string
     {
-        $content = CopilotRuntime::run($this->prompt());
+        $content = Copilot::run($this->prompt())->content();
+
+        $content = Str::of($content)->between('<tips>', '</tips>')->trim()->toString();
 
         $this->info($content);
 
@@ -71,7 +73,7 @@ class ChatTipsCommand extends Command
             $lang,
             'Use ## for markdown headings.',
             'Please provide only one answer.',
-            'Write output into '.Storage::path('copilot.md'),
+            'Wrap the answer in <tips> tags and send it as the final assistant message. <tips>answer</tips>',
         ])->join(PHP_EOL);
     }
 }

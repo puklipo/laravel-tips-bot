@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
-use App\Copilot\CopilotRuntime;
 use App\Notifications\ReleaseNotification;
 use Illuminate\Console\Command;
 use Illuminate\Http\Client\RequestException;
@@ -12,8 +11,8 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Revolution\Copilot\Facades\Copilot;
 use Revolution\Nostr\Notifications\NostrRoute;
 
 class ReleaseCommand extends Command
@@ -91,7 +90,9 @@ class ReleaseCommand extends Command
 
     private function copilot(string $body): string
     {
-        $content = CopilotRuntime::run($this->prompt($body));
+        $content = Copilot::run($this->prompt($body))->content();
+
+        $content = Str::of($content)->between('<translated>', '</translated>')->trim()->toString();
 
         $this->info($content);
 
@@ -104,7 +105,8 @@ class ReleaseCommand extends Command
     {
         return collect([
             '次の`'.$this->argument('repo').'`のリリースノートを日本語で要約してください。',
-            '- 結果だけをMarkdown形式で出力して '.Storage::path('copilot.md').' に保存。',
+            '- Markdown形式で出力。',
+            '- 後で切り抜くので<translated>タグで囲んで最後のアシスタントメッセージとして送信。<translated>AIからの応答を含まない日本語の要約</translated>',
             '- @から始まるユーザー名を含めない。',
             '- URLを含めない。',
             '----',
