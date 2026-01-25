@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace Tests\Feature;
 
 use Illuminate\Support\Facades\Notification;
-use Revolution\Amazon\Bedrock\Facades\Bedrock;
-use Revolution\Amazon\Bedrock\Testing\TextResponseFake;
-use Revolution\Amazon\Bedrock\ValueObjects\Usage;
+use Revolution\Copilot\Facades\Copilot;
 use Tests\TestCase;
 
 class ChatTest extends TestCase
@@ -16,11 +14,7 @@ class ChatTest extends TestCase
     {
         Notification::fake();
 
-        $fakeResponse = TextResponseFake::make()
-            ->withText('This is a fake Laravel tip about using Eloquent relationships effectively.')
-            ->withUsage(new Usage(85, 42));
-
-        Bedrock::fake([$fakeResponse]);
+        Copilot::fake('This is a fake Laravel tip about using Eloquent relationships effectively.');
 
         $response = $this->artisan('chat:tips');
 

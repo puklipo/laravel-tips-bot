@@ -6,9 +6,7 @@ namespace Tests\Feature;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
-use Revolution\Amazon\Bedrock\Facades\Bedrock;
-use Revolution\Amazon\Bedrock\Testing\TextResponseFake;
-use Revolution\Amazon\Bedrock\ValueObjects\Usage;
+use Revolution\Copilot\Facades\Copilot;
 use Tests\TestCase;
 
 class ReleaseTest extends TestCase
@@ -28,11 +26,7 @@ class ReleaseTest extends TestCase
             ]),
         ]);
 
-        $fakeResponse = TextResponseFake::make()
-            ->withText('これは新機能とバグ修正を含むテストリリースです。')
-            ->withUsage(new Usage(120, 58));
-
-        Bedrock::fake([$fakeResponse]);
+        Copilot::fake('これは新機能とバグ修正を含むテストリリースです。');
 
         $response = $this->artisan('chat:release');
 
