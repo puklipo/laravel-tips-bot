@@ -9,7 +9,7 @@
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.9",
         "revolution/laravel-amazon-bedrock": "^0.1.1",
-        "revolution/laravel-copilot-sdk": "^0.1.4",
+        "revolution/laravel-copilot-sdk": "^0.2",
         "revolution/laravel-nostr": "^1.0.0",
         "revolution/laravel-notification-discord-webhook": "^1.0",
         "revolution/laravel-str-mixins": "^2.4"
