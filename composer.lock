@@ -54,16 +54,16 @@
         },
         {
             "name": "brick/math",
-            "version": "0.14.4",
+            "version": "0.14.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "a8b53e6cc4d3a336543f042a4dfa0e3f2f2356a4"
+                "reference": "618a8077b3c326045e10d5788ed713b341fcfe40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/a8b53e6cc4d3a336543f042a4dfa0e3f2f2356a4",
-                "reference": "a8b53e6cc4d3a336543f042a4dfa0e3f2f2356a4",
+                "url": "https://api.github.com/repos/brick/math/zipball/618a8077b3c326045e10d5788ed713b341fcfe40",
+                "reference": "618a8077b3c326045e10d5788ed713b341fcfe40",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.14.4"
+                "source": "https://github.com/brick/math/tree/0.14.5"
             },
             "funding": [
                 {
@@ -110,7 +110,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-02T16:57:31+00:00"
+            "time": "2026-02-03T18:06:51+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -2478,16 +2478,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.1.1",
+            "version": "v4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "c99059c0315591f1a0db7ad6002000288ab8dc72"
+                "reference": "f76b5dc3d6c6d3043c8d937df2698515b99cbaf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/c99059c0315591f1a0db7ad6002000288ab8dc72",
-                "reference": "c99059c0315591f1a0db7ad6002000288ab8dc72",
+                "url": "https://api.github.com/repos/nette/utils/zipball/f76b5dc3d6c6d3043c8d937df2698515b99cbaf5",
+                "reference": "f76b5dc3d6c6d3043c8d937df2698515b99cbaf5",
                 "shasum": ""
             },
             "require": {
@@ -2500,7 +2500,7 @@
             "require-dev": {
                 "jetbrains/phpstorm-attributes": "^1.2",
                 "nette/tester": "^2.5",
-                "phpstan/phpstan-nette": "^2.0@stable",
+                "phpstan/phpstan": "^2.0@stable",
                 "tracy/tracy": "^2.9"
             },
             "suggest": {
@@ -2561,9 +2561,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.1.1"
+                "source": "https://github.com/nette/utils/tree/v4.1.2"
             },
-            "time": "2025-12-22T12:14:32+00:00"
+            "time": "2026-02-03T17:21:09+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -4156,16 +4156,16 @@
         },
         {
             "name": "revolution/laravel-copilot-sdk",
-            "version": "0.2.14",
+            "version": "0.2.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-copilot-sdk.git",
-                "reference": "9e199d93353cf78bd4479eeb5d583641e100c6c0"
+                "reference": "765b7cd541592bb206267d05751a403225e876b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/9e199d93353cf78bd4479eeb5d583641e100c6c0",
-                "reference": "9e199d93353cf78bd4479eeb5d583641e100c6c0",
+                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/765b7cd541592bb206267d05751a403225e876b6",
+                "reference": "765b7cd541592bb206267d05751a403225e876b6",
                 "shasum": ""
             },
             "require": {
@@ -4204,20 +4204,21 @@
             ],
             "authors": [
                 {
-                    "name": "puklipo"
-                },
-                {
                     "name": "kawax",
                     "email": "kawaxbiz@gmail.com"
+                },
+                {
+                    "name": "puklipo"
                 }
             ],
-            "description": "Copilot CLI SDK for Laravel",
+            "description": "GitHub Copilot CLI SDK for Laravel",
             "keywords": [
                 "copilot-cli",
+                "copilot-sdk",
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.14"
+                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.15"
             },
             "funding": [
                 {
@@ -4225,7 +4226,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-02T01:16:32+00:00"
+            "time": "2026-02-03T23:51:52+00:00"
         },
         {
             "name": "revolution/laravel-nostr",
@@ -4560,16 +4561,16 @@
         },
         {
             "name": "swentel/nostr-php",
-            "version": "1.9.3",
+            "version": "1.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nostrver-se/nostr-php.git",
-                "reference": "c415dd1bf20c1b414eca94005288cc137a79e0d7"
+                "reference": "e502540ea811199443e1fffcbdaef9048940399c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nostrver-se/nostr-php/zipball/c415dd1bf20c1b414eca94005288cc137a79e0d7",
-                "reference": "c415dd1bf20c1b414eca94005288cc137a79e0d7",
+                "url": "https://api.github.com/repos/nostrver-se/nostr-php/zipball/e502540ea811199443e1fffcbdaef9048940399c",
+                "reference": "e502540ea811199443e1fffcbdaef9048940399c",
                 "shasum": ""
             },
             "require": {
@@ -4619,9 +4620,9 @@
                 "chat": "https://t.me/nostr_php",
                 "issue": "https://github.com/swentel/nostr-php/issues",
                 "issues": "https://github.com/nostrver-se/nostr-php/issues",
-                "source": "https://github.com/nostrver-se/nostr-php/tree/1.9.3"
+                "source": "https://github.com/nostrver-se/nostr-php/tree/1.9.4"
             },
-            "time": "2025-12-04T09:09:22+00:00"
+            "time": "2026-02-03T11:13:00+00:00"
         },
         {
             "name": "symfony/clock",
