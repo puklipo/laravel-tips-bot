@@ -8,7 +8,7 @@
         "php": "^8.2",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.9",
-        "revolution/laravel-amazon-bedrock": "^0.1.1",
+        "revolution/laravel-amazon-bedrock": "^0.2.0",
         "revolution/laravel-copilot-sdk": "^0.2",
         "revolution/laravel-nostr": "^1.0.0",
         "revolution/laravel-notification-discord-webhook": "^1.0",
@@ -21,7 +21,7 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^8.1",
         "phpunit/phpunit": "^12.0",
-        "revolution/laravel-boost-copilot-cli": "^1.0"
+        "revolution/laravel-boost-copilot-cli": "^2.0"
     },
     "autoload": {
         "psr-4": {

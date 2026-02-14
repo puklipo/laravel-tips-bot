@@ -2,11 +2,12 @@
     "agents": [
         "copilot-cli"
     ],
-    "editors": [
-        "copilot-cli"
+    "guidelines": true,
+    "herd_mcp": false,
+    "mcp": true,
+    "packages": [
+        "revolution/laravel-amazon-bedrock",
+        "revolution/laravel-boost-copilot-cli"
     ],
-    "guidelines": [
-        "revolution/laravel-boost-copilot-cli",
-        "revolution/laravel-amazon-bedrock"
-    ]
+    "sail": false
 }
