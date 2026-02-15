@@ -4307,16 +4307,16 @@
         },
         {
             "name": "revolution/laravel-amazon-bedrock",
-            "version": "0.2.4",
+            "version": "0.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-amazon-bedrock.git",
-                "reference": "291ad726b3ed07dacc952247cbca62938e95186a"
+                "reference": "ca197a78c07eaf4a34ee857a54e25d7b761959e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/291ad726b3ed07dacc952247cbca62938e95186a",
-                "reference": "291ad726b3ed07dacc952247cbca62938e95186a",
+                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/ca197a78c07eaf4a34ee857a54e25d7b761959e0",
+                "reference": "ca197a78c07eaf4a34ee857a54e25d7b761959e0",
                 "shasum": ""
             },
             "require": {
@@ -4364,7 +4364,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.2.4"
+                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.2.5"
             },
             "funding": [
                 {
@@ -4372,20 +4372,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-13T01:15:46+00:00"
+            "time": "2026-02-14T02:55:38+00:00"
         },
         {
             "name": "revolution/laravel-copilot-sdk",
-            "version": "0.2.16",
+            "version": "0.2.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-copilot-sdk.git",
-                "reference": "dcd0f42d01f3b0ee64e8408a1b0294f42b4a807f"
+                "reference": "4283847ef400afc7e4631b7185cdc0bf0b72aa25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/dcd0f42d01f3b0ee64e8408a1b0294f42b4a807f",
-                "reference": "dcd0f42d01f3b0ee64e8408a1b0294f42b4a807f",
+                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/4283847ef400afc7e4631b7185cdc0bf0b72aa25",
+                "reference": "4283847ef400afc7e4631b7185cdc0bf0b72aa25",
                 "shasum": ""
             },
             "require": {
@@ -4438,7 +4438,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.16"
+                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.17"
             },
             "funding": [
                 {
@@ -4446,7 +4446,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-05T03:14:03+00:00"
+            "time": "2026-02-14T05:50:28+00:00"
         },
         {
             "name": "revolution/laravel-nostr",
