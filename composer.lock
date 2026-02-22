@@ -4307,21 +4307,21 @@
         },
         {
             "name": "revolution/laravel-amazon-bedrock",
-            "version": "0.2.7",
+            "version": "0.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-amazon-bedrock.git",
-                "reference": "b794759a202dbd8bff267149be4dc7764d2b8f56"
+                "reference": "b0a0c98236568c800f8ee4d73bc3e02bf01a28ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/b794759a202dbd8bff267149be4dc7764d2b8f56",
-                "reference": "b794759a202dbd8bff267149be4dc7764d2b8f56",
+                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/b0a0c98236568c800f8ee4d73bc3e02bf01a28ae",
+                "reference": "b0a0c98236568c800f8ee4d73bc3e02bf01a28ae",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.369",
-                "illuminate/support": "^12.0",
+                "illuminate/support": "^12.0||^13.0",
                 "php": "^8.4"
             },
             "require-dev": {
@@ -4364,7 +4364,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.2.7"
+                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.2.9"
             },
             "funding": [
                 {
@@ -4372,24 +4372,24 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-19T23:15:36+00:00"
+            "time": "2026-02-21T23:25:23+00:00"
         },
         {
             "name": "revolution/laravel-copilot-sdk",
-            "version": "0.2.20",
+            "version": "0.2.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-copilot-sdk.git",
-                "reference": "84da38b4771fd4edc9031bbab41e3a5b55be6a22"
+                "reference": "0ba8bdb5eafa2325fac8ab9520dcf63f6995e382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/84da38b4771fd4edc9031bbab41e3a5b55be6a22",
-                "reference": "84da38b4771fd4edc9031bbab41e3a5b55be6a22",
+                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/0ba8bdb5eafa2325fac8ab9520dcf63f6995e382",
+                "reference": "0ba8bdb5eafa2325fac8ab9520dcf63f6995e382",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^12.45",
+                "illuminate/support": "^12.45||^13.0",
                 "php": "^8.4",
                 "revolt/event-loop": "^1.0"
             },
@@ -4439,7 +4439,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.20"
+                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.21"
             },
             "funding": [
                 {
@@ -4447,34 +4447,34 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-19T22:59:21+00:00"
+            "time": "2026-02-21T23:20:43+00:00"
         },
         {
             "name": "revolution/laravel-nostr",
-            "version": "1.1.9",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-nostr.git",
-                "reference": "6224a2de7bd96d7a9a22e516f83bdbf1ab9c1953"
+                "reference": "5bdee12a23abee3b878ee2dde95e0ca10f33a3bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-nostr/zipball/6224a2de7bd96d7a9a22e516f83bdbf1ab9c1953",
-                "reference": "6224a2de7bd96d7a9a22e516f83bdbf1ab9c1953",
+                "url": "https://api.github.com/repos/invokable/laravel-nostr/zipball/5bdee12a23abee3b878ee2dde95e0ca10f33a3bd",
+                "reference": "5bdee12a23abee3b878ee2dde95e0ca10f33a3bd",
                 "shasum": ""
             },
             "require": {
                 "ext-gmp": "*",
                 "guzzlehttp/guzzle": "^7.8",
-                "illuminate/support": "^11.28||^12.0",
-                "php": "^8.2",
+                "illuminate/support": "^12.0||^13.0",
+                "php": "^8.3",
                 "swentel/nostr-php": "^1.9.2",
                 "valtzu/guzzle-websocket-middleware": "^0.3"
             },
             "require-dev": {
                 "laravel/pint": "^1.22",
-                "orchestra/testbench": "^9.0||^10.0",
-                "revolution/laravel-boost-copilot-cli": "^1.0"
+                "orchestra/testbench": "^10.0",
+                "revolution/laravel-boost-copilot-cli": "^2.0"
             },
             "type": "library",
             "extra": {
@@ -4505,7 +4505,7 @@
                 "nostr"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-nostr/tree/1.1.9"
+                "source": "https://github.com/invokable/laravel-nostr/tree/1.2.0"
             },
             "funding": [
                 {
@@ -4513,25 +4513,25 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-12-25T06:23:16+00:00"
+            "time": "2026-02-21T23:38:40+00:00"
         },
         {
             "name": "revolution/laravel-notification-discord-webhook",
-            "version": "1.3.1",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-notification-discord-webhook.git",
-                "reference": "07ef70d1d8526bb56cf642b45fb1cdaf7ff8319c"
+                "reference": "c92074eebf17762e221bd63633ee5999c4494b9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-notification-discord-webhook/zipball/07ef70d1d8526bb56cf642b45fb1cdaf7ff8319c",
-                "reference": "07ef70d1d8526bb56cf642b45fb1cdaf7ff8319c",
+                "url": "https://api.github.com/repos/invokable/laravel-notification-discord-webhook/zipball/c92074eebf17762e221bd63633ee5999c4494b9d",
+                "reference": "c92074eebf17762e221bd63633ee5999c4494b9d",
                 "shasum": ""
             },
             "require": {
-                "illuminate/notifications": "^11.0||^12.0",
-                "php": "^8.2"
+                "illuminate/notifications": "^12.0||^13.0",
+                "php": "^8.3"
             },
             "require-dev": {
                 "laravel/pint": "^1.22",
@@ -4560,7 +4560,7 @@
                 "notification"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-notification-discord-webhook/tree/1.3.1"
+                "source": "https://github.com/invokable/laravel-notification-discord-webhook/tree/1.4.0"
             },
             "funding": [
                 {
@@ -4568,30 +4568,30 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-04T01:29:45+00:00"
+            "time": "2026-02-21T23:51:46+00:00"
         },
         {
             "name": "revolution/laravel-str-mixins",
-            "version": "2.7.1",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-str-mixins.git",
-                "reference": "2f70853cb0a41d930ac4325b88b5c3f071c37d70"
+                "reference": "8a8ef7682007ae490c965216916596d427015f1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-str-mixins/zipball/2f70853cb0a41d930ac4325b88b5c3f071c37d70",
-                "reference": "2f70853cb0a41d930ac4325b88b5c3f071c37d70",
+                "url": "https://api.github.com/repos/invokable/laravel-str-mixins/zipball/8a8ef7682007ae490c965216916596d427015f1e",
+                "reference": "8a8ef7682007ae490c965216916596d427015f1e",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "illuminate/support": "^11.0||^12.0",
-                "php": "^8.2"
+                "illuminate/support": "^12.0||^13.0",
+                "php": "^8.3"
             },
             "require-dev": {
                 "laravel/pint": "^1.22",
-                "orchestra/testbench": "^9.0||^10.0"
+                "orchestra/testbench": "^10.0"
             },
             "type": "library",
             "extra": {
@@ -4623,7 +4623,7 @@
                 "str"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-str-mixins/tree/2.7.1"
+                "source": "https://github.com/invokable/laravel-str-mixins/tree/2.8.0"
             },
             "funding": [
                 {
@@ -4631,7 +4631,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-21T10:07:11+00:00"
+            "time": "2026-02-22T00:12:19+00:00"
         },
         {
             "name": "simplito/bigint-wrapper-php",
@@ -8984,20 +8984,20 @@
         },
         {
             "name": "revolution/laravel-boost-copilot-cli",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-boost-copilot-cli.git",
-                "reference": "fe159fb6235c0f7fb7181f03363732ac92e67df4"
+                "reference": "d47fb66efba9ba03e9da41a38e799be871f21db8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-boost-copilot-cli/zipball/fe159fb6235c0f7fb7181f03363732ac92e67df4",
-                "reference": "fe159fb6235c0f7fb7181f03363732ac92e67df4",
+                "url": "https://api.github.com/repos/invokable/laravel-boost-copilot-cli/zipball/d47fb66efba9ba03e9da41a38e799be871f21db8",
+                "reference": "d47fb66efba9ba03e9da41a38e799be871f21db8",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^12.30",
+                "illuminate/support": "^12.30||^13.0",
                 "laravel/boost": "^2.0",
                 "php": "^8.2"
             },
@@ -9041,7 +9041,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-boost-copilot-cli/tree/2.0.2"
+                "source": "https://github.com/invokable/laravel-boost-copilot-cli/tree/2.0.3"
             },
             "funding": [
                 {
@@ -9049,7 +9049,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-18T00:21:25+00:00"
+            "time": "2026-02-21T23:23:45+00:00"
         },
         {
             "name": "sebastian/cli-parser",
