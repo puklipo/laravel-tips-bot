@@ -4378,16 +4378,16 @@
         },
         {
             "name": "revolution/laravel-copilot-sdk",
-            "version": "0.2.28",
+            "version": "0.2.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-copilot-sdk.git",
-                "reference": "5e1cbfb1f7506992b07a96aaf77c23a0c0bbd490"
+                "reference": "19369ebced124ae44ca5158c889c7eab5a27fbdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/5e1cbfb1f7506992b07a96aaf77c23a0c0bbd490",
-                "reference": "5e1cbfb1f7506992b07a96aaf77c23a0c0bbd490",
+                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/19369ebced124ae44ca5158c889c7eab5a27fbdc",
+                "reference": "19369ebced124ae44ca5158c889c7eab5a27fbdc",
                 "shasum": ""
             },
             "require": {
@@ -4434,14 +4434,14 @@
                     "name": "puklipo"
                 }
             ],
-            "description": "GitHub Copilot CLI SDK for Laravel",
+            "description": "GitHub Copilot SDK for Laravel",
             "keywords": [
                 "copilot-cli",
                 "copilot-sdk",
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.28"
+                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.29"
             },
             "funding": [
                 {
@@ -4449,7 +4449,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-03-06T21:41:57+00:00"
+            "time": "2026-03-08T01:02:07+00:00"
         },
         {
             "name": "revolution/laravel-nostr",
