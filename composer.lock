@@ -3961,16 +3961,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.12.21",
+            "version": "v0.12.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "4821fab5b7cd8c49a673a9fd5754dc9162bb9e97"
+                "reference": "3be75d5b9244936dd4ac62ade2bfb004d13acf0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4821fab5b7cd8c49a673a9fd5754dc9162bb9e97",
-                "reference": "4821fab5b7cd8c49a673a9fd5754dc9162bb9e97",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/3be75d5b9244936dd4ac62ade2bfb004d13acf0f",
+                "reference": "3be75d5b9244936dd4ac62ade2bfb004d13acf0f",
                 "shasum": ""
             },
             "require": {
@@ -4034,9 +4034,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.21"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.22"
             },
-            "time": "2026-03-06T21:21:28+00:00"
+            "time": "2026-03-22T23:03:24+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -4379,16 +4379,16 @@
         },
         {
             "name": "revolution/laravel-copilot-sdk",
-            "version": "0.2.34",
+            "version": "0.2.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-copilot-sdk.git",
-                "reference": "120d5dd268e0e4a3ea953e3f095e040243efb6ea"
+                "reference": "b2a8518a1b32a454d2bf05d9f806862c69fa9169"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/120d5dd268e0e4a3ea953e3f095e040243efb6ea",
-                "reference": "120d5dd268e0e4a3ea953e3f095e040243efb6ea",
+                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/b2a8518a1b32a454d2bf05d9f806862c69fa9169",
+                "reference": "b2a8518a1b32a454d2bf05d9f806862c69fa9169",
                 "shasum": ""
             },
             "require": {
@@ -4405,6 +4405,9 @@
                 "pestphp/pest-plugin-laravel": "^4.0",
                 "revolution/laravel-boost-copilot-cli": "^2.0",
                 "spatie/fork": "^1.2"
+            },
+            "suggest": {
+                "open-telemetry/api": "Required for automatic W3C Trace Context propagation between your app and the Copilot CLI"
             },
             "type": "library",
             "extra": {
@@ -4442,7 +4445,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.34"
+                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.35"
             },
             "funding": [
                 {
@@ -4450,7 +4453,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-03-20T22:46:37+00:00"
+            "time": "2026-03-22T23:03:27+00:00"
         },
         {
             "name": "revolution/laravel-nostr",
