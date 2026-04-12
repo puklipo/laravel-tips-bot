@@ -3,11 +3,16 @@
         "copilot-cli"
     ],
     "guidelines": true,
-    "herd_mcp": false,
     "mcp": true,
+    "nightwatch_mcp": false,
     "packages": [
-        "revolution/laravel-amazon-bedrock",
-        "revolution/laravel-boost-copilot-cli"
+        "revolution/laravel-boost-copilot-cli",
+        "revolution/laravel-copilot-sdk"
     ],
-    "sail": false
+    "sail": false,
+    "skills": [
+        "ai-sdk-development",
+        "laravel-best-practices",
+        "laravel-copilot-sdk-development"
+    ]
 }
