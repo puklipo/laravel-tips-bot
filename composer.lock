@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b14906d84b1da1e92aa07741235db39",
+    "content-hash": "77c41680bc05882c116bbc896ad89f4d",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.379.1",
+            "version": "3.379.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "261bfa48bb4dc0d9a8d0dcb5af7c329d97de7acc"
+                "reference": "45c385619d43e54ede8daca211960c345d3ff3b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/261bfa48bb4dc0d9a8d0dcb5af7c329d97de7acc",
-                "reference": "261bfa48bb4dc0d9a8d0dcb5af7c329d97de7acc",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/45c385619d43e54ede8daca211960c345d3ff3b7",
+                "reference": "45c385619d43e54ede8daca211960c345d3ff3b7",
                 "shasum": ""
             },
             "require": {
@@ -153,9 +153,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.379.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.379.2"
             },
-            "time": "2026-04-16T18:06:02+00:00"
+            "time": "2026-04-17T18:05:27+00:00"
         },
         {
             "name": "bitwasp/bech32",
@@ -1390,16 +1390,16 @@
         },
         {
             "name": "laravel/ai",
-            "version": "v0.5.1",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/ai.git",
-                "reference": "bf16555eebc2d78efcc4fa2367a476a91b2e508b"
+                "reference": "4f9e21562ec1872620084d1d3c793d78ce0d8292"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/ai/zipball/bf16555eebc2d78efcc4fa2367a476a91b2e508b",
-                "reference": "bf16555eebc2d78efcc4fa2367a476a91b2e508b",
+                "url": "https://api.github.com/repos/laravel/ai/zipball/4f9e21562ec1872620084d1d3c793d78ce0d8292",
+                "reference": "4f9e21562ec1872620084d1d3c793d78ce0d8292",
                 "shasum": ""
             },
             "require": {
@@ -1454,7 +1454,7 @@
                 "issues": "https://github.com/laravel/ai/issues",
                 "source": "https://github.com/laravel/ai"
             },
-            "time": "2026-04-10T18:49:05+00:00"
+            "time": "2026-04-16T15:17:28+00:00"
         },
         {
             "name": "laravel/framework",
@@ -4705,23 +4705,23 @@
         },
         {
             "name": "revolution/laravel-amazon-bedrock",
-            "version": "0.3.8",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-amazon-bedrock.git",
-                "reference": "cb0c4ac01e18e5ac4c07ce8f321f562e5074d6f4"
+                "reference": "c670cf9cd49bc781d467aa30a75ac770987c2f96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/cb0c4ac01e18e5ac4c07ce8f321f562e5074d6f4",
-                "reference": "cb0c4ac01e18e5ac4c07ce8f321f562e5074d6f4",
+                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/c670cf9cd49bc781d467aa30a75ac770987c2f96",
+                "reference": "c670cf9cd49bc781d467aa30a75ac770987c2f96",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.369",
                 "illuminate/support": "^12.0||^13.0",
-                "laravel/ai": "^0.5",
-                "php": "^8.4"
+                "laravel/ai": "^0.6",
+                "php": "^8.3"
             },
             "require-dev": {
                 "laravel/pint": "^1.22",
@@ -4763,7 +4763,7 @@
                 "laravel-ai-sdk"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.3.8"
+                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.6.0"
             },
             "funding": [
                 {
@@ -4771,20 +4771,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-04-15T10:19:18+00:00"
+            "time": "2026-04-17T10:24:00+00:00"
         },
         {
             "name": "revolution/laravel-copilot-sdk",
-            "version": "0.2.38",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-copilot-sdk.git",
-                "reference": "be80c03c6a2f3f7f16abfd179bf3b282d659e032"
+                "reference": "c0cea2717485bc9e7bf3ea5097e9c86a8684d028"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/be80c03c6a2f3f7f16abfd179bf3b282d659e032",
-                "reference": "be80c03c6a2f3f7f16abfd179bf3b282d659e032",
+                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/c0cea2717485bc9e7bf3ea5097e9c86a8684d028",
+                "reference": "c0cea2717485bc9e7bf3ea5097e9c86a8684d028",
                 "shasum": ""
             },
             "require": {
@@ -4841,7 +4841,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.2.38"
+                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.3.0"
             },
             "funding": [
                 {
@@ -4849,7 +4849,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-04-10T22:43:48+00:00"
+            "time": "2026-04-17T22:34:22+00:00"
         },
         {
             "name": "revolution/laravel-nostr",
@@ -9162,16 +9162,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.5.21",
+            "version": "12.5.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "1b7bd4788966bf1533901808657850b6c7876ec7"
+                "reference": "e07667405f0f43317a1799d3907c43a123bc5587"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1b7bd4788966bf1533901808657850b6c7876ec7",
-                "reference": "1b7bd4788966bf1533901808657850b6c7876ec7",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e07667405f0f43317a1799d3907c43a123bc5587",
+                "reference": "e07667405f0f43317a1799d3907c43a123bc5587",
                 "shasum": ""
             },
             "require": {
@@ -9240,7 +9240,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.5.21"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.5.22"
             },
             "funding": [
                 {
@@ -9248,7 +9248,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-04-16T04:56:04+00:00"
+            "time": "2026-04-17T12:51:04+00:00"
         },
         {
             "name": "revolution/laravel-boost-copilot-cli",
@@ -10400,7 +10400,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.3"
+        "php": "^8.5"
     },
     "platform-dev": {},
     "plugin-api-version": "2.9.0"
