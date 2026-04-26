@@ -4696,16 +4696,16 @@
         },
         {
             "name": "revolution/laravel-copilot-sdk",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-copilot-sdk.git",
-                "reference": "c0cea2717485bc9e7bf3ea5097e9c86a8684d028"
+                "reference": "1dce0223215bafcae5fd9928fa82167a5dd098b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/c0cea2717485bc9e7bf3ea5097e9c86a8684d028",
-                "reference": "c0cea2717485bc9e7bf3ea5097e9c86a8684d028",
+                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/1dce0223215bafcae5fd9928fa82167a5dd098b9",
+                "reference": "1dce0223215bafcae5fd9928fa82167a5dd098b9",
                 "shasum": ""
             },
             "require": {
@@ -4714,7 +4714,7 @@
                 "revolt/event-loop": "^1.0"
             },
             "require-dev": {
-                "laravel/ai": "^0.5",
+                "laravel/ai": "^0.6",
                 "laravel/pint": "^1.25",
                 "mockery/mockery": "^1.6",
                 "orchestra/testbench": "^10.6||^11.0",
@@ -4762,7 +4762,8 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.3.0"
+                "issues": "https://github.com/invokable/laravel-copilot-sdk/issues",
+                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/0.3.1"
             },
             "funding": [
                 {
@@ -4770,7 +4771,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-04-17T22:34:22+00:00"
+            "time": "2026-04-25T01:12:32+00:00"
         },
         {
             "name": "revolution/laravel-nostr",
