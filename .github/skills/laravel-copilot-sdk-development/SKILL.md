@@ -95,7 +95,7 @@ use Revolution\Copilot\Types\InfiniteSessionConfig;
 use Revolution\Copilot\Enums\ReasoningEffort;
 
 $config = new SessionConfig(
-    model: 'claude-opus-4.7',
+    model: 'auto',
     reasoningEffort: ReasoningEffort::HIGH,
     systemMessage: new SystemMessageConfig(
         content: 'You are a helpful assistant for Laravel developers.',
@@ -116,7 +116,7 @@ $response = Copilot::run('Hello', config: $config);
 
 For simple cases, use an array:
 ```php
-Copilot::run('Hello', config: ['model' => 'gpt-5.2']);
+Copilot::run('Hello', config: ['model' => 'auto']);
 ```
 
 ---
@@ -376,16 +376,16 @@ $config = new SessionConfig(
         switch ($request['kind'] ?? null) {
             case 'shell':
             case 'write':
-                // High-risk operations: require explicit application-level authorization or deny by default.
-                return PermissionRequestResultKind::deniedInteractivelyByUser();
+                // High-risk operations: deny by default.
+                return PermissionRequestResultKind::reject();
 
             case 'read':
             case 'url':
             case 'mcp':
             case 'custom-tool':
             default:
-                // Lower-risk operations: adjust this to your own policies (per-user confirmation, permissions, etc.).
-                return PermissionRequestResultKind::approved();
+                // Lower-risk operations: approve once (adjust to your own policies).
+                return PermissionRequestResultKind::approveOnce();
         }
     },
 );
@@ -534,4 +534,4 @@ The SDK dispatches Laravel events for logging and debugging:
 | `Attachment`                  | `Attachment::file()`, `Attachment::directory()`, `Attachment::selection()`                                                               |
 | `ServerRpc` / `SessionRpc`    | Typed RPC layer                                                                                                                          |
 | `PermissionHandler`           | `PermissionHandler::approveAll()`, `PermissionHandler::approveSafety()`, `PermissionHandler::denyAll()`                                  |
-| `PermissionRequestResultKind` | `approved()`, `deniedInteractivelyByUser()`, `select()`                                                                                  |
+| `PermissionRequestResultKind` | `approveOnce()`, `approveForSession()`, `approveForLocation()`, `reject()`, `userNotAvailable()`, `noResult()`, `select()`               |
