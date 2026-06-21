@@ -4633,16 +4633,16 @@
         },
         {
             "name": "revolution/laravel-amazon-bedrock",
-            "version": "0.7.2",
+            "version": "0.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-amazon-bedrock.git",
-                "reference": "eec091091abc41205915af21a77937544a9b3ec6"
+                "reference": "f8b88d008b0e469d68d1ea35476e0aa06d8034c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/eec091091abc41205915af21a77937544a9b3ec6",
-                "reference": "eec091091abc41205915af21a77937544a9b3ec6",
+                "url": "https://api.github.com/repos/invokable/laravel-amazon-bedrock/zipball/f8b88d008b0e469d68d1ea35476e0aa06d8034c7",
+                "reference": "f8b88d008b0e469d68d1ea35476e0aa06d8034c7",
                 "shasum": ""
             },
             "require": {
@@ -4691,7 +4691,7 @@
                 "laravel-ai-sdk"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.7.2"
+                "source": "https://github.com/invokable/laravel-amazon-bedrock/tree/0.7.3"
             },
             "funding": [
                 {
@@ -4699,7 +4699,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-06-09T23:33:18+00:00"
+            "time": "2026-06-21T00:19:05+00:00"
         },
         {
             "name": "revolution/laravel-copilot-sdk",
