@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.387.0",
+            "version": "3.387.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "38422b3eaed583a6056cef6d40e5594cd90cc895"
+                "reference": "2e1a16e9c87f2a069aa8a0a14a314dd148de21e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/38422b3eaed583a6056cef6d40e5594cd90cc895",
-                "reference": "38422b3eaed583a6056cef6d40e5594cd90cc895",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2e1a16e9c87f2a069aa8a0a14a314dd148de21e1",
+                "reference": "2e1a16e9c87f2a069aa8a0a14a314dd148de21e1",
                 "shasum": ""
             },
             "require": {
@@ -153,9 +153,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.387.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.387.1"
             },
-            "time": "2026-06-30T18:31:55+00:00"
+            "time": "2026-07-01T18:10:42+00:00"
         },
         {
             "name": "bitwasp/bech32",
@@ -4703,16 +4703,16 @@
         },
         {
             "name": "revolution/laravel-copilot-sdk",
-            "version": "1.0.3",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-copilot-sdk.git",
-                "reference": "5933af3ded72f629588609be19dba01ff3fcd797"
+                "reference": "ec38ee993b8d9ad81e1713bf8b78f7b31e419639"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/5933af3ded72f629588609be19dba01ff3fcd797",
-                "reference": "5933af3ded72f629588609be19dba01ff3fcd797",
+                "url": "https://api.github.com/repos/invokable/laravel-copilot-sdk/zipball/ec38ee993b8d9ad81e1713bf8b78f7b31e419639",
+                "reference": "ec38ee993b8d9ad81e1713bf8b78f7b31e419639",
                 "shasum": ""
             },
             "require": {
@@ -4721,7 +4721,7 @@
                 "revolt/event-loop": "^1.0"
             },
             "require-dev": {
-                "laravel/ai": "^0.7",
+                "laravel/ai": "^0.8",
                 "laravel/pao": "^1.0",
                 "laravel/pint": "^1.25",
                 "mockery/mockery": "^1.6",
@@ -4771,7 +4771,7 @@
             ],
             "support": {
                 "issues": "https://github.com/invokable/laravel-copilot-sdk/issues",
-                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/1.0.3"
+                "source": "https://github.com/invokable/laravel-copilot-sdk/tree/1.0.5"
             },
             "funding": [
                 {
@@ -4779,7 +4779,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-06-27T01:53:36+00:00"
+            "time": "2026-07-01T22:27:34+00:00"
         },
         {
             "name": "revolution/laravel-nostr",
