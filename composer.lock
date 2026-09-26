@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.398.0",
+            "version": "3.398.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "1b6f116bd571bd461126b7edff8bf7e173b36ea2"
+                "reference": "42abd470c300c143972e27778b3bbb0ce7402e41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1b6f116bd571bd461126b7edff8bf7e173b36ea2",
-                "reference": "1b6f116bd571bd461126b7edff8bf7e173b36ea2",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/42abd470c300c143972e27778b3bbb0ce7402e41",
+                "reference": "42abd470c300c143972e27778b3bbb0ce7402e41",
                 "shasum": ""
             },
             "require": {
@@ -153,9 +153,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.398.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.398.1"
             },
-            "time": "2026-09-24T18:07:06+00:00"
+            "time": "2026-09-25T18:11:40+00:00"
         },
         {
             "name": "bitwasp/bech32",
@@ -3760,16 +3760,16 @@
         },
         {
             "name": "phrity/util-transformer",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirn-se/phrity-util-transformer.git",
-                "reference": "4bda68d36d06e36c80ca8ece20651b715bf99c7d"
+                "reference": "42e17f80ff6d91e0df1ced9e024d1c3aa5aca98f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirn-se/phrity-util-transformer/zipball/4bda68d36d06e36c80ca8ece20651b715bf99c7d",
-                "reference": "4bda68d36d06e36c80ca8ece20651b715bf99c7d",
+                "url": "https://api.github.com/repos/sirn-se/phrity-util-transformer/zipball/42e17f80ff6d91e0df1ced9e024d1c3aa5aca98f",
+                "reference": "42e17f80ff6d91e0df1ced9e024d1c3aa5aca98f",
                 "shasum": ""
             },
             "require": {
@@ -3814,9 +3814,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sirn-se/phrity-util-transformer/issues",
-                "source": "https://github.com/sirn-se/phrity-util-transformer/tree/1.4.0"
+                "source": "https://github.com/sirn-se/phrity-util-transformer/tree/1.4.1"
             },
-            "time": "2026-09-02T17:56:17+00:00"
+            "time": "2026-09-25T10:08:22+00:00"
         },
         {
             "name": "phrity/websocket",
@@ -9298,16 +9298,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.5.35",
+            "version": "12.5.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "345ac22e42cb14cdc7aa8428655d8bb8c82a4aab"
+                "reference": "ddb775588a0ea447d1c9b190c0f29c174ce81d65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/345ac22e42cb14cdc7aa8428655d8bb8c82a4aab",
-                "reference": "345ac22e42cb14cdc7aa8428655d8bb8c82a4aab",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ddb775588a0ea447d1c9b190c0f29c174ce81d65",
+                "reference": "ddb775588a0ea447d1c9b190c0f29c174ce81d65",
                 "shasum": ""
             },
             "require": {
@@ -9376,7 +9376,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.5.35"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.5.36"
             },
             "funding": [
                 {
@@ -9384,7 +9384,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-09-09T04:48:50+00:00"
+            "time": "2026-09-25T08:47:40+00:00"
         },
         {
             "name": "revolution/laravel-boost-copilot-cli",
